@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ethanflo.github.io/audits/sitemap.xml
