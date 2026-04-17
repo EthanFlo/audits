@@ -1,7 +1,8 @@
 {
-  "audits_delivered": 128,
-  "sends_today": 64,
-  "sends_week": 65,
+  "audits_delivered": 141,
+  "sends_today": 67,
+  "sends_week": 68,
   "launch_free_remaining": 10,
-  "updated_at": "2026-04-17T04:35:21.268138+00:00"
+  "recent_audits": [],
+  "updated_at": "2026-04-17T04:42:24.350056+00:00"
 }
