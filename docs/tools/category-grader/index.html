@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Free GBP Category Coverage Grader — how many secondary categories should you add</title>
+<meta name="description" content="Grade your Google Business Profile category coverage for free. Find out how many secondary categories you should add for your vertical.">
+<link rel="canonical" href="https://ethanflo.github.io/audits/tools/category-grader/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:720px;margin:0 auto;padding:40px 20px;color:#1a1a1a;line-height:1.6;font-size:17px}
+h1{font-size:30px;font-weight:800;margin:0 0 8px}
+.sub{color:#6b7280;font-size:16px;margin:0 0 28px}
+select,input{padding:12px 14px;border:2px solid #e5e7eb;border-radius:10px;font-size:17px;font-family:inherit;background:#fff}
+select:focus,input:focus{outline:none;border-color:#111}
+.row{display:flex;gap:16px;align-items:center;margin:16px 0;flex-wrap:wrap}
+label{font-size:15px;color:#374151;font-weight:600;min-width:200px}
+.result{background:#fef3c7;border:1px solid #fbbf24;border-radius:12px;padding:20px;margin:24px 0}
+.grade{font-size:52px;font-weight:800;margin:0;line-height:1}
+.grade.a{color:#059669}.grade.b{color:#65a30d}.grade.c{color:#d97706}.grade.d{color:#dc2626}.grade.f{color:#991b1b}
+.grade-explain{font-size:15px;color:#374151;margin:10px 0 0}
+.missing-list{margin-top:12px;font-size:15px}
+.missing-list strong{color:#111}
+.cta{display:inline-block;background:#111;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;margin:20px 0}
+footer{color:#888;font-size:13px;border-top:1px solid #eee;padding-top:20px;margin-top:40px}
+</style>
+</head><body>
+<p><a href="/audits/tools/" style="color:#6b7280;font-size:14px;text-decoration:none;">← All tools</a></p>
+<h1>GBP category coverage grader</h1>
+<p class="sub">Google lets you set one primary + up to 9 secondary categories. Most businesses set one total. Grade your coverage:</p>
+
+<div class="row">
+ <label>Your vertical</label>
+ <select id="vertical" onchange="grade()">
+  <option value="plumber">Plumber</option>
+  <option value="electrician">Electrician</option>
+  <option value="dentist">Dentist</option>
+  <option value="salon">Hair salon / Beauty</option>
+  <option value="restaurant">Restaurant</option>
+  <option value="lawyer">Law firm</option>
+  <option value="realestate">Real estate agent</option>
+  <option value="autorepair">Auto repair shop</option>
+  <option value="gym">Gym / Fitness</option>
+  <option value="chiropractor">Chiropractor</option>
+  <option value="photographer">Photographer</option>
+  <option value="accountant">Accountant</option>
+ </select>
+</div>
+<div class="row">
+ <label>Secondary categories you have set</label>
+ <input type="number" id="count" min="0" max="9" value="0" onchange="grade()">
+</div>
+
+<div class="result">
+ <div class="grade" id="grade">F</div>
+ <div class="grade-explain" id="explain">Select your vertical and enter secondary category count.</div>
+ <div class="missing-list" id="missing"></div>
+</div>
+
+<a href="/audits/get-audit/" class="cta">Want me to audit your full profile for free? →</a>
+
+<script>
+var CATS = {
+ plumber: {recommended:6, secondaries:['Emergency plumber','Drain cleaning service','Water heater installer','Hot water tank repair','Sewer cleaning service','Pipe repair service','Residential plumber','Commercial plumber']},
+ electrician: {recommended:5, secondaries:['Residential electrician','Commercial electrician','Emergency electrician','Smoke detector installation','EV charger installer','Solar panel installer','Panel upgrade service']},
+ dentist: {recommended:5, secondaries:['Cosmetic dentist','Family dentist','Pediatric dentist','Emergency dentist','Orthodontist','Dental implant provider','Teeth whitening service']},
+ salon: {recommended:5, secondaries:['Hair salon','Barber shop','Hair color specialist','Hair extensions service','Blow-dry bar','Beauty salon','Nail salon']},
+ restaurant: {recommended:4, secondaries:['Takeout restaurant','Catering service','Brunch restaurant','Bar & grill','Fine dining restaurant','Family restaurant','Delivery restaurant']},
+ lawyer: {recommended:5, secondaries:['Personal injury lawyer','Divorce attorney','Criminal defense attorney','Estate planning attorney','Immigration attorney','Real estate lawyer','Employment attorney']},
+ realestate: {recommended:4, secondaries:['Real estate broker','Commercial real estate agency','Property manager','Luxury real estate agent','First time home buyer agent','Investment property specialist']},
+ autorepair: {recommended:5, secondaries:['Auto tune-up service','Brake shop','Transmission shop','Oil change service','Tire shop','Car AC repair service','Engine repair service']},
+ gym: {recommended:4, secondaries:['Personal trainer','Yoga studio','Pilates studio','CrossFit gym','Martial arts school','Group fitness class','24-hour gym']},
+ chiropractor: {recommended:4, secondaries:['Sports medicine chiropractor','Pediatric chiropractor','Pregnancy chiropractor','Massage therapist','Physical therapist','Wellness center']},
+ photographer: {recommended:5, secondaries:['Wedding photographer','Portrait photographer','Commercial photographer','Event photographer','Real estate photographer','Family photographer','Headshot photographer']},
+ accountant: {recommended:4, secondaries:['Tax preparer','Bookkeeping service','CPA firm','Payroll service','Small business accountant','Financial consultant']},
+};
+
+function grade() {
+ var v = document.getElementById('vertical').value;
+ var count = parseInt(document.getElementById('count').value) || 0;
+ var data = CATS[v];
+ var ratio = Math.min(1, count / data.recommended);
+ var grade, explain;
+ if (count === 0) { grade='F'; explain='Critical. You are missing every secondary category. Every one of those is a query you could rank for that you currently cannot.'; }
+ else if (ratio < 0.4) { grade='D'; explain='Poor coverage. You have under 40% of the relevant secondary categories for your vertical.'; }
+ else if (ratio < 0.7) { grade='C'; explain='Average coverage. There is meaningful room to expand.'; }
+ else if (ratio < 1) { grade='B'; explain='Good coverage. You are close to full but still missing one or two high-value secondaries.'; }
+ else { grade='A'; explain='Full coverage for your vertical. Well done.'; }
+ var el = document.getElementById('grade');
+ el.textContent = grade;
+ el.className = 'grade ' + grade.toLowerCase();
+ document.getElementById('explain').textContent = explain;
+ var missing = document.getElementById('missing');
+ if (count < data.recommended) {
+  var suggestions = data.secondaries.slice(0, data.recommended - count);
+  missing.innerHTML = '<strong>High-value secondaries to add for your vertical:</strong><br>' + suggestions.map(function(s){return '• ' + s;}).join('<br>');
+ } else {
+  missing.innerHTML = '<strong>Suggested additional secondaries (if you want even broader coverage):</strong><br>' + data.secondaries.slice(data.recommended).map(function(s){return '• ' + s;}).join('<br>');
+ }
+}
+grade();
+</script>
+
+<footer>
+<p>Ethan Florendo · <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> · Vancouver, BC · <a href="/audits/faq/">FAQ</a></p>
+</footer>
+</body></html>

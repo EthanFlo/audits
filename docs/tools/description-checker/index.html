@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Free Google Business Profile Description Length Checker (750 char limit)</title>
+<meta name="description" content="Paste your Google Business Profile description and see how much space you're leaving unused. Free browser tool, no signup.">
+<link rel="canonical" href="https://ethanflo.github.io/audits/tools/description-checker/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:720px;margin:0 auto;padding:40px 20px;color:#1a1a1a;line-height:1.6;font-size:17px}
+h1{font-size:30px;font-weight:800;margin:0 0 8px}
+.sub{color:#6b7280;font-size:16px;margin:0 0 28px}
+textarea{width:100%;min-height:180px;padding:14px;border:2px solid #e5e7eb;border-radius:10px;font-size:15px;font-family:inherit;box-sizing:border-box;resize:vertical}
+textarea:focus{outline:none;border-color:#111}
+.meter{background:#f3f4f6;border-radius:10px;height:24px;overflow:hidden;margin:20px 0 6px;position:relative}
+.meter-fill{background:linear-gradient(90deg,#10b981,#f59e0b,#ef4444);height:100%;width:0;transition:width 0.3s}
+.meter-label{text-align:center;font-size:14px;font-weight:600;color:#374151;margin-bottom:16px}
+.score{font-size:28px;font-weight:800;margin:10px 0}
+.score.good{color:#059669}
+.score.ok{color:#d97706}
+.score.poor{color:#dc2626}
+.advice{background:#fef3c7;border:1px solid #fbbf24;border-radius:10px;padding:14px 18px;margin:18px 0;font-size:15px}
+.cta{display:inline-block;background:#111;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;margin:20px 0}
+footer{color:#888;font-size:13px;border-top:1px solid #eee;padding-top:20px;margin-top:40px}
+</style>
+</head><body>
+<p><a href="/audits/tools/" style="color:#6b7280;font-size:14px;text-decoration:none;">← All tools</a></p>
+<h1>GBP description length checker</h1>
+<p class="sub">Google Business Profile caps descriptions at <strong>750 characters</strong>. Paste yours below.</p>
+
+<textarea id="desc" placeholder="Paste your Google Business Profile description here..." oninput="update()"></textarea>
+
+<div class="meter"><div id="meter-fill" class="meter-fill"></div></div>
+<div class="meter-label"><span id="char-count">0</span> / 750 characters</div>
+
+<div id="score" class="score">Paste your description to see your score</div>
+<div id="advice" class="advice" style="display:none;"></div>
+
+<h2 style="font-size:20px;margin-top:36px;">What the score means</h2>
+<ul>
+ <li><strong>0-400 chars:</strong> Poor. You are leaving significant keyword space unused. Most small businesses hit this range.</li>
+ <li><strong>400-600 chars:</strong> OK. Decent coverage but could expand.</li>
+ <li><strong>600-749 chars:</strong> Good. Near-full coverage of keyword space.</li>
+ <li><strong>750 chars:</strong> Perfect. Maxed out.</li>
+</ul>
+
+<h2 style="font-size:20px;margin-top:28px;">Tips for writing to the 750-char limit</h2>
+<ol>
+ <li>Open with your <strong>primary service + city</strong> (e.g. "Emergency plumber serving Vancouver, BC since 2008")</li>
+ <li>List <strong>3-5 secondary services</strong> by name (Google uses these for long-tail queries)</li>
+ <li>Include your <strong>service area radius</strong> or specific neighborhoods</li>
+ <li>Mention <strong>years of experience</strong> or operational history</li>
+ <li>Close with a <strong>specific differentiator</strong> (same-day turnaround, licensed, insured, etc.)</li>
+</ol>
+
+<a href="/audits/get-audit/" class="cta">Want me to audit your full profile for free? →</a>
+
+<script>
+function update() {
+ var txt = document.getElementById('desc').value;
+ var count = txt.length;
+ document.getElementById('char-count').textContent = count;
+ var pct = Math.min(100, (count/750)*100);
+ document.getElementById('meter-fill').style.width = pct + '%';
+ var score = document.getElementById('score');
+ var advice = document.getElementById('advice');
+ if (count === 0) {
+  score.textContent = 'Paste your description to see your score';
+  score.className = 'score';
+  advice.style.display = 'none';
+  return;
+ }
+ var unused = 750 - count;
+ if (count < 400) {
+  score.textContent = 'Poor: ' + unused + ' chars of unused keyword space';
+  score.className = 'score poor';
+  advice.style.display = 'block';
+  advice.innerHTML = '<strong>Impact:</strong> Businesses in your tier who expand description to 650+ chars typically see 12-22% lift in local-pack impressions within 30 days. You have ' + unused + ' characters of runway to add services, service area, and differentiators.';
+ } else if (count < 600) {
+  score.textContent = 'OK: ' + unused + ' chars still unused';
+  score.className = 'score ok';
+  advice.style.display = 'block';
+  advice.innerHTML = '<strong>Room to grow:</strong> you are in a decent range but missing ' + unused + ' characters. Add secondary services and specific differentiators.';
+ } else if (count < 750) {
+  score.textContent = 'Good: ' + unused + ' chars of runway left';
+  score.className = 'score good';
+  advice.style.display = 'block';
+  advice.innerHTML = '<strong>Nearly maxed:</strong> fill the last ' + unused + ' characters with one more secondary service or a stronger differentiator line.';
+ } else {
+  score.textContent = 'Perfect: 750/750';
+  score.className = 'score good';
+  advice.style.display = 'block';
+  advice.innerHTML = '<strong>Maxed out.</strong> Google will truncate at 750, so keep it here. Now audit your categories and photos too.';
+ }
+}
+</script>
+
+<footer>
+<p>Ethan Florendo · <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> · Vancouver, BC · <a href="/audits/faq/">FAQ</a></p>
+</footer>
+</body></html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Free GBP Photo Cadence Calculator — how many photos to upload weekly</title>
+<meta name="description" content="Free browser calculator: how many Google Business Profile photos should you upload per week to rank in the local pack. No signup.">
+<link rel="canonical" href="https://ethanflo.github.io/audits/tools/photo-cadence/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:720px;margin:0 auto;padding:40px 20px;color:#1a1a1a;line-height:1.6;font-size:17px}
+h1{font-size:30px;font-weight:800;margin:0 0 8px}
+.sub{color:#6b7280;font-size:16px;margin:0 0 28px}
+input[type=number]{padding:12px 14px;border:2px solid #e5e7eb;border-radius:10px;font-size:17px;width:140px;font-family:inherit}
+input[type=number]:focus{outline:none;border-color:#111}
+.row{display:flex;gap:16px;align-items:center;margin:16px 0}
+label{font-size:15px;color:#374151;font-weight:600;flex:1}
+.result{background:#f0fdf4;border:1px solid #16a34a;border-radius:12px;padding:20px;margin:24px 0}
+.result-big{font-size:32px;font-weight:800;color:#166534;margin:0 0 8px}
+.result-sub{color:#166534;font-size:15px;margin:0}
+.cta{display:inline-block;background:#111;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;margin:20px 0}
+footer{color:#888;font-size:13px;border-top:1px solid #eee;padding-top:20px;margin-top:40px}
+ul{padding-left:22px}
+li{margin:6px 0}
+</style>
+</head><body>
+<p><a href="/audits/tools/" style="color:#6b7280;font-size:14px;text-decoration:none;">← All tools</a></p>
+<h1>GBP photo cadence calculator</h1>
+<p class="sub">Google's local algorithm rewards consistent photo uploads. Enter your current photo count and goal, get your weekly target.</p>
+
+<div class="row">
+ <label>Current total photos on your GBP</label>
+ <input type="number" id="current" min="0" value="15" oninput="calc()">
+</div>
+<div class="row">
+ <label>Target photo count in 90 days</label>
+ <input type="number" id="target" min="0" value="80" oninput="calc()">
+</div>
+<div class="row">
+ <label>% uploaded by you (vs customers)</label>
+ <input type="number" id="ownerpct" min="0" max="100" value="40" oninput="calc()">
+</div>
+
+<div class="result">
+ <div class="result-big" id="per-week">5 photos/week</div>
+ <div class="result-sub" id="guidance">To hit your target, upload at this cadence for 13 weeks.</div>
+</div>
+
+<h2 style="font-size:20px;margin-top:36px;">Why cadence matters</h2>
+<ul>
+ <li>Google's algorithm specifically tracks <strong>upload pattern</strong>, not just total photo count</li>
+ <li>Bursts (e.g. 50 photos in a day, then nothing for a year) underperform steady cadence (2-5 per week)</li>
+ <li>Owner-uploaded photos with geolocation stamps rank higher than customer-uploaded photos (customer uploads rarely carry geolocation data)</li>
+ <li>80 photos is a common plateau above which returns diminish; aim for 60-100 in your first 90 days</li>
+</ul>
+
+<h2 style="font-size:20px;margin-top:28px;">What to photograph</h2>
+<ol>
+ <li><strong>Storefront / exterior</strong> (3-5 angles, different times of day)</li>
+ <li><strong>Interior</strong> (work areas, reception, equipment)</li>
+ <li><strong>Team members</strong> (5-10 individual + group)</li>
+ <li><strong>Every service you offer</strong> (one representative photo per service)</li>
+ <li><strong>Before/after or work-in-progress</strong> (if applicable to your business)</li>
+ <li><strong>Signage, logos, awards, licenses</strong></li>
+</ol>
+
+<a href="/audits/get-audit/" class="cta">Want me to audit your full profile for free? →</a>
+
+<script>
+function calc() {
+ var current = parseInt(document.getElementById('current').value) || 0;
+ var target = parseInt(document.getElementById('target').value) || 0;
+ var ownerpct = parseInt(document.getElementById('ownerpct').value) || 0;
+ var gap = Math.max(0, target - current);
+ var weeks = 13;
+ var perWeek = Math.ceil(gap / weeks);
+ document.getElementById('per-week').textContent = perWeek + ' photos/week';
+ var guidance = '';
+ if (gap === 0) {
+  guidance = 'You are already at your target. Focus on cadence maintenance and refreshing older photos.';
+ } else if (perWeek <= 2) {
+  guidance = 'Low cadence. Google prefers at least 2-3 uploads per week. Consider pulling your 90-day target higher.';
+ } else if (perWeek <= 7) {
+  guidance = 'Sustainable cadence for 13 weeks. Upload on the same 2-3 weekdays for consistency.';
+ } else {
+  guidance = 'Aggressive cadence. Make sure all photos are owner-taken with geolocation on (use your phone on-site). Batch in sets of 2-3 per day to avoid bot flags.';
+ }
+ if (ownerpct < 60 && current > 10) {
+  guidance += ' Your owner-upload ratio (' + ownerpct + '%) is low. New uploads should all be owner-taken to shift the balance.';
+ }
+ document.getElementById('guidance').textContent = guidance;
+}
+calc();
+</script>
+
+<footer>
+<p>Ethan Florendo · <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> · Vancouver, BC · <a href="/audits/faq/">FAQ</a></p>
+</footer>
+</body></html>
