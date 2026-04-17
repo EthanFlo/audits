@@ -872,6 +872,28 @@
 </script>
 </head>
 <body>
+<div id="urgency-banner" style="background:linear-gradient(90deg,#ff6b35,#c62828);color:#fff;padding:11px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-weight:600;line-height:1.4;">
+ <span id="urgency-text">🔥 Launch week: first 10 customers get 30 days of monthly maintenance FREE. Only <strong id="slots-left">10</strong> spots left.</span>
+ &nbsp;·&nbsp;
+ <a href="https://buy.stripe.com/7sYcN6aUp2Rl4W98wIenS01" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+</div>
+<script>
+(function(){
+ try {
+  fetch("/audits/stats.json", {cache:"no-store"}).then(r=>r.json()).then(s=>{
+   var slots = (typeof s.launch_free_remaining === "number") ? s.launch_free_remaining : 10;
+   var audits = s.audits_delivered || 0;
+   var el = document.getElementById("slots-left");
+   if (el) el.textContent = slots;
+   var txt = document.getElementById("urgency-text");
+   if (txt && audits > 50) {
+    txt.innerHTML = "🔥 " + audits + " audits delivered this week \u00b7 Only <strong id=\"slots-left\">" + slots + "</strong> launch-week free-maintenance slots left.";
+   }
+  }).catch(function(){});
+ } catch(e){}
+})();
+</script>
+
 
 
 <!-- ══════════════════════════════════════════════════════
@@ -1654,7 +1676,7 @@
  <div class="footer-inner">
   <div class="footer-brand">Flo Marketing System</div>
   <div class="footer-contact">
-   Ethan Florendo &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC
+   Ethan Florendo &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
   </div>
   <div class="footer-legal">
    This report is confidential and prepared exclusively for Vancouver Roofing &amp; Solar. Audit ID: F5B36D68.<br>
