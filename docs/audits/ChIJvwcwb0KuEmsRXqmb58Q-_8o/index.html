@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Google Visibility Audit — Fox Electricians Pty Ltd">
-<meta property="og:description" content="Confidential audit report for Fox Electricians Pty Ltd. 3 issues found, estimated $4,500/mo revenue leak identified, with a specific optimization plan.">
+<meta property="og:description" content="Confidential audit report for Fox Electricians Pty Ltd. 3 issues found, estimated $12,500/mo revenue leak identified, with a specific optimization plan.">
 <meta property="og:type" content="article">
 <title>Google Visibility Audit, Fox Electricians Pty Ltd</title>
 <link rel="preconnect" href="https://checkout.stripe.com">
@@ -878,10 +878,17 @@
 
 </head>
 <body>
+
+<!-- Urgency banner + recent signups rotating ticker (fetches /audits/stats.json) -->
 <div id="urgency-banner" style="background:linear-gradient(90deg,#ff6b35,#c62828);color:#fff;padding:11px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-weight:600;line-height:1.4;">
  <span id="urgency-text">🔥 Launch week: first 10 customers get 30 days of monthly maintenance FREE. Only <strong id="slots-left">10</strong> spots left.</span>
  &nbsp;·&nbsp;
- <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJvwcwb0KuEmsRXqmb58Q-_8o?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+ <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+</div>
+<div id="recent-ticker" style="background:#f9fafb;color:#374151;padding:6px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;border-bottom:1px solid #e5e7eb;min-height:20px;display:none;"></div>
+<!-- Audit expiry countdown -->
+<div id="audit-expiry" style="background:#fff7ed;color:#9a3412;padding:7px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:600;border-bottom:1px solid #fed7aa;display:none;">
+ ⏱ This audit was generated on April 16, 2026. Launch-week pricing expires in <strong id="expiry-countdown">7 days</strong>.
 </div>
 <script>
 (function(){
@@ -895,11 +902,50 @@
    if (txt && audits > 50) {
     txt.innerHTML = "🔥 " + audits + " audits delivered this week \u00b7 Only <strong id=\"slots-left\">" + slots + "</strong> launch-week free-maintenance slots left.";
    }
+   // Rotating recent signups ticker
+   var recent = s.recent_audits || [];
+   if (recent.length > 0) {
+    var ticker = document.getElementById("recent-ticker");
+    if (ticker) {
+     ticker.style.display = "block";
+     var i = 0;
+     var render = function() {
+      var r = recent[i % recent.length];
+      ticker.innerHTML = "✓ Just sent an audit to <strong>" + r.name + "</strong>" + (r.country ? " (" + r.country + ")" : "") + " \u00b7 " + recent.length + " businesses got theirs in the last hour";
+      i++;
+     };
+     render();
+     setInterval(render, 4500);
+    }
+   }
   }).catch(function(){});
+ } catch(e){}
+ // Audit expiry countdown: 7 days from April 16, 2026
+ try {
+  var auditBanner = document.getElementById("audit-expiry");
+  var generated = new Date("April 16, 2026");
+  if (!isNaN(generated.getTime())) {
+   var expiry = new Date(generated.getTime() + 7*24*60*60*1000);
+   var update = function() {
+    var now = new Date();
+    var diffMs = expiry - now;
+    if (diffMs > 0) {
+     var days = Math.floor(diffMs / (24*60*60*1000));
+     var hours = Math.floor((diffMs % (24*60*60*1000)) / (60*60*1000));
+     var lbl = days > 0 ? days + " day" + (days!==1?"s":"") + ", " + hours + "h" : hours + " hours";
+     var el = document.getElementById("expiry-countdown");
+     if (el) el.textContent = lbl;
+     auditBanner.style.display = "block";
+    } else {
+     auditBanner.style.display = "none";
+    }
+   };
+   update();
+   setInterval(update, 60000);
+  }
  } catch(e){}
 })();
 </script>
-
 
 
 <!-- ══════════════════════════════════════════════════════
@@ -977,13 +1023,13 @@
    <h2 class="doc-title" style="border-bottom-color:#fecaca;">Your Listing Is Losing You an Estimated</h2>
 
    <div class="stat-block">
-    <div class="doc-stat" style="color:#dc2626; font-size:56px;">$4,500</div>
+    <div class="doc-stat" style="color:#dc2626; font-size:56px;">$12,500</div>
     <div style="font-size:16px; color:#dc2626; margin-top:4px; font-weight:500;">estimated per month in missed customers</div>
    </div>
 
    <p class="doc-body">That is not a guess. Based on your current search visibility, review velocity, profile completeness, and category competition data, your listing is underperforming relative to the top 3 competitors in your area. The customers who should be finding you, people actively searching for a electrician near Suite 2, Level 12/338 Pitt St, Sydney NSW 2000, Australia, are finding your competitors instead.</p>
 
-   <p class="doc-body"><span class="highlight">Every week that passes without addressing these issues, an estimated $4,500 divided by four walks straight to businesses that have optimized their Google presence.</span> Over a 6-month period, that compounds to an estimated $4,500 times six in revenue that could have gone to your business.</p>
+   <p class="doc-body"><span class="highlight">Every week that passes without addressing these issues, an estimated $12,500 divided by four walks straight to businesses that have optimized their Google presence.</span> Over a 6-month period, that compounds to an estimated $12,500 times six in revenue that could have gone to your business.</p>
 
    <p class="doc-body">The good news: <strong>every issue I found is fixable</strong>. The problems are specific, measurable, and solvable. Below is exactly what is going wrong, what it is costing you, and what needs to happen to fix it.</p>
 
@@ -993,11 +1039,11 @@
      <div class="doc-label" style="margin-top:4px;">Issues Found</div>
     </div>
     <div class="stat-item">
-     <div class="doc-stat" style="color:#d97706;">32/100</div>
+     <div class="doc-stat" style="color:#d97706;">28/100</div>
      <div class="doc-label" style="margin-top:4px;">Visibility Score</div>
     </div>
     <div class="stat-item">
-     <div class="doc-stat" style="color:#dc2626;">$4,500</div>
+     <div class="doc-stat" style="color:#dc2626;">$12,500</div>
      <div class="doc-label" style="margin-top:4px;">Est. Monthly Revenue Leak</div>
     </div>
    </div>
@@ -1015,12 +1061,12 @@
    <h2 class="doc-title">Overall Visibility Assessment</h2>
 
    <div class="stat-block" style="margin-bottom:40px;">
-    <div class="doc-stat" style="color:#d97706; font-size:64px;">32</div>
+    <div class="doc-stat" style="color:#d97706; font-size:64px;">28</div>
     <div style="font-size:14px; color:#6b7280; margin-top:4px;">out of 100 — Needs Work</div>
     <div style="font-size:13px; color:#6b7280; margin-top:2px;">Benchmark: top performers in your category typically score <strong style="color:#111827;">82+</strong></div>
    </div>
 
-   <p class="doc-body">Fox Electricians Pty Ltd currently has a critical visibility gap in Sydney due to an incomplete profile and zero social proof. Addressing these foundational issues will generate an estimated $4,500 in additional monthly revenue, starting with the immediate acquisition of customer reviews to build trust.</p>
+   <p class="doc-body">Fox Electricians Pty Ltd is currently invisible to the majority of Sydney searchers due to a critical lack of profile content and social proof. We estimate these gaps result in a monthly revenue loss of $12,500, which can be mitigated by immediately populating the business description and implementing a review acquisition system.</p>
 
    <p class="doc-body">Based on everything I have found in this audit, your listing has significant untapped potential. The core issues center around profile completeness, review strategy, and content optimization, all areas where targeted improvements typically produce measurable results within 14 to 28 days.</p>
 
@@ -1100,7 +1146,7 @@
      </tr>
      <tr>
       <td>Mobile Speed Score<br><span style="font-weight:400; font-size:12px; color:#6b7280;">How fast your website loads on phones; Google penalizes slow sites</span></td>
-      <td><strong>92</strong> out of 100</td>
+      <td><strong>94</strong> out of 100</td>
       <td><span class="badge badge-amber">Slow</span></td>
      </tr>
      <tr>
@@ -1159,14 +1205,14 @@
      <tr>
       <td style="text-align:center;"><span class="dot dot-amber"></span></td>
       <td><strong>Mobile Speed Score</strong></td>
-      <td>92 out of 100</td>
+      <td>94 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">Above 90 is fast; below 50 is slow</td>
       <td><span class="badge badge-amber">Medium</span></td>
      </tr>
      <tr>
       <td style="text-align:center;"><span class="dot dot-red"></span></td>
       <td><strong>Local Visibility</strong></td>
-      <td>32 out of 100</td>
+      <td>28 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">How likely you appear in Google Maps results</td>
       <td><span class="badge badge-rose">High</span></td>
      </tr>
@@ -1228,7 +1274,7 @@
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-warn">&#9888;</span>
-     <span><strong>Mobile Speed</strong> scored 92 out of 100 on Google's speed test</span>
+     <span><strong>Mobile Speed</strong> scored 94 out of 100 on Google's speed test</span>
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-fail">&#10007;</span>
@@ -1260,13 +1306,13 @@
    <div class="finding">
   <div class="finding-header">
     <div class="finding-num">1</div>
-    <div class="finding-title">Zero customer reviews preventing conversion and trust</div>
+    <div class="finding-title">Zero customer reviews preventing trust and ranking</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The business lacks an automated system to request and manage feedback from past electrical clients.</p>
+      <p>The business lacks an automated system to request feedback from clients after electrical service calls are completed.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1274,32 +1320,32 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Implement a direct review acquisition campaign by contacting the last 20 clients via SMS to secure at least 5 initial five-star ratings. We will also set up a QR code on technician invoices to facilitate immediate on-site feedback collection.</p>
+      <p>We will implement a direct SMS and email follow-up sequence for every completed job to secure the first 10 verified five-star ratings. This includes creating a custom QR code for technicians to present on-site immediately after service is rendered.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Potential customers will skip over your listing in favor of competitors who have visible ratings and social proof.</p>
+      <p>Sydney homeowners will choose competitors with established reputations over a profile that shows no history of successful work.</p>
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$2,500/mo</div>
+    <div class="impact-amount">$8,000/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (high confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The listing will display a visible star rating and recent text reviews, making it eligible for the Google Map Pack top three.</p>
+    <p>The profile will display a verified rating badge that triggers the Google 'Local Pack' trust signals.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">2</div>
-    <div class="finding-title">Missing business description reduces search keyword relevance</div>
+    <div class="finding-title">Missing business description reduces keyword relevance</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The profile was initialized without the mandatory 750-character business summary required for local indexing.</p>
+      <p>The profile was initialized without the mandatory 750-character narrative required for Google's indexing algorithm.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1307,32 +1353,32 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Write a 740-character business description that incorporates high-intent keywords such as 'emergency electrician', 'switchboard upgrades', and 'commercial wiring' specifically for the Sydney CBD area. This text will clearly state your location at 338 Pitt St to reinforce local relevance.</p>
+      <p>We will author a 740-character business description that incorporates the primary category of electrician alongside specific Sydney service areas. The text will highlight emergency repairs, rewiring, and lighting installations to capture local search intent.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Google cannot categorize your specific services, which prevents your business from appearing for 'electrician near me' searches.</p>
+      <p>Google cannot categorize the specific electrical services offered, leading to poor visibility for high-intent search terms.</p>
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$1,200/mo</div>
+    <div class="impact-amount">$3,000/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (high confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The listing will feature a complete, professional summary that helps Google match your profile to specific electrical service queries.</p>
+    <p>The listing will appear in searches for specific electrical sub-services rather than just general brand name queries.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">3</div>
-    <div class="finding-title">Lack of visual content decreases user engagement</div>
+    <div class="finding-title">Complete lack of visual content reduces click-through rates</div>
     <span class="severity medium">MEDIUM IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>No project photography or team images have been uploaded to the Google Business Profile gallery.</p>
+      <p>No visual assets have been uploaded to the Google Business Profile to verify the physical location or work quality.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1340,20 +1386,20 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Upload 15 high-resolution images including the exterior of the Pitt St office, branded service vehicles, and completed electrical panels. Each image will be geotagged to Sydney to further signal your service area to Google's algorithm.</p>
+      <p>We will upload 15 high-resolution images including the office at 338 Pitt St, branded service vehicles, and completed electrical panels. Each photo will be geotagged to Sydney coordinates to reinforce local authority.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Profiles without photos receive significantly fewer clicks and phone calls than those showcasing real work.</p>
+      <p>Profiles without photos receive significantly fewer requests for directions and phone calls compared to those with active galleries.</p>
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$800/mo</div>
+    <div class="impact-amount">$1,500/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (medium confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The listing will present a professional visual gallery that proves your team is active and legitimate in the local market.</p>
+    <p>The listing will feature a professional visual gallery that validates the business as a legitimate local operation.</p>
   </div>
 </div>
   </div>
@@ -1370,7 +1416,7 @@
    <h2 class="doc-title">The Prescription</h2>
 
    <div class="stat-block" style="margin-bottom:40px;">
-    <div class="doc-stat" style="color:#dc2626;">$4,500/mo</div>
+    <div class="doc-stat" style="color:#dc2626;">$12,500/mo</div>
     <div style="font-size:14px; color:#6b7280; margin-top:4px;">estimated revenue leak identified in this audit</div>
     <div style="font-size:14px; color:#6b7280; margin-top:2px;">Every finding above has a specific fix. Here is the plan.</div>
    </div>
@@ -1424,7 +1470,7 @@
    <div style="background:#ecfdf5; border: 1px solid #a7f3d0; padding:24px; margin-top:32px; text-align:center;">
     <div class="doc-label" style="color:#059669;">Estimated Return on Investment</div>
     <p style="font-size:15px; color:#374151; line-height:1.8; margin-top:8px;">
-     <strong style="color:#111827;">$287</strong> one-time investment against an estimated <strong style="color:#111827;">$4,500/month</strong> in recovered revenue. Based on industry benchmarks, this optimization typically pays for itself within the first few weeks of improved visibility.
+     <strong style="color:#111827;">$287</strong> one-time investment against an estimated <strong style="color:#111827;">$12,500/month</strong> in recovered revenue. Based on industry benchmarks, this optimization typically pays for itself within the first few weeks of improved visibility.
     </p>
    </div>
   </div>
@@ -1509,11 +1555,11 @@
    <div class="compare-grid">
     <div class="compare-col compare-negative">
      <h3>Option A: Do Nothing</h3>
-     <p>Your listing continues running exactly as it is. The 3 issues identified in this audit remain unresolved. Based on the data, that means an estimated <strong>$4,500/month</strong> continues going to competitors who have optimized their profiles. Over 6 months, that compounds significantly.</p>
+     <p>Your listing continues running exactly as it is. The 3 issues identified in this audit remain unresolved. Based on the data, that means an estimated <strong>$12,500/month</strong> continues going to competitors who have optimized their profiles. Over 6 months, that compounds significantly.</p>
     </div>
     <div class="compare-col compare-positive">
      <h3>Option B: Invest $287 Today</h3>
-     <p>I implement every fix identified in this audit. Your profile gets optimized from top to bottom. You get a review system, a content calendar, and a 90-day action plan. If the optimization recovers even a fraction of that estimated <strong>$4,500/month</strong>, the investment pays for itself in the first week.</p>
+     <p>I implement every fix identified in this audit. Your profile gets optimized from top to bottom. You get a review system, a content calendar, and a 90-day action plan. If the optimization recovers even a fraction of that estimated <strong>$12,500/month</strong>, the investment pays for itself in the first week.</p>
     </div>
    </div>
 
@@ -1561,7 +1607,7 @@
     </div>
    </div>
 
-   <p class="doc-body">The estimated revenue figure (<strong>$4,500/month</strong>) is calculated using a model that factors in your category's average customer value, how often your listing appears in search compared to competitors, and the difference in how many searchers contact an optimized business versus one that has not been optimized. This is a conservative estimate based on industry benchmarks; actual results may vary.</p>
+   <p class="doc-body">The estimated revenue figure (<strong>$12,500/month</strong>) is calculated using a model that factors in your category's average customer value, how often your listing appears in search compared to competitors, and the difference in how many searchers contact an optimized business versus one that has not been optimized. This is a conservative estimate based on industry benchmarks; actual results may vary.</p>
 
    <p class="doc-body">Your audit ID (731E7DDC) is a unique identifier tied to this specific analysis. Every finding, score, and recommendation in this report is timestamped and reproducible. If you want to verify any data point, I am happy to walk you through the methodology in detail.</p>
   </div>
@@ -1617,7 +1663,7 @@
    <div class="doc-label">Next Step</div>
    <h2 class="doc-title">Here Is What I Recommend You Do</h2>
 
-   <p class="doc-body">You have read the data. You have seen the 3 issues, the estimated <strong>$4,500/month</strong> revenue leak, the gap between where your listing is and where it should be. Every week that passes without addressing these issues is another week that revenue walks out the door.</p>
+   <p class="doc-body">You have read the data. You have seen the 3 issues, the estimated <strong>$12,500/month</strong> revenue leak, the gap between where your listing is and where it should be. Every week that passes without addressing these issues is another week that revenue walks out the door.</p>
 
    <p class="doc-body"><span class="highlight">The audit is done. The diagnosis is clear. The only question left is whether you want to fix it.</span></p>
 
@@ -1635,7 +1681,7 @@
    <div class="doc-label" style="color:rgba(255,255,255,0.35); margin-bottom:20px;">Complete Google Business Profile Optimization</div>
    <div class="cta-price">$287</div>
    <div class="cta-note">One-time investment. No subscription. No contract.</div>
-   <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJvwcwb0KuEmsRXqmb58Q-_8o?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
+   <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
    <div class="cta-subtext">Secure checkout via Stripe &#183; 48-hour revision window &#183; Implementation begins same day</div>
   </div>
  </section>
@@ -1649,7 +1695,7 @@
   <div class="section-inner">
    <div class="ps-block">
     <strong>P.S.</strong>
-    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$4,500/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJvwcwb0KuEmsRXqmb58Q-_8o?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
+    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$12,500/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
    </div>
 
    <p style="text-align:center; font-style:italic; color:#6b7280; font-size:15px; line-height:1.8; margin-top:32px;">
@@ -1657,7 +1703,7 @@
    </p>
 
    <p style="text-align:center; margin-top:24px;">
-    <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJvwcwb0KuEmsRXqmb58Q-_8o?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
+    <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
    </p>
 
    <div style="margin-top:56px; padding:32px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; text-align:center;">
@@ -1682,7 +1728,8 @@
  <div class="footer-inner">
   <div class="footer-brand">Flo Marketing System</div>
   <div class="footer-contact">
-   &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
+   &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC
+   &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
   </div>
   <div class="footer-legal">
    This report is confidential and prepared exclusively for Fox Electricians Pty Ltd. Audit ID: 731E7DDC.<br>
@@ -1951,42 +1998,8 @@
 </script>
 
 
-<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJvwcwb0KuEmsRXqmb58Q-_8o" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0" loading="lazy">
-
-<div id="exit-intent-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:99999;align-items:center;justify-content:center;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
- <div style="background:#fff;max-width:420px;width:100%;border-radius:16px;padding:32px;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-  <button onclick="document.getElementById('exit-intent-popup').style.display='none';document.body.style.overflow='';" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:26px;color:#999;cursor:pointer;line-height:1;">&times;</button>
-  <div style="font-size:14px;font-weight:700;letter-spacing:1.2px;color:#c62828;text-transform:uppercase;margin-bottom:10px;">Before you go</div>
-  <h3 style="font-size:22px;font-weight:800;color:#111;margin:0 0 12px;line-height:1.3;">Not ready for the $287 implementation?</h3>
-  <p style="color:#374151;font-size:15px;line-height:1.6;margin:0 0 20px;">No pressure. Reply to the email I sent with any one question about your Google listing and I will answer personally within 2 hours. Free.</p>
-  <p style="color:#6b7280;font-size:14px;margin:0 0 18px;">Or come back when the timing is better. The audit stays live for 7 days.</p>
-  <a href="mailto:florendo.ethan@gmail.com?subject=One%20question%20about%20my%20Google%20listing" style="display:inline-block;background:#111;color:#fff;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;">Ask me one question, free →</a>
- </div>
-</div>
-<script>
-(function(){
- var shown = false;
- var popup = document.getElementById('exit-intent-popup');
- if (!popup) return;
- document.addEventListener('mouseout', function(e) {
-  if (shown) return;
-  if (e.clientY < 10 && e.relatedTarget === null) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- });
- // Mobile fallback: show after 45s if they haven't scrolled much
- setTimeout(function() {
-  if (shown) return;
-  if (window.scrollY < 300 && window.innerHeight < 900) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- }, 45000);
-})();
-</script>
+<!-- Page-open tracking pixel (logs audit-view engagement) -->
+<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJvwcwb0KuEmsRXqmb58Q-_8o" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0;" loading="lazy">
 
 </body>
 </html>
