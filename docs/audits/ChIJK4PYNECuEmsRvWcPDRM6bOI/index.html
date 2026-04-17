@@ -878,10 +878,17 @@
 
 </head>
 <body>
+
+<!-- Urgency banner + recent signups rotating ticker (fetches /audits/stats.json) -->
 <div id="urgency-banner" style="background:linear-gradient(90deg,#ff6b35,#c62828);color:#fff;padding:11px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-weight:600;line-height:1.4;">
  <span id="urgency-text">🔥 Launch week: first 10 customers get 30 days of monthly maintenance FREE. Only <strong id="slots-left">10</strong> spots left.</span>
  &nbsp;·&nbsp;
- <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJK4PYNECuEmsRvWcPDRM6bOI?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+ <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+</div>
+<div id="recent-ticker" style="background:#f9fafb;color:#374151;padding:6px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;border-bottom:1px solid #e5e7eb;min-height:20px;display:none;"></div>
+<!-- Audit expiry countdown -->
+<div id="audit-expiry" style="background:#fff7ed;color:#9a3412;padding:7px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:600;border-bottom:1px solid #fed7aa;display:none;">
+ ⏱ This audit was generated on April 16, 2026. Launch-week pricing expires in <strong id="expiry-countdown">7 days</strong>.
 </div>
 <script>
 (function(){
@@ -895,11 +902,50 @@
    if (txt && audits > 50) {
     txt.innerHTML = "🔥 " + audits + " audits delivered this week \u00b7 Only <strong id=\"slots-left\">" + slots + "</strong> launch-week free-maintenance slots left.";
    }
+   // Rotating recent signups ticker
+   var recent = s.recent_audits || [];
+   if (recent.length > 0) {
+    var ticker = document.getElementById("recent-ticker");
+    if (ticker) {
+     ticker.style.display = "block";
+     var i = 0;
+     var render = function() {
+      var r = recent[i % recent.length];
+      ticker.innerHTML = "✓ Just sent an audit to <strong>" + r.name + "</strong>" + (r.country ? " (" + r.country + ")" : "") + " \u00b7 " + recent.length + " businesses got theirs in the last hour";
+      i++;
+     };
+     render();
+     setInterval(render, 4500);
+    }
+   }
   }).catch(function(){});
+ } catch(e){}
+ // Audit expiry countdown: 7 days from April 16, 2026
+ try {
+  var auditBanner = document.getElementById("audit-expiry");
+  var generated = new Date("April 16, 2026");
+  if (!isNaN(generated.getTime())) {
+   var expiry = new Date(generated.getTime() + 7*24*60*60*1000);
+   var update = function() {
+    var now = new Date();
+    var diffMs = expiry - now;
+    if (diffMs > 0) {
+     var days = Math.floor(diffMs / (24*60*60*1000));
+     var hours = Math.floor((diffMs % (24*60*60*1000)) / (60*60*1000));
+     var lbl = days > 0 ? days + " day" + (days!==1?"s":"") + ", " + hours + "h" : hours + " hours";
+     var el = document.getElementById("expiry-countdown");
+     if (el) el.textContent = lbl;
+     auditBanner.style.display = "block";
+    } else {
+     auditBanner.style.display = "none";
+    }
+   };
+   update();
+   setInterval(update, 60000);
+  }
  } catch(e){}
 })();
 </script>
-
 
 
 <!-- ══════════════════════════════════════════════════════
@@ -993,7 +1039,7 @@
      <div class="doc-label" style="margin-top:4px;">Issues Found</div>
     </div>
     <div class="stat-item">
-     <div class="doc-stat" style="color:#d97706;">18/100</div>
+     <div class="doc-stat" style="color:#d97706;">32/100</div>
      <div class="doc-label" style="margin-top:4px;">Visibility Score</div>
     </div>
     <div class="stat-item">
@@ -1015,12 +1061,12 @@
    <h2 class="doc-title">Overall Visibility Assessment</h2>
 
    <div class="stat-block" style="margin-bottom:40px;">
-    <div class="doc-stat" style="color:#d97706; font-size:64px;">18</div>
+    <div class="doc-stat" style="color:#d97706; font-size:64px;">32</div>
     <div style="font-size:14px; color:#6b7280; margin-top:4px;">out of 100 — Needs Work</div>
     <div style="font-size:13px; color:#6b7280; margin-top:2px;">Benchmark: top performers in your category typically score <strong style="color:#111827;">82+</strong></div>
    </div>
 
-   <p class="doc-body">Pitt Street Dental Centre in Sydney currently has a critical visibility score due to a completely unoptimized profile that lacks basic information and visual proof. Addressing these gaps will result in an estimated $12,500 in additional monthly revenue, with the immediate priority being the creation of a professional business description and photo gallery.</p>
+   <p class="doc-body">Pitt Street Dental Centre in Sydney currently holds a critical health score due to a complete lack of profile optimization despite a strong 4.9 rating. We estimate an immediate monthly revenue impact of $12,500 by addressing the missing content, with the most impactful fix being the immediate addition of high-quality visual assets and a keyword-optimized description.</p>
 
    <p class="doc-body">Based on everything I have found in this audit, your listing has significant untapped potential. The core issues center around profile completeness, review strategy, and content optimization, all areas where targeted improvements typically produce measurable results within 14 to 28 days.</p>
 
@@ -1100,7 +1146,7 @@
      </tr>
      <tr>
       <td>Mobile Speed Score<br><span style="font-weight:400; font-size:12px; color:#6b7280;">How fast your website loads on phones; Google penalizes slow sites</span></td>
-      <td><strong>28</strong> out of 100</td>
+      <td><strong>26</strong> out of 100</td>
       <td><span class="badge badge-amber">Slow</span></td>
      </tr>
      <tr>
@@ -1159,14 +1205,14 @@
      <tr>
       <td style="text-align:center;"><span class="dot dot-amber"></span></td>
       <td><strong>Mobile Speed Score</strong></td>
-      <td>28 out of 100</td>
+      <td>26 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">Above 90 is fast; below 50 is slow</td>
       <td><span class="badge badge-amber">Medium</span></td>
      </tr>
      <tr>
       <td style="text-align:center;"><span class="dot dot-red"></span></td>
       <td><strong>Local Visibility</strong></td>
-      <td>18 out of 100</td>
+      <td>32 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">How likely you appear in Google Maps results</td>
       <td><span class="badge badge-rose">High</span></td>
      </tr>
@@ -1228,7 +1274,7 @@
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-warn">&#9888;</span>
-     <span><strong>Mobile Speed</strong> scored 28 out of 100 on Google's speed test</span>
+     <span><strong>Mobile Speed</strong> scored 26 out of 100 on Google's speed test</span>
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-fail">&#10007;</span>
@@ -1260,25 +1306,25 @@
    <div class="finding">
   <div class="finding-header">
     <div class="finding-num">1</div>
-    <div class="finding-title">Missing business description prevents search engine indexing</div>
+    <div class="finding-title">Zero photos on profile prevents patient trust and conversions</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The profile lacks any descriptive text, leaving the Google algorithm with no context regarding specific dental services or patient benefits.</p>
+      <p>The profile lacks any visual representation of the clinic, staff, or facilities which is the primary driver for local clicks.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>0 chars</code></p>
+      <p><code>0 photos on GBP</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>I will draft a 740-character business description that incorporates high-intent keywords such as 'Sydney CBD dentist', 'cosmetic dentistry', and 'dental checkups' while highlighting the Level 2 Pitt Street location. This text will be formatted to prioritize the most important services in the first 200 characters for maximum visibility.</p>
+      <p>We will upload 20 high-resolution images including the Level 2/70 Pitt St entrance, the dental surgeries, and professional headshots of the practitioners. Each image will be geotagged to Sydney to strengthen local relevance.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Potential patients cannot find your clinic when searching for specific treatments because your profile contains no relevant keywords.</p>
+      <p>Sydney patients choose dentists based on the cleanliness and professionalism of the office, and a blank profile suggests the business is inactive or unreliable.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1287,31 +1333,31 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The listing will display a comprehensive summary that helps Google rank the clinic for a wider variety of local search terms.</p>
+    <p>The listing will feature a vibrant gallery that showcases the actual clinical environment and builds immediate rapport with prospective patients.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">2</div>
-    <div class="finding-title">Zero profile photos significantly reduce user trust and clicks</div>
+    <div class="finding-title">Missing business description eliminates search visibility for key services</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>No visual assets have been uploaded to the listing, which makes the business appear inactive or untrustworthy to mobile searchers.</p>
+      <p>The description field is currently empty, meaning Google has no text-based context to rank the business for specific dental procedures.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>0 photos</code></p>
+      <p><code>0 chars in GBP description</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>I will upload 20 high-resolution images including the exterior of 70 Pitt St, the Level 2 clinical suites, and professional headshots of the dental team. Each image will be geotagged to Sydney to reinforce local relevance and categorized into 'Interior', 'Exterior', and 'Team' sections.</p>
+      <p>We will draft a 740-character business description that incorporates the primary category of dentist along with specific Sydney-based service keywords. This text will highlight the Level 2 Pitt Street location and the 4.9-star patient satisfaction record.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Profiles without photos receive significantly fewer requests for directions and phone calls compared to those with interior and staff images.</p>
+      <p>You are missing out on appearing for high-intent searches like cosmetic dentistry or teeth whitening because those terms do not exist on your profile.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1320,31 +1366,31 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>Your listing will feature a vibrant gallery that showcases the professional environment of the clinic and encourages patients to book appointments.</p>
+    <p>Your profile will display a comprehensive summary that informs patients of your expertise while improving your rank for local service-specific searches.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">3</div>
-    <div class="finding-title">Poor mobile page speed increases visitor bounce rates</div>
+    <div class="finding-title">Critical mobile speed issues causing high website bounce rates</div>
     <span class="severity medium">MEDIUM IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The website linked to the profile has technical performance issues that slow down loading times on mobile devices.</p>
+      <p>The website at pittstdentalcentre.com.au has significant technical overhead that prevents it from loading quickly on mobile devices.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>28 mobile score</code></p>
+      <p><code>PageSpeed mobile score: 26</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>I will optimize the website by compressing all images, enabling browser caching, and removing unused JavaScript to move the mobile score from 28 toward the green zone. This technical cleanup focuses on the mobile experience where most local searches occur.</p>
+      <p>We will compress all image assets on the homepage and minify the CSS and JavaScript files to reduce server response times. We will also implement browser caching to ensure the site loads in under three seconds for returning visitors.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Patients clicking through from your profile are likely to leave the site before it loads, resulting in lost appointment bookings.</p>
+      <p>Patients searching on their phones in Sydney will abandon the site if it takes more than a few seconds to load, wasting your profile traffic.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1353,7 +1399,7 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The website will load in under three seconds on mobile devices, ensuring patients stay on the page to complete a booking.</p>
+    <p>The mobile experience will be fast and responsive, ensuring that patients who click your website link actually stay to book an appointment.</p>
   </div>
 </div>
   </div>
@@ -1635,7 +1681,7 @@
    <div class="doc-label" style="color:rgba(255,255,255,0.35); margin-bottom:20px;">Complete Google Business Profile Optimization</div>
    <div class="cta-price">$287</div>
    <div class="cta-note">One-time investment. No subscription. No contract.</div>
-   <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJK4PYNECuEmsRvWcPDRM6bOI?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
+   <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
    <div class="cta-subtext">Secure checkout via Stripe &#183; 48-hour revision window &#183; Implementation begins same day</div>
   </div>
  </section>
@@ -1649,7 +1695,7 @@
   <div class="section-inner">
    <div class="ps-block">
     <strong>P.S.</strong>
-    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$12,500/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJK4PYNECuEmsRvWcPDRM6bOI?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
+    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$12,500/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
    </div>
 
    <p style="text-align:center; font-style:italic; color:#6b7280; font-size:15px; line-height:1.8; margin-top:32px;">
@@ -1657,7 +1703,7 @@
    </p>
 
    <p style="text-align:center; margin-top:24px;">
-    <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJK4PYNECuEmsRvWcPDRM6bOI?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
+    <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
    </p>
 
    <div style="margin-top:56px; padding:32px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; text-align:center;">
@@ -1682,7 +1728,8 @@
  <div class="footer-inner">
   <div class="footer-brand">Flo Marketing System</div>
   <div class="footer-contact">
-   &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
+   &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC
+   &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
   </div>
   <div class="footer-legal">
    This report is confidential and prepared exclusively for Pitt Street Dental Centre. Audit ID: B36EE557.<br>
@@ -1951,42 +1998,8 @@
 </script>
 
 
-<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJK4PYNECuEmsRvWcPDRM6bOI" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0" loading="lazy">
-
-<div id="exit-intent-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:99999;align-items:center;justify-content:center;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
- <div style="background:#fff;max-width:420px;width:100%;border-radius:16px;padding:32px;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-  <button onclick="document.getElementById('exit-intent-popup').style.display='none';document.body.style.overflow='';" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:26px;color:#999;cursor:pointer;line-height:1;">&times;</button>
-  <div style="font-size:14px;font-weight:700;letter-spacing:1.2px;color:#c62828;text-transform:uppercase;margin-bottom:10px;">Before you go</div>
-  <h3 style="font-size:22px;font-weight:800;color:#111;margin:0 0 12px;line-height:1.3;">Not ready for the $287 implementation?</h3>
-  <p style="color:#374151;font-size:15px;line-height:1.6;margin:0 0 20px;">No pressure. Reply to the email I sent with any one question about your Google listing and I will answer personally within 2 hours. Free.</p>
-  <p style="color:#6b7280;font-size:14px;margin:0 0 18px;">Or come back when the timing is better. The audit stays live for 7 days.</p>
-  <a href="mailto:florendo.ethan@gmail.com?subject=One%20question%20about%20my%20Google%20listing" style="display:inline-block;background:#111;color:#fff;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;">Ask me one question, free →</a>
- </div>
-</div>
-<script>
-(function(){
- var shown = false;
- var popup = document.getElementById('exit-intent-popup');
- if (!popup) return;
- document.addEventListener('mouseout', function(e) {
-  if (shown) return;
-  if (e.clientY < 10 && e.relatedTarget === null) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- });
- // Mobile fallback: show after 45s if they haven't scrolled much
- setTimeout(function() {
-  if (shown) return;
-  if (window.scrollY < 300 && window.innerHeight < 900) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- }, 45000);
-})();
-</script>
+<!-- Page-open tracking pixel (logs audit-view engagement) -->
+<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJK4PYNECuEmsRvWcPDRM6bOI" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0;" loading="lazy">
 
 </body>
 </html>

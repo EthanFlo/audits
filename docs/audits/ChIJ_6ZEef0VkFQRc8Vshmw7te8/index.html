@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Google Visibility Audit — Spa Dental Sydney CBD">
-<meta property="og:description" content="Confidential audit report for Spa Dental Sydney CBD. 3 issues found, estimated $14,500/mo revenue leak identified, with a specific optimization plan.">
+<meta property="og:title" content="Google Visibility Audit — Pretty Books">
+<meta property="og:description" content="Confidential audit report for Pretty Books. 3 issues found, estimated $2,400/mo revenue leak identified, with a specific optimization plan.">
 <meta property="og:type" content="article">
-<title>Google Visibility Audit, Spa Dental Sydney CBD</title>
+<title>Google Visibility Audit, Pretty Books</title>
 <link rel="preconnect" href="https://checkout.stripe.com">
 <style>
  /* ═══════════════════════════════════════════════════
@@ -879,74 +879,6 @@
 </head>
 <body>
 
-<!-- Urgency banner + recent signups rotating ticker (fetches /audits/stats.json) -->
-<div id="urgency-banner" style="background:linear-gradient(90deg,#ff6b35,#c62828);color:#fff;padding:11px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-weight:600;line-height:1.4;">
- <span id="urgency-text">🔥 Launch week: first 10 customers get 30 days of monthly maintenance FREE. Only <strong id="slots-left">10</strong> spots left.</span>
- &nbsp;·&nbsp;
- <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
-</div>
-<div id="recent-ticker" style="background:#f9fafb;color:#374151;padding:6px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;border-bottom:1px solid #e5e7eb;min-height:20px;display:none;"></div>
-<!-- Audit expiry countdown -->
-<div id="audit-expiry" style="background:#fff7ed;color:#9a3412;padding:7px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:600;border-bottom:1px solid #fed7aa;display:none;">
- ⏱ This audit was generated on April 16, 2026. Launch-week pricing expires in <strong id="expiry-countdown">7 days</strong>.
-</div>
-<script>
-(function(){
- try {
-  fetch("/audits/stats.json", {cache:"no-store"}).then(r=>r.json()).then(s=>{
-   var slots = (typeof s.launch_free_remaining === "number") ? s.launch_free_remaining : 10;
-   var audits = s.audits_delivered || 0;
-   var el = document.getElementById("slots-left");
-   if (el) el.textContent = slots;
-   var txt = document.getElementById("urgency-text");
-   if (txt && audits > 50) {
-    txt.innerHTML = "🔥 " + audits + " audits delivered this week \u00b7 Only <strong id=\"slots-left\">" + slots + "</strong> launch-week free-maintenance slots left.";
-   }
-   // Rotating recent signups ticker
-   var recent = s.recent_audits || [];
-   if (recent.length > 0) {
-    var ticker = document.getElementById("recent-ticker");
-    if (ticker) {
-     ticker.style.display = "block";
-     var i = 0;
-     var render = function() {
-      var r = recent[i % recent.length];
-      ticker.innerHTML = "✓ Just sent an audit to <strong>" + r.name + "</strong>" + (r.country ? " (" + r.country + ")" : "") + " \u00b7 " + recent.length + " businesses got theirs in the last hour";
-      i++;
-     };
-     render();
-     setInterval(render, 4500);
-    }
-   }
-  }).catch(function(){});
- } catch(e){}
- // Audit expiry countdown: 7 days from April 16, 2026
- try {
-  var auditBanner = document.getElementById("audit-expiry");
-  var generated = new Date("April 16, 2026");
-  if (!isNaN(generated.getTime())) {
-   var expiry = new Date(generated.getTime() + 7*24*60*60*1000);
-   var update = function() {
-    var now = new Date();
-    var diffMs = expiry - now;
-    if (diffMs > 0) {
-     var days = Math.floor(diffMs / (24*60*60*1000));
-     var hours = Math.floor((diffMs % (24*60*60*1000)) / (60*60*1000));
-     var lbl = days > 0 ? days + " day" + (days!==1?"s":"") + ", " + hours + "h" : hours + " hours";
-     var el = document.getElementById("expiry-countdown");
-     if (el) el.textContent = lbl;
-     auditBanner.style.display = "block";
-    } else {
-     auditBanner.style.display = "none";
-    }
-   };
-   update();
-   setInterval(update, 60000);
-  }
- } catch(e){}
-})();
-</script>
-
 
 <!-- ══════════════════════════════════════════════════════
  HEADER
@@ -959,8 +891,8 @@
 
   <div class="header-doc-type">Google Business Profile Audit</div>
   <h1 class="header-title">Visibility Audit Report</h1>
-  <div class="header-business">Spa Dental Sydney CBD</div>
-  <div class="header-address">Suite 2 Level 4/64 Castlereagh St, Sydney NSW 2000, Australia</div>
+  <div class="header-business">Pretty Books</div>
+  <div class="header-address">1204 Minor Ave, Seattle, WA 98101, USA</div>
 
   <div class="header-meta">
    <div class="header-meta-item">
@@ -969,7 +901,7 @@
    </div>
    <div class="header-meta-item">
     <div class="doc-label">Audit ID</div>
-    <div class="header-meta-value">32697D0C</div>
+    <div class="header-meta-value">8B7DE369</div>
    </div>
    <div class="header-meta-item">
     <div class="doc-label">Prepared By</div>
@@ -977,11 +909,11 @@
    </div>
    <div class="header-meta-item">
     <div class="doc-label">Place ID</div>
-    <div class="header-meta-value" style="font-size:11px; word-break:break-all;">ChIJp1FAAUCuEmsRMGAm1vwmxQo</div>
+    <div class="header-meta-value" style="font-size:11px; word-break:break-all;">ChIJ_6ZEef0VkFQRc8Vshmw7te8</div>
    </div>
   </div>
 
-  <div class="header-confidential">Confidential Report &#183; Prepared for Spa Dental Sydney CBD</div>
+  <div class="header-confidential">Confidential Report &#183; Prepared for Pretty Books</div>
 
  </div>
 </header>
@@ -1023,13 +955,13 @@
    <h2 class="doc-title" style="border-bottom-color:#fecaca;">Your Listing Is Losing You an Estimated</h2>
 
    <div class="stat-block">
-    <div class="doc-stat" style="color:#dc2626; font-size:56px;">$14,500</div>
+    <div class="doc-stat" style="color:#dc2626; font-size:56px;">$2,400</div>
     <div style="font-size:16px; color:#dc2626; margin-top:4px; font-weight:500;">estimated per month in missed customers</div>
    </div>
 
-   <p class="doc-body">That is not a guess. Based on your current search visibility, review velocity, profile completeness, and category competition data, your listing is underperforming relative to the top 3 competitors in your area. The customers who should be finding you, people actively searching for a dentist near Suite 2 Level 4/64 Castlereagh St, Sydney NSW 2000, Australia, are finding your competitors instead.</p>
+   <p class="doc-body">That is not a guess. Based on your current search visibility, review velocity, profile completeness, and category competition data, your listing is underperforming relative to the top 3 competitors in your area. The customers who should be finding you, people actively searching for a bookkeeper near 1204 Minor Ave, Seattle, WA 98101, USA, are finding your competitors instead.</p>
 
-   <p class="doc-body"><span class="highlight">Every week that passes without addressing these issues, an estimated $14,500 divided by four walks straight to businesses that have optimized their Google presence.</span> Over a 6-month period, that compounds to an estimated $14,500 times six in revenue that could have gone to your business.</p>
+   <p class="doc-body"><span class="highlight">Every week that passes without addressing these issues, an estimated $2,400 divided by four walks straight to businesses that have optimized their Google presence.</span> Over a 6-month period, that compounds to an estimated $2,400 times six in revenue that could have gone to your business.</p>
 
    <p class="doc-body">The good news: <strong>every issue I found is fixable</strong>. The problems are specific, measurable, and solvable. Below is exactly what is going wrong, what it is costing you, and what needs to happen to fix it.</p>
 
@@ -1039,11 +971,11 @@
      <div class="doc-label" style="margin-top:4px;">Issues Found</div>
     </div>
     <div class="stat-item">
-     <div class="doc-stat" style="color:#d97706;">18/100</div>
+     <div class="doc-stat" style="color:#d97706;">28/100</div>
      <div class="doc-label" style="margin-top:4px;">Visibility Score</div>
     </div>
     <div class="stat-item">
-     <div class="doc-stat" style="color:#dc2626;">$14,500</div>
+     <div class="doc-stat" style="color:#dc2626;">$2,400</div>
      <div class="doc-label" style="margin-top:4px;">Est. Monthly Revenue Leak</div>
     </div>
    </div>
@@ -1061,12 +993,12 @@
    <h2 class="doc-title">Overall Visibility Assessment</h2>
 
    <div class="stat-block" style="margin-bottom:40px;">
-    <div class="doc-stat" style="color:#d97706; font-size:64px;">18</div>
+    <div class="doc-stat" style="color:#d97706; font-size:64px;">28</div>
     <div style="font-size:14px; color:#6b7280; margin-top:4px;">out of 100 — Needs Work</div>
     <div style="font-size:13px; color:#6b7280; margin-top:2px;">Benchmark: top performers in your category typically score <strong style="color:#111827;">82+</strong></div>
    </div>
 
-   <p class="doc-body">Spa Dental Sydney CBD currently has a critical visibility deficit in Sydney due to a completely unoptimized profile. The total estimated monthly revenue impact of these gaps is $14,500, and the single most impactful fix is populating the business description and photo gallery to establish basic trust.</p>
+   <p class="doc-body">Pretty Books in Seattle currently has a critical visibility deficit due to an incomplete profile and zero social proof. Addressing the missing business description and visual content will capture an estimated $2,400 in monthly revenue. The most impactful fix is the immediate implementation of a keyword-optimized business description and a review acquisition strategy.</p>
 
    <p class="doc-body">Based on everything I have found in this audit, your listing has significant untapped potential. The core issues center around profile completeness, review strategy, and content optimization, all areas where targeted improvements typically produce measurable results within 14 to 28 days.</p>
 
@@ -1111,17 +1043,17 @@
     <tbody>
      <tr>
       <td>Business Name</td>
-      <td>Spa Dental Sydney CBD</td>
+      <td>Pretty Books</td>
       <td><span class="badge badge-green">Verified</span></td>
      </tr>
      <tr>
       <td>Main Business Category<br><span style="font-weight:400; font-size:12px; color:#6b7280;">The #1 label Google uses to decide which searches show your listing</span></td>
-      <td>dentist</td>
+      <td>bookkeeper</td>
       <td><span class="badge badge-green">Set</span></td>
      </tr>
      <tr>
       <td>Address</td>
-      <td>Suite 2 Level 4/64 Castlereagh St, Sydney NSW 2000, Australia</td>
+      <td>1204 Minor Ave, Seattle, WA 98101, USA</td>
       <td><span class="badge badge-green">Accurate</span></td>
      </tr>
      <tr>
@@ -1146,12 +1078,12 @@
      </tr>
      <tr>
       <td>Mobile Speed Score<br><span style="font-weight:400; font-size:12px; color:#6b7280;">How fast your website loads on phones; Google penalizes slow sites</span></td>
-      <td><strong>33</strong> out of 100</td>
+      <td><strong>59</strong> out of 100</td>
       <td><span class="badge badge-amber">Slow</span></td>
      </tr>
      <tr>
       <td>Google Place ID</td>
-      <td style="font-size:12px; word-break:break-all;">ChIJp1FAAUCuEmsRMGAm1vwmxQo</td>
+      <td style="font-size:12px; word-break:break-all;">ChIJ_6ZEef0VkFQRc8Vshmw7te8</td>
       <td><span class="badge badge-green">Indexed</span></td>
      </tr>
     </tbody>
@@ -1168,7 +1100,7 @@
   <div class="section-inner">
    <div class="doc-label">Performance Analysis</div>
    <h2 class="doc-title">Health Scorecard</h2>
-   <p class="doc-body">Six critical ranking categories measured against top competitors in the dentist category within your geographic area.</p>
+   <p class="doc-body">Six critical ranking categories measured against top competitors in the bookkeeper category within your geographic area.</p>
 
    <table class="clean-table">
     <thead>
@@ -1205,14 +1137,14 @@
      <tr>
       <td style="text-align:center;"><span class="dot dot-amber"></span></td>
       <td><strong>Mobile Speed Score</strong></td>
-      <td>33 out of 100</td>
+      <td>59 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">Above 90 is fast; below 50 is slow</td>
       <td><span class="badge badge-amber">Medium</span></td>
      </tr>
      <tr>
       <td style="text-align:center;"><span class="dot dot-red"></span></td>
       <td><strong>Local Visibility</strong></td>
-      <td>18 out of 100</td>
+      <td>28 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">How likely you appear in Google Maps results</td>
       <td><span class="badge badge-rose">High</span></td>
      </tr>
@@ -1246,7 +1178,7 @@
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-pass">&#10003;</span>
-     <span><strong>Main Business Category</strong> correctly set to dentist</span>
+     <span><strong>Main Business Category</strong> correctly set to bookkeeper</span>
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-pass">&#10003;</span>
@@ -1274,7 +1206,7 @@
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-warn">&#9888;</span>
-     <span><strong>Mobile Speed</strong> scored 33 out of 100 on Google's speed test</span>
+     <span><strong>Mobile Speed</strong> scored 59 out of 100 on Google's speed test</span>
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-fail">&#10007;</span>
@@ -1306,46 +1238,46 @@
    <div class="finding">
   <div class="finding-header">
     <div class="finding-num">1</div>
-    <div class="finding-title">Zero photos and empty description prevent ranking and trust</div>
+    <div class="finding-title">Missing business description prevents search engine indexing</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The profile lacks the basic visual and textual content required by Google's algorithm to categorize and rank the business.</p>
+      <p>The profile lacks any text in the description field which prevents Google from categorizing the specific bookkeeping services offered.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>Photos on GBP: 0; GBP description length: 0 chars</code></p>
+      <p><code>GBP description length: 0 chars</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Upload 20 high-resolution photos including the exterior, interior, and staff headshots. Write a 740-character business description that incorporates the primary category 'dentist' and specific services like check-ups and cosmetic dentistry.</p>
+      <p>I will draft a 740-character business description that incorporates high-intent keywords such as 'Seattle small business bookkeeping', 'payroll management', and 'tax preparation support'. This text will clearly state the 1204 Minor Ave location to reinforce local relevance.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Patients will not book dental appointments with a business that has no photos of the clinic or staff to verify its legitimacy.</p>
+      <p>Potential clients searching for a bookkeeper in Seattle cannot find this business because there is no text to match their search queries.</p>
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$8,500/mo</div>
+    <div class="impact-amount">$1,200/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (high confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The listing will present a professional visual identity and provide enough text for Google to index the business for local search terms.</p>
+    <p>The listing will display a comprehensive professional summary that triggers appearances for specific financial service searches in the Seattle area.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">2</div>
-    <div class="finding-title">Lack of reviews eliminates social proof for new patients</div>
+    <div class="finding-title">Zero reviews and ratings create a trust barrier</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>There is no active system in place to request or manage feedback from patients after their appointments.</p>
+      <p>The business has not established a systematic process for requesting and managing client feedback on the Google platform.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1353,53 +1285,53 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Implement a direct review request process for every patient via SMS or email immediately following their visit to build a baseline of 10-15 reviews. Respond to every new review with personalized text to signal activity to Google.</p>
+      <p>I will generate a direct review link and implement an automated email follow-up sequence for current clients to secure the first five 5-star ratings. I will also provide templates for responding to these reviews to increase engagement signals.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>A 5-star rating is meaningless without a review count, as users prioritize businesses with a high volume of recent feedback.</p>
+      <p>Prospects will choose competitors with established ratings over a profile with no social proof or history of service quality.</p>
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$4,000/mo</div>
+    <div class="impact-amount">$800/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (high confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The profile will display a credible review count that encourages users to choose this clinic over competitors with more feedback.</p>
+    <p>The profile will show a visible star rating and active client testimonials that validate the business's 5-star quality.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">3</div>
-    <div class="finding-title">Mobile website speed is significantly below industry standards</div>
+    <div class="finding-title">Lack of visual content reduces profile engagement</div>
     <span class="severity medium">MEDIUM IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The website likely contains unoptimized images or heavy scripts that delay the loading process on mobile devices.</p>
+      <p>No interior, exterior, or team photos have been uploaded to the Google Business Profile to humanize the brand.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>PageSpeed mobile score: 33</code></p>
+      <p><code>Photos on GBP: 0</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Compress all website images, enable browser caching, and remove unused JavaScript to increase the mobile speed score to at least 80. Ensure the 'Book Now' button is visible and functional within two seconds of page load.</p>
+      <p>I will upload 10 high-resolution images including the office exterior at 1204 Minor Ave, professional team headshots, and branded graphics of the bookkeeping software used. Each image will be geo-tagged to Seattle to strengthen local search signals.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Users clicking through from the Google profile will abandon the site if it takes more than a few seconds to load on their phones.</p>
+      <p>Profiles without images receive significantly fewer requests for directions and website visits than those with a complete gallery.</p>
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$2,000/mo</div>
+    <div class="impact-amount">$400/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (medium confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The website will load quickly on mobile devices, reducing the bounce rate and increasing successful appointment bookings.</p>
+    <p>The listing will feature a professional visual gallery that increases the click-through rate to the website.</p>
   </div>
 </div>
   </div>
@@ -1416,7 +1348,7 @@
    <h2 class="doc-title">The Prescription</h2>
 
    <div class="stat-block" style="margin-bottom:40px;">
-    <div class="doc-stat" style="color:#dc2626;">$14,500/mo</div>
+    <div class="doc-stat" style="color:#dc2626;">$2,400/mo</div>
     <div style="font-size:14px; color:#6b7280; margin-top:4px;">estimated revenue leak identified in this audit</div>
     <div style="font-size:14px; color:#6b7280; margin-top:2px;">Every finding above has a specific fix. Here is the plan.</div>
    </div>
@@ -1470,7 +1402,7 @@
    <div style="background:#ecfdf5; border: 1px solid #a7f3d0; padding:24px; margin-top:32px; text-align:center;">
     <div class="doc-label" style="color:#059669;">Estimated Return on Investment</div>
     <p style="font-size:15px; color:#374151; line-height:1.8; margin-top:8px;">
-     <strong style="color:#111827;">$287</strong> one-time investment against an estimated <strong style="color:#111827;">$14,500/month</strong> in recovered revenue. Based on industry benchmarks, this optimization typically pays for itself within the first few weeks of improved visibility.
+     <strong style="color:#111827;">$287</strong> one-time investment against an estimated <strong style="color:#111827;">$2,400/month</strong> in recovered revenue. Based on industry benchmarks, this optimization typically pays for itself within the first few weeks of improved visibility.
     </p>
    </div>
   </div>
@@ -1528,7 +1460,7 @@
    <div class="doc-label">The After</div>
    <h2 class="doc-title">Imagine Your Listing in 30 Days</h2>
 
-   <p class="doc-body">Imagine checking your Google Business Profile 30 days from now. Your listing appears in the top results of the map section when someone searches for "dentist" in your area. Your profile is complete, every field filled with keyword-optimized content that tells Google exactly what you do and who you serve.</p>
+   <p class="doc-body">Imagine checking your Google Business Profile 30 days from now. Your listing appears in the top results of the map section when someone searches for "bookkeeper" in your area. Your profile is complete, every field filled with keyword-optimized content that tells Google exactly what you do and who you serve.</p>
 
    <p class="doc-body">Your review count is climbing steadily because you have a system in place -- not guesswork, not hoping customers remember, but an actual process that consistently generates new reviews. Each review gets a thoughtful, on-brand response within 24 hours. Your star rating is holding strong or improving.</p>
 
@@ -1555,11 +1487,11 @@
    <div class="compare-grid">
     <div class="compare-col compare-negative">
      <h3>Option A: Do Nothing</h3>
-     <p>Your listing continues running exactly as it is. The 3 issues identified in this audit remain unresolved. Based on the data, that means an estimated <strong>$14,500/month</strong> continues going to competitors who have optimized their profiles. Over 6 months, that compounds significantly.</p>
+     <p>Your listing continues running exactly as it is. The 3 issues identified in this audit remain unresolved. Based on the data, that means an estimated <strong>$2,400/month</strong> continues going to competitors who have optimized their profiles. Over 6 months, that compounds significantly.</p>
     </div>
     <div class="compare-col compare-positive">
      <h3>Option B: Invest $287 Today</h3>
-     <p>I implement every fix identified in this audit. Your profile gets optimized from top to bottom. You get a review system, a content calendar, and a 90-day action plan. If the optimization recovers even a fraction of that estimated <strong>$14,500/month</strong>, the investment pays for itself in the first week.</p>
+     <p>I implement every fix identified in this audit. Your profile gets optimized from top to bottom. You get a review system, a content calendar, and a 90-day action plan. If the optimization recovers even a fraction of that estimated <strong>$2,400/month</strong>, the investment pays for itself in the first week.</p>
     </div>
    </div>
 
@@ -1603,13 +1535,13 @@
     <div>
      <div style="font-size:28px; margin-bottom:8px;">&#9878;</div>
      <div style="font-size:14px; font-weight:700; color:#111827; margin-bottom:6px;">Competitive Analysis</div>
-     <div style="font-size:14px; color:#374151; line-height:1.7;">Top 5 competitors in "dentist" within your area analyzed for review count, rating, photo volume, and profile completeness.</div>
+     <div style="font-size:14px; color:#374151; line-height:1.7;">Top 5 competitors in "bookkeeper" within your area analyzed for review count, rating, photo volume, and profile completeness.</div>
     </div>
    </div>
 
-   <p class="doc-body">The estimated revenue figure (<strong>$14,500/month</strong>) is calculated using a model that factors in your category's average customer value, how often your listing appears in search compared to competitors, and the difference in how many searchers contact an optimized business versus one that has not been optimized. This is a conservative estimate based on industry benchmarks; actual results may vary.</p>
+   <p class="doc-body">The estimated revenue figure (<strong>$2,400/month</strong>) is calculated using a model that factors in your category's average customer value, how often your listing appears in search compared to competitors, and the difference in how many searchers contact an optimized business versus one that has not been optimized. This is a conservative estimate based on industry benchmarks; actual results may vary.</p>
 
-   <p class="doc-body">Your audit ID (32697D0C) is a unique identifier tied to this specific analysis. Every finding, score, and recommendation in this report is timestamped and reproducible. If you want to verify any data point, I am happy to walk you through the methodology in detail.</p>
+   <p class="doc-body">Your audit ID (8B7DE369) is a unique identifier tied to this specific analysis. Every finding, score, and recommendation in this report is timestamped and reproducible. If you want to verify any data point, I am happy to walk you through the methodology in detail.</p>
   </div>
  </section>
 
@@ -1663,7 +1595,7 @@
    <div class="doc-label">Next Step</div>
    <h2 class="doc-title">Here Is What I Recommend You Do</h2>
 
-   <p class="doc-body">You have read the data. You have seen the 3 issues, the estimated <strong>$14,500/month</strong> revenue leak, the gap between where your listing is and where it should be. Every week that passes without addressing these issues is another week that revenue walks out the door.</p>
+   <p class="doc-body">You have read the data. You have seen the 3 issues, the estimated <strong>$2,400/month</strong> revenue leak, the gap between where your listing is and where it should be. Every week that passes without addressing these issues is another week that revenue walks out the door.</p>
 
    <p class="doc-body"><span class="highlight">The audit is done. The diagnosis is clear. The only question left is whether you want to fix it.</span></p>
 
@@ -1695,7 +1627,7 @@
   <div class="section-inner">
    <div class="ps-block">
     <strong>P.S.</strong>
-    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$14,500/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
+    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$2,400/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
    </div>
 
    <p style="text-align:center; font-style:italic; color:#6b7280; font-size:15px; line-height:1.8; margin-top:32px;">
@@ -1709,9 +1641,9 @@
    <div style="margin-top:56px; padding:32px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; text-align:center;">
     <div style="font-size:13px; font-weight:700; letter-spacing:1.2px; color:#6b7280; text-transform:uppercase; margin-bottom:10px;">Know another local business?</div>
     <h3 style="font-size:24px; font-weight:700; color:#111827; margin:0 0 12px;">Send them this audit. Save $50 on yours.</h3>
-    <p style="color:#374151; font-size:16px; line-height:1.7; max-width:540px; margin:0 auto 20px;">If a plumber, dentist, salon, accountant, or any local business in your network could use the same free audit, forward them this page. When they book their audit and mention <strong>Spa Dental Sydney CBD</strong>, I knock $50 off your implementation.</p>
+    <p style="color:#374151; font-size:16px; line-height:1.7; max-width:540px; margin:0 auto 20px;">If a plumber, dentist, salon, accountant, or any local business in your network could use the same free audit, forward them this page. When they book their audit and mention <strong>Pretty Books</strong>, I knock $50 off your implementation.</p>
     <p style="font-size:15px; color:#6b7280; margin:0 0 18px;">No cap on referrals. Refer 5 and the implementation is free.</p>
-    <a href="mailto:?subject=Free%20Google%20listing%20audit%20I%20thought%20you%27d%20find%20useful&amp;body=Hey%2C%20a%20guy%20named%20Ethan%20made%20me%20a%20free%20Google%20Business%20Profile%20audit%20and%20it%20actually%20had%20real%20findings%20in%20it.%20He%27s%20doing%20them%20for%20local%20businesses%20right%20now%2C%20no%20strings.%20The%20one%20he%20made%20me%20is%20at%3A%20https%3A%2F%2Fethanflo.github.io%2Faudits%2Faudits%2FChIJp1FAAUCuEmsRMGAm1vwmxQo%2F%20%2D%20if%20you%20want%20your%20own%2C%20just%20reply%20to%20this%20and%20I%27ll%20forward%20his%20address." style="display:inline-block; padding:14px 32px; background:#111827; color:#fff; border-radius:10px; text-decoration:none; font-weight:600; font-size:15px;">Forward this audit &#8594;</a>
+    <a href="mailto:?subject=Free%20Google%20listing%20audit%20I%20thought%20you%27d%20find%20useful&amp;body=Hey%2C%20a%20guy%20named%20Ethan%20made%20me%20a%20free%20Google%20Business%20Profile%20audit%20and%20it%20actually%20had%20real%20findings%20in%20it.%20He%27s%20doing%20them%20for%20local%20businesses%20right%20now%2C%20no%20strings.%20The%20one%20he%20made%20me%20is%20at%3A%20https%3A%2F%2Fethanflo.github.io%2Faudits%2Faudits%2FChIJ_6ZEef0VkFQRc8Vshmw7te8%2F%20%2D%20if%20you%20want%20your%20own%2C%20just%20reply%20to%20this%20and%20I%27ll%20forward%20his%20address." style="display:inline-block; padding:14px 32px; background:#111827; color:#fff; border-radius:10px; text-decoration:none; font-weight:600; font-size:15px;">Forward this audit &#8594;</a>
    </div>
   </div>
  </section>
@@ -1729,10 +1661,9 @@
   <div class="footer-brand">Flo Marketing System</div>
   <div class="footer-contact">
    &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC
-   &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
   </div>
   <div class="footer-legal">
-   This report is confidential and prepared exclusively for Spa Dental Sydney CBD. Audit ID: 32697D0C.<br>
+   This report is confidential and prepared exclusively for Pretty Books. Audit ID: 8B7DE369.<br>
    Data sourced from Google Places API, Google's Mobile Speed Test, and competitive analysis tools on April 16, 2026.<br>
    Revenue estimates are modeled projections based on category benchmarks and are not guaranteed outcomes.
   </div>
@@ -1743,7 +1674,7 @@
 <!--
   Chat widget — vanilla JS, zero deps, ~200 lines
   Embed this snippet in the <body> of the landing page template.
-  Replace https://beyond-passengers-kurt-mathematics.trycloudflare.com and ChIJp1FAAUCuEmsRMGAm1vwmxQo at generation time.
+  Replace https://bolt-modules-grace-concept.trycloudflare.com and ChIJ_6ZEef0VkFQRc8Vshmw7te8 at generation time.
 -->
 
 <div id="rb-chat-widget">
@@ -1850,9 +1781,9 @@
 
 <script>
 (function() {
-  const CHAT_URL = "https://beyond-passengers-kurt-mathematics.trycloudflare.com";
-  const PLACE_ID = "ChIJp1FAAUCuEmsRMGAm1vwmxQo";
-  const BUSINESS = "Spa Dental Sydney CBD";
+  const CHAT_URL = "https://bolt-modules-grace-concept.trycloudflare.com";
+  const PLACE_ID = "ChIJ_6ZEef0VkFQRc8Vshmw7te8";
+  const BUSINESS = "Pretty Books";
   const STORAGE_KEY = "rb_chat_session_" + PLACE_ID;
 
   let sessionId = localStorage.getItem(STORAGE_KEY);
@@ -1997,9 +1928,6 @@
 })();
 </script>
 
-
-<!-- Page-open tracking pixel (logs audit-view engagement) -->
-<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJp1FAAUCuEmsRMGAm1vwmxQo" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0;" loading="lazy">
 
 </body>
 </html>
