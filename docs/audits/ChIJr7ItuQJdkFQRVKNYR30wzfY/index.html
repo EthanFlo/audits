@@ -879,6 +879,74 @@
 </head>
 <body>
 
+<!-- Urgency banner + recent signups rotating ticker (fetches /audits/stats.json) -->
+<div id="urgency-banner" style="background:linear-gradient(90deg,#ff6b35,#c62828);color:#fff;padding:11px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-weight:600;line-height:1.4;">
+ <span id="urgency-text">🔥 Launch week: first 10 customers get 30 days of monthly maintenance FREE. Only <strong id="slots-left">10</strong> spots left.</span>
+ &nbsp;·&nbsp;
+ <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+</div>
+<div id="recent-ticker" style="background:#f9fafb;color:#374151;padding:6px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;border-bottom:1px solid #e5e7eb;min-height:20px;display:none;"></div>
+<!-- Audit expiry countdown -->
+<div id="audit-expiry" style="background:#fff7ed;color:#9a3412;padding:7px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:600;border-bottom:1px solid #fed7aa;display:none;">
+ ⏱ This audit was generated on April 17, 2026. Launch-week pricing expires in <strong id="expiry-countdown">7 days</strong>.
+</div>
+<script>
+(function(){
+ try {
+  fetch("/audits/stats.json", {cache:"no-store"}).then(r=>r.json()).then(s=>{
+   var slots = (typeof s.launch_free_remaining === "number") ? s.launch_free_remaining : 10;
+   var audits = s.audits_delivered || 0;
+   var el = document.getElementById("slots-left");
+   if (el) el.textContent = slots;
+   var txt = document.getElementById("urgency-text");
+   if (txt && audits > 50) {
+    txt.innerHTML = "🔥 " + audits + " audits delivered this week \u00b7 Only <strong id=\"slots-left\">" + slots + "</strong> launch-week free-maintenance slots left.";
+   }
+   // Rotating recent signups ticker
+   var recent = s.recent_audits || [];
+   if (recent.length > 0) {
+    var ticker = document.getElementById("recent-ticker");
+    if (ticker) {
+     ticker.style.display = "block";
+     var i = 0;
+     var render = function() {
+      var r = recent[i % recent.length];
+      ticker.innerHTML = "✓ Just sent an audit to <strong>" + r.name + "</strong>" + (r.country ? " (" + r.country + ")" : "") + " \u00b7 " + recent.length + " businesses got theirs in the last hour";
+      i++;
+     };
+     render();
+     setInterval(render, 4500);
+    }
+   }
+  }).catch(function(){});
+ } catch(e){}
+ // Audit expiry countdown: 7 days from April 17, 2026
+ try {
+  var auditBanner = document.getElementById("audit-expiry");
+  var generated = new Date("April 17, 2026");
+  if (!isNaN(generated.getTime())) {
+   var expiry = new Date(generated.getTime() + 7*24*60*60*1000);
+   var update = function() {
+    var now = new Date();
+    var diffMs = expiry - now;
+    if (diffMs > 0) {
+     var days = Math.floor(diffMs / (24*60*60*1000));
+     var hours = Math.floor((diffMs % (24*60*60*1000)) / (60*60*1000));
+     var lbl = days > 0 ? days + " day" + (days!==1?"s":"") + ", " + hours + "h" : hours + " hours";
+     var el = document.getElementById("expiry-countdown");
+     if (el) el.textContent = lbl;
+     auditBanner.style.display = "block";
+    } else {
+     auditBanner.style.display = "none";
+    }
+   };
+   update();
+   setInterval(update, 60000);
+  }
+ } catch(e){}
+})();
+</script>
+
 
 <!-- ══════════════════════════════════════════════════════
  HEADER
@@ -897,7 +965,7 @@
   <div class="header-meta">
    <div class="header-meta-item">
     <div class="doc-label">Report Date</div>
-    <div class="header-meta-value">April 16, 2026</div>
+    <div class="header-meta-value">April 17, 2026</div>
    </div>
    <div class="header-meta-item">
     <div class="doc-label">Audit ID</div>
@@ -998,7 +1066,7 @@
     <div style="font-size:13px; color:#6b7280; margin-top:2px;">Benchmark: top performers in your category typically score <strong style="color:#111827;">82+</strong></div>
    </div>
 
-   <p class="doc-body">Charlie Dang Tax &amp; Accounting in Seattle currently has a critical visibility deficit due to an incomplete profile and a lack of social proof. Addressing the empty business description and missing visual content will capture an estimated $2,400 in monthly revenue. The most impactful fix is the immediate population of the business description and photo gallery to build consumer trust.</p>
+   <p class="doc-body">Charlie Dang Tax &amp; Accounting in Seattle currently has a critical visibility deficit due to missing core profile elements and poor technical performance. Addressing the complete lack of a business description is the single most impactful fix to improve search relevance. Optimizing these foundational elements will capture an estimated $2,400 in monthly revenue currently lost to competitors with complete profiles.</p>
 
    <p class="doc-body">Based on everything I have found in this audit, your listing has significant untapped potential. The core issues center around profile completeness, review strategy, and content optimization, all areas where targeted improvements typically produce measurable results within 14 to 28 days.</p>
 
@@ -1078,7 +1146,7 @@
      </tr>
      <tr>
       <td>Mobile Speed Score<br><span style="font-weight:400; font-size:12px; color:#6b7280;">How fast your website loads on phones; Google penalizes slow sites</span></td>
-      <td><strong>61</strong> out of 100</td>
+      <td><strong>51</strong> out of 100</td>
       <td><span class="badge badge-amber">Slow</span></td>
      </tr>
      <tr>
@@ -1137,7 +1205,7 @@
      <tr>
       <td style="text-align:center;"><span class="dot dot-amber"></span></td>
       <td><strong>Mobile Speed Score</strong></td>
-      <td>61 out of 100</td>
+      <td>51 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">Above 90 is fast; below 50 is slow</td>
       <td><span class="badge badge-amber">Medium</span></td>
      </tr>
@@ -1206,7 +1274,7 @@
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-warn">&#9888;</span>
-     <span><strong>Mobile Speed</strong> scored 61 out of 100 on Google's speed test</span>
+     <span><strong>Mobile Speed</strong> scored 51 out of 100 on Google's speed test</span>
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-fail">&#10007;</span>
@@ -1238,13 +1306,13 @@
    <div class="finding">
   <div class="finding-header">
     <div class="finding-num">1</div>
-    <div class="finding-title">Zero business description reduces search relevance and trust</div>
+    <div class="finding-title">Missing business description prevents search engine indexing</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The Google Business Profile was created but the description field was left entirely blank during the setup process.</p>
+      <p>The profile lacks any written content, leaving the description field entirely empty and providing no context to search algorithms.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1252,11 +1320,11 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>I will draft a 740-character business description that incorporates high-intent keywords such as 'Seattle tax preparation', 'IRS audit representation', and 'small business accounting'. This text will clearly state your location at 1215 South Main St to improve local map rankings.</p>
+      <p>I will draft a 740-character business description that incorporates high-volume search terms like 'Seattle tax preparation', 'IRS audit representation', and 'small business accounting'. This text will clearly state the 1215 South Main St location to reinforce local relevance.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Potential clients cannot find your services through search because Google lacks the text data to categorize your business properly.</p>
+      <p>Potential clients searching for specific tax services in Seattle cannot find this listing because there are no keywords to trigger a match.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1265,31 +1333,31 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The listing will display a comprehensive professional summary that highlights your specific tax expertise to every visitor.</p>
+    <p>The listing will display a professional, keyword-optimized summary that helps the business appear in local map pack results for tax-related queries.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">2</div>
-    <div class="finding-title">Missing photos lead to high visitor bounce rates</div>
+    <div class="finding-title">Zero profile photos reduce user trust and engagement</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>No visual assets have been uploaded to the gallery to verify the physical existence of the office.</p>
+      <p>No visual assets have been uploaded to the Google Business Profile to represent the physical office or staff.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>0 photos</code></p>
+      <p><code>0</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>I will upload 10 high-resolution images including the exterior signage at the South Main St location, the interior consultation area, and professional headshots. Each image will be geotagged to Seattle coordinates to reinforce local authority.</p>
+      <p>I will upload 10 high-resolution images including the exterior signage at 1215 South Main St, the interior office environment, and professional headshots of the team. Each image will be geotagged to Seattle coordinates before uploading to strengthen local signals.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Tax clients require visual confirmation of a professional office environment before they feel comfortable sharing sensitive financial documents.</p>
+      <p>Profiles without photos receive significantly fewer clicks and direction requests because users cannot verify the legitimacy of the business location.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1298,31 +1366,31 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The profile will feature a vibrant gallery that proves your business is active and professional.</p>
+    <p>The profile will feature a complete visual gallery that builds immediate credibility with taxpayers seeking a physical office.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">3</div>
-    <div class="finding-title">Low mobile page speed score hurts search rankings</div>
+    <div class="finding-title">Slow mobile page speed increases website bounce rates</div>
     <span class="severity medium">MEDIUM IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The website at dangtax.com has unoptimized scripts or large image files that slow down the mobile loading experience.</p>
+      <p>The website at dangtax.com has technical performance issues that hinder loading times on mobile devices.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>61</code></p>
+      <p><code>51</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>I will optimize the website by compressing all images, enabling browser caching, and minifying CSS files to target a score above 90. This technical cleanup ensures that users who click your website link from Google stay on the page.</p>
+      <p>I will compress all image files on the website, enable browser caching, and minify the CSS and JavaScript files to reduce server response times. These technical adjustments will target a mobile performance score above 90.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Google penalizes listings that link to slow websites, pushing your business further down in the local map pack.</p>
+      <p>More than half of local searchers use mobile phones, and they will abandon the site if it does not load quickly, leading to lost leads.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1331,7 +1399,7 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The website will load in under two seconds on mobile devices, satisfying Google's ranking algorithms.</p>
+    <p>The website will load in under three seconds on mobile devices, ensuring users who click through from Google stay on the site to book a consultation.</p>
   </div>
 </div>
   </div>
@@ -1661,10 +1729,11 @@
   <div class="footer-brand">Flo Marketing System</div>
   <div class="footer-contact">
    &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC
+   &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
   </div>
   <div class="footer-legal">
    This report is confidential and prepared exclusively for Charlie Dang Tax &amp; Accounting. Audit ID: 8E2D8176.<br>
-   Data sourced from Google Places API, Google's Mobile Speed Test, and competitive analysis tools on April 16, 2026.<br>
+   Data sourced from Google Places API, Google's Mobile Speed Test, and competitive analysis tools on April 17, 2026.<br>
    Revenue estimates are modeled projections based on category benchmarks and are not guaranteed outcomes.
   </div>
  </div>
@@ -1674,7 +1743,7 @@
 <!--
   Chat widget — vanilla JS, zero deps, ~200 lines
   Embed this snippet in the <body> of the landing page template.
-  Replace https://bolt-modules-grace-concept.trycloudflare.com and ChIJr7ItuQJdkFQRVKNYR30wzfY at generation time.
+  Replace https://beyond-passengers-kurt-mathematics.trycloudflare.com and ChIJr7ItuQJdkFQRVKNYR30wzfY at generation time.
 -->
 
 <div id="rb-chat-widget">
@@ -1781,7 +1850,7 @@
 
 <script>
 (function() {
-  const CHAT_URL = "https://bolt-modules-grace-concept.trycloudflare.com";
+  const CHAT_URL = "https://beyond-passengers-kurt-mathematics.trycloudflare.com";
   const PLACE_ID = "ChIJr7ItuQJdkFQRVKNYR30wzfY";
   const BUSINESS = "Charlie Dang Tax & Accounting";
   const STORAGE_KEY = "rb_chat_session_" + PLACE_ID;
@@ -1928,6 +1997,9 @@
 })();
 </script>
 
+
+<!-- Page-open tracking pixel (logs audit-view engagement) -->
+<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJr7ItuQJdkFQRVKNYR30wzfY" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0;" loading="lazy">
 
 </body>
 </html>

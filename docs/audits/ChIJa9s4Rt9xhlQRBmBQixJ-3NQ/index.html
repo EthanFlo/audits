@@ -879,6 +879,74 @@
 </head>
 <body>
 
+<!-- Urgency banner + recent signups rotating ticker (fetches /audits/stats.json) -->
+<div id="urgency-banner" style="background:linear-gradient(90deg,#ff6b35,#c62828);color:#fff;padding:11px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-weight:600;line-height:1.4;">
+ <span id="urgency-text">🔥 Launch week: first 10 customers get 30 days of monthly maintenance FREE. Only <strong id="slots-left">10</strong> spots left.</span>
+ &nbsp;·&nbsp;
+ <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+</div>
+<div id="recent-ticker" style="background:#f9fafb;color:#374151;padding:6px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;border-bottom:1px solid #e5e7eb;min-height:20px;display:none;"></div>
+<!-- Audit expiry countdown -->
+<div id="audit-expiry" style="background:#fff7ed;color:#9a3412;padding:7px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:600;border-bottom:1px solid #fed7aa;display:none;">
+ ⏱ This audit was generated on April 17, 2026. Launch-week pricing expires in <strong id="expiry-countdown">7 days</strong>.
+</div>
+<script>
+(function(){
+ try {
+  fetch("/audits/stats.json", {cache:"no-store"}).then(r=>r.json()).then(s=>{
+   var slots = (typeof s.launch_free_remaining === "number") ? s.launch_free_remaining : 10;
+   var audits = s.audits_delivered || 0;
+   var el = document.getElementById("slots-left");
+   if (el) el.textContent = slots;
+   var txt = document.getElementById("urgency-text");
+   if (txt && audits > 50) {
+    txt.innerHTML = "🔥 " + audits + " audits delivered this week \u00b7 Only <strong id=\"slots-left\">" + slots + "</strong> launch-week free-maintenance slots left.";
+   }
+   // Rotating recent signups ticker
+   var recent = s.recent_audits || [];
+   if (recent.length > 0) {
+    var ticker = document.getElementById("recent-ticker");
+    if (ticker) {
+     ticker.style.display = "block";
+     var i = 0;
+     var render = function() {
+      var r = recent[i % recent.length];
+      ticker.innerHTML = "✓ Just sent an audit to <strong>" + r.name + "</strong>" + (r.country ? " (" + r.country + ")" : "") + " \u00b7 " + recent.length + " businesses got theirs in the last hour";
+      i++;
+     };
+     render();
+     setInterval(render, 4500);
+    }
+   }
+  }).catch(function(){});
+ } catch(e){}
+ // Audit expiry countdown: 7 days from April 17, 2026
+ try {
+  var auditBanner = document.getElementById("audit-expiry");
+  var generated = new Date("April 17, 2026");
+  if (!isNaN(generated.getTime())) {
+   var expiry = new Date(generated.getTime() + 7*24*60*60*1000);
+   var update = function() {
+    var now = new Date();
+    var diffMs = expiry - now;
+    if (diffMs > 0) {
+     var days = Math.floor(diffMs / (24*60*60*1000));
+     var hours = Math.floor((diffMs % (24*60*60*1000)) / (60*60*1000));
+     var lbl = days > 0 ? days + " day" + (days!==1?"s":"") + ", " + hours + "h" : hours + " hours";
+     var el = document.getElementById("expiry-countdown");
+     if (el) el.textContent = lbl;
+     auditBanner.style.display = "block";
+    } else {
+     auditBanner.style.display = "none";
+    }
+   };
+   update();
+   setInterval(update, 60000);
+  }
+ } catch(e){}
+})();
+</script>
+
 
 <!-- ══════════════════════════════════════════════════════
  HEADER
@@ -897,7 +965,7 @@
   <div class="header-meta">
    <div class="header-meta-item">
     <div class="doc-label">Report Date</div>
-    <div class="header-meta-value">April 16, 2026</div>
+    <div class="header-meta-value">April 17, 2026</div>
    </div>
    <div class="header-meta-item">
     <div class="doc-label">Audit ID</div>
@@ -998,7 +1066,7 @@
     <div style="font-size:13px; color:#6b7280; margin-top:2px;">Benchmark: top performers in your category typically score <strong style="color:#111827;">82+</strong></div>
    </div>
 
-   <p class="doc-body">ARC Wealth: Vancouver Wealth Management + Financial Planner currently has a critical visibility score in Vancouver due to a complete lack of engagement signals and profile content. Addressing the empty business description and zero review count will capture an estimated $4,500 in monthly revenue currently lost to competitors. The single most impactful fix is the immediate implementation of a review acquisition strategy to build social proof.</p>
+   <p class="doc-body">ARC Wealth: Vancouver Wealth Management + Financial Planner is currently invisible to local searchers in Vancouver due to a completely unoptimized profile. We estimate this lack of visibility costs the firm $4,500 in monthly revenue, which can be recovered by first addressing the total absence of reviews and business information. The single most impactful fix is establishing a review acquisition system to move the profile from zero to a competitive rating.</p>
 
    <p class="doc-body">Based on everything I have found in this audit, your listing has significant untapped potential. The core issues center around profile completeness, review strategy, and content optimization, all areas where targeted improvements typically produce measurable results within 14 to 28 days.</p>
 
@@ -1078,7 +1146,7 @@
      </tr>
      <tr>
       <td>Mobile Speed Score<br><span style="font-weight:400; font-size:12px; color:#6b7280;">How fast your website loads on phones; Google penalizes slow sites</span></td>
-      <td><strong>57</strong> out of 100</td>
+      <td><strong>55</strong> out of 100</td>
       <td><span class="badge badge-amber">Slow</span></td>
      </tr>
      <tr>
@@ -1137,7 +1205,7 @@
      <tr>
       <td style="text-align:center;"><span class="dot dot-amber"></span></td>
       <td><strong>Mobile Speed Score</strong></td>
-      <td>57 out of 100</td>
+      <td>55 out of 100</td>
       <td style="font-size:13px; color:#6b7280;">Above 90 is fast; below 50 is slow</td>
       <td><span class="badge badge-amber">Medium</span></td>
      </tr>
@@ -1206,7 +1274,7 @@
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-warn">&#9888;</span>
-     <span><strong>Mobile Speed</strong> scored 57 out of 100 on Google's speed test</span>
+     <span><strong>Mobile Speed</strong> scored 55 out of 100 on Google's speed test</span>
     </div>
     <div class="checklist-item">
      <span class="check-icon icon-fail">&#10007;</span>
@@ -1238,13 +1306,13 @@
    <div class="finding">
   <div class="finding-header">
     <div class="finding-num">1</div>
-    <div class="finding-title">Zero reviews and five star rating lacks social proof</div>
+    <div class="finding-title">Zero customer reviews preventing trust and ranking</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The business has not implemented an automated system to request feedback from clients after financial planning sessions.</p>
+      <p>The business lacks an automated system to request and manage client feedback on the Google platform.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1252,11 +1320,11 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>We will set up an automated review request sequence for your current client base and create a custom QR code for your office to facilitate immediate feedback. This system will target a minimum of 10 high-quality reviews within the first 30 days to establish credibility.</p>
+      <p>We will implement a direct review request campaign targeting your top 20 existing clients to secure five-star ratings. We will also set up a QR code at your Howe Street office and an email signature link to ensure every new client interaction leads to a review.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Potential clients will choose competitors with established track records over a profile with no public feedback.</p>
+      <p>Potential clients will choose competitors with established social proof over a profile with no feedback history.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1265,19 +1333,19 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>Your listing will display a verified review count that validates your 5-star rating and increases click-through rates from search results.</p>
+    <p>The profile will display a 5-star rating with at least 10 detailed client testimonials within the first month.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">2</div>
-    <div class="finding-title">Missing business description prevents keyword indexing</div>
+    <div class="finding-title">Missing business description and visual content</div>
     <span class="severity high">HIGH IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The profile was initialized without the optional descriptive fields being populated during the setup phase.</p>
+      <p>The profile was created but never populated with the necessary text or media to inform Google's search algorithm.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1285,11 +1353,11 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>I will draft a 750-character business description that incorporates the primary category of financial services and specific Vancouver neighborhood identifiers. This text will highlight your expertise in retirement planning and investment management to match local search intent.</p>
+      <p>We will write a 740-character business description focusing on financial planning and wealth management services in Vancouver. We will also upload 15 high-resolution photos of the office at 329 Howe St and professional team headshots to verify the business location.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Google cannot categorize your services or match your profile to local searches for wealth management without descriptive text.</p>
+      <p>Google cannot categorize your services or show your listing for relevant Vancouver financial planning searches without descriptive text.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1298,31 +1366,31 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The profile will feature a complete, professional summary that helps Google surface your business for specific financial planning queries.</p>
+    <p>Your listing will feature a complete profile with professional imagery and a keyword-rich description that improves search relevance.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">3</div>
-    <div class="finding-title">Poor mobile performance creates high website bounce rates</div>
+    <div class="finding-title">Slow mobile website performance affecting conversion</div>
     <span class="severity medium">MEDIUM IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The website architecture contains unoptimized images and scripts that delay loading on mobile devices.</p>
+      <p>The website architecture contains unoptimized scripts and images that delay loading on mobile devices.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
-      <p><code>PageSpeed mobile score: 57</code></p>
+      <p><code>PageSpeed mobile score: 55</code></p>
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>We will compress all site images, enable browser caching, and minify Javascript files to increase the mobile speed score above 85. This technical optimization ensures that the traffic driven by your Google profile actually converts into inquiries.</p>
+      <p>We will optimize all images on the website, enable browser caching, and minify CSS and JavaScript files to reduce server response times. These technical adjustments will target a mobile performance score of 90 or higher.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Users clicking through from your profile will abandon the site if it takes more than three seconds to load on their phones.</p>
+      <p>Users clicking through from Google will abandon the site if it takes more than three seconds to load on their phones.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1331,7 +1399,7 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>Your website will load near-instantaneously on mobile devices, significantly reducing the number of lost leads.</p>
+    <p>The website will load instantly on mobile devices, significantly reducing the bounce rate for local visitors.</p>
   </div>
 </div>
   </div>
@@ -1613,7 +1681,7 @@
    <div class="doc-label" style="color:rgba(255,255,255,0.35); margin-bottom:20px;">Complete Google Business Profile Optimization</div>
    <div class="cta-price">$287</div>
    <div class="cta-note">One-time investment. No subscription. No contract.</div>
-   <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJa9s4Rt9xhlQRBmBQixJ-3NQ?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
+   <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
    <div class="cta-subtext">Secure checkout via Stripe &#183; 48-hour revision window &#183; Implementation begins same day</div>
   </div>
  </section>
@@ -1627,7 +1695,7 @@
   <div class="section-inner">
    <div class="ps-block">
     <strong>P.S.</strong>
-    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$4,500/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJa9s4Rt9xhlQRBmBQixJ-3NQ?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
+    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$4,500/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
    </div>
 
    <p style="text-align:center; font-style:italic; color:#6b7280; font-size:15px; line-height:1.8; margin-top:32px;">
@@ -1635,7 +1703,7 @@
    </p>
 
    <p style="text-align:center; margin-top:24px;">
-    <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJa9s4Rt9xhlQRBmBQixJ-3NQ?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
+    <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
    </p>
 
    <div style="margin-top:56px; padding:32px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; text-align:center;">
@@ -1661,10 +1729,11 @@
   <div class="footer-brand">Flo Marketing System</div>
   <div class="footer-contact">
    &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC
+   &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
   </div>
   <div class="footer-legal">
    This report is confidential and prepared exclusively for ARC Wealth: Vancouver Wealth Management + Financial Planner. Audit ID: 8763A5B6.<br>
-   Data sourced from Google Places API, Google's Mobile Speed Test, and competitive analysis tools on April 16, 2026.<br>
+   Data sourced from Google Places API, Google's Mobile Speed Test, and competitive analysis tools on April 17, 2026.<br>
    Revenue estimates are modeled projections based on category benchmarks and are not guaranteed outcomes.
   </div>
  </div>
@@ -1929,42 +1998,8 @@
 </script>
 
 
-<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJa9s4Rt9xhlQRBmBQixJ-3NQ" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0" loading="lazy">
-
-<div id="exit-intent-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:99999;align-items:center;justify-content:center;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
- <div style="background:#fff;max-width:420px;width:100%;border-radius:16px;padding:32px;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-  <button onclick="document.getElementById('exit-intent-popup').style.display='none';document.body.style.overflow='';" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:26px;color:#999;cursor:pointer;line-height:1;">&times;</button>
-  <div style="font-size:14px;font-weight:700;letter-spacing:1.2px;color:#c62828;text-transform:uppercase;margin-bottom:10px;">Before you go</div>
-  <h3 style="font-size:22px;font-weight:800;color:#111;margin:0 0 12px;line-height:1.3;">Not ready for the $287 implementation?</h3>
-  <p style="color:#374151;font-size:15px;line-height:1.6;margin:0 0 20px;">No pressure. Reply to the email I sent with any one question about your Google listing and I will answer personally within 2 hours. Free.</p>
-  <p style="color:#6b7280;font-size:14px;margin:0 0 18px;">Or come back when the timing is better. The audit stays live for 7 days.</p>
-  <a href="mailto:florendo.ethan@gmail.com?subject=One%20question%20about%20my%20Google%20listing" style="display:inline-block;background:#111;color:#fff;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;">Ask me one question, free →</a>
- </div>
-</div>
-<script>
-(function(){
- var shown = false;
- var popup = document.getElementById('exit-intent-popup');
- if (!popup) return;
- document.addEventListener('mouseout', function(e) {
-  if (shown) return;
-  if (e.clientY < 10 && e.relatedTarget === null) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- });
- // Mobile fallback: show after 45s if they haven't scrolled much
- setTimeout(function() {
-  if (shown) return;
-  if (window.scrollY < 300 && window.innerHeight < 900) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- }, 45000);
-})();
-</script>
+<!-- Page-open tracking pixel (logs audit-view engagement) -->
+<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJa9s4Rt9xhlQRBmBQixJ-3NQ" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0;" loading="lazy">
 
 </body>
 </html>

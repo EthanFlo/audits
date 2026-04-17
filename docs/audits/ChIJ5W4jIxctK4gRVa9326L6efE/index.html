@@ -879,6 +879,74 @@
 </head>
 <body>
 
+<!-- Urgency banner + recent signups rotating ticker (fetches /audits/stats.json) -->
+<div id="urgency-banner" style="background:linear-gradient(90deg,#ff6b35,#c62828);color:#fff;padding:11px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-weight:600;line-height:1.4;">
+ <span id="urgency-text">🔥 Launch week: first 10 customers get 30 days of monthly maintenance FREE. Only <strong id="slots-left">10</strong> spots left.</span>
+ &nbsp;·&nbsp;
+ <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" style="color:#fff;text-decoration:underline;font-weight:700;">Claim yours →</a>
+</div>
+<div id="recent-ticker" style="background:#f9fafb;color:#374151;padding:6px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;border-bottom:1px solid #e5e7eb;min-height:20px;display:none;"></div>
+<!-- Audit expiry countdown -->
+<div id="audit-expiry" style="background:#fff7ed;color:#9a3412;padding:7px 16px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:600;border-bottom:1px solid #fed7aa;display:none;">
+ ⏱ This audit was generated on April 17, 2026. Launch-week pricing expires in <strong id="expiry-countdown">7 days</strong>.
+</div>
+<script>
+(function(){
+ try {
+  fetch("/audits/stats.json", {cache:"no-store"}).then(r=>r.json()).then(s=>{
+   var slots = (typeof s.launch_free_remaining === "number") ? s.launch_free_remaining : 10;
+   var audits = s.audits_delivered || 0;
+   var el = document.getElementById("slots-left");
+   if (el) el.textContent = slots;
+   var txt = document.getElementById("urgency-text");
+   if (txt && audits > 50) {
+    txt.innerHTML = "🔥 " + audits + " audits delivered this week \u00b7 Only <strong id=\"slots-left\">" + slots + "</strong> launch-week free-maintenance slots left.";
+   }
+   // Rotating recent signups ticker
+   var recent = s.recent_audits || [];
+   if (recent.length > 0) {
+    var ticker = document.getElementById("recent-ticker");
+    if (ticker) {
+     ticker.style.display = "block";
+     var i = 0;
+     var render = function() {
+      var r = recent[i % recent.length];
+      ticker.innerHTML = "✓ Just sent an audit to <strong>" + r.name + "</strong>" + (r.country ? " (" + r.country + ")" : "") + " \u00b7 " + recent.length + " businesses got theirs in the last hour";
+      i++;
+     };
+     render();
+     setInterval(render, 4500);
+    }
+   }
+  }).catch(function(){});
+ } catch(e){}
+ // Audit expiry countdown: 7 days from April 17, 2026
+ try {
+  var auditBanner = document.getElementById("audit-expiry");
+  var generated = new Date("April 17, 2026");
+  if (!isNaN(generated.getTime())) {
+   var expiry = new Date(generated.getTime() + 7*24*60*60*1000);
+   var update = function() {
+    var now = new Date();
+    var diffMs = expiry - now;
+    if (diffMs > 0) {
+     var days = Math.floor(diffMs / (24*60*60*1000));
+     var hours = Math.floor((diffMs % (24*60*60*1000)) / (60*60*1000));
+     var lbl = days > 0 ? days + " day" + (days!==1?"s":"") + ", " + hours + "h" : hours + " hours";
+     var el = document.getElementById("expiry-countdown");
+     if (el) el.textContent = lbl;
+     auditBanner.style.display = "block";
+    } else {
+     auditBanner.style.display = "none";
+    }
+   };
+   update();
+   setInterval(update, 60000);
+  }
+ } catch(e){}
+})();
+</script>
+
 
 <!-- ══════════════════════════════════════════════════════
  HEADER
@@ -897,7 +965,7 @@
   <div class="header-meta">
    <div class="header-meta-item">
     <div class="doc-label">Report Date</div>
-    <div class="header-meta-value">April 16, 2026</div>
+    <div class="header-meta-value">April 17, 2026</div>
    </div>
    <div class="header-meta-item">
     <div class="doc-label">Audit ID</div>
@@ -998,7 +1066,7 @@
     <div style="font-size:13px; color:#6b7280; margin-top:2px;">Benchmark: top performers in your category typically score <strong style="color:#111827;">82+</strong></div>
    </div>
 
-   <p class="doc-body">Hush Hush Bookkeeping in Toronto is currently invisible to local searchers due to a lack of core profile content and social proof. By addressing the missing business description and zero-photo status, the firm can capture an estimated $2,400 in monthly revenue currently lost to competitors. The most impactful fix is the immediate implementation of a keyword-optimized business description and a professional photo gallery.</p>
+   <p class="doc-body">Hush Hush Bookkeeping in Toronto currently holds a critical visibility score due to a complete lack of profile optimization and social proof. Addressing these foundational gaps will generate an estimated $2,400 in monthly revenue by capturing high-intent local search traffic. The single most impactful fix is establishing a review acquisition system to move the rating from zero to active status.</p>
 
    <p class="doc-body">Based on everything I have found in this audit, your listing has significant untapped potential. The core issues center around profile completeness, review strategy, and content optimization, all areas where targeted improvements typically produce measurable results within 14 to 28 days.</p>
 
@@ -1244,7 +1312,7 @@
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The business lacks an automated system to request and manage feedback from existing Toronto clients.</p>
+      <p>The business lacks an automated process to request and manage feedback from existing clients after service delivery.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1252,11 +1320,11 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Implement a direct review acquisition campaign by sending personalized links to current clients and setting up a physical QR code in the Toronto office. We will aim to secure the first 5 to 10 five-star reviews to establish a baseline of credibility.</p>
+      <p>Implement a direct outreach campaign to current and past clients to secure the first five reviews. We will provide a direct link to the Google review window and a template that encourages clients to mention specific bookkeeping services provided.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Prospective clients will choose competitors with visible social proof over a profile with no feedback history.</p>
+      <p>Potential clients in Toronto will choose competitors with established reputations over a profile that shows no history of successful work.</p>
     </div>
   </div>
   <div class="finding-impact">
@@ -1265,19 +1333,19 @@
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The profile will display a 5-star rating backed by verified client testimonials, increasing the click-through rate from search results.</p>
+    <p>The profile will display a 5-star rating with visible text testimonials, triggering the Google Map Pack algorithm to show the business for local searches.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">2</div>
     <div class="finding-title">Missing business description reduces keyword relevance</div>
-    <span class="severity high">HIGH IMPACT</span>
+    <span class="severity medium">MEDIUM IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>The profile was initialized without the mandatory narrative content required for Google to categorize the service properly.</p>
+      <p>The profile was initialized without the optional descriptive fields being populated during the setup phase.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1285,32 +1353,32 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Write a 750-character business description that incorporates the primary category of bookkeeper along with specific Toronto service mentions. This text will focus on the King St W location to improve local proximity signals.</p>
+      <p>Write a 750-character business description that incorporates the primary category of bookkeeper along with secondary terms like tax preparation and payroll management. This text will specifically mention the Toronto service area and the King St W location to anchor local relevance.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
-      <p>Google cannot match this business to specific searches like tax preparation or payroll because the text is empty.</p>
+      <p>Google cannot index the specific services offered, meaning the business stays hidden when users search for specialized accounting help.</p>
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$800/mo</div>
+    <div class="impact-amount">$750/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (high confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>Your listing will feature a complete narrative that tells Google and customers exactly what financial services you provide.</p>
+    <p>The listing will feature a complete professional summary that informs users and helps Google categorize the business for specific search queries.</p>
   </div>
 </div>
 <div class="finding">
   <div class="finding-header">
     <div class="finding-num">3</div>
-    <div class="finding-title">Lack of visual content decreases profile engagement</div>
+    <div class="finding-title">Lack of visual content decreases user engagement</div>
     <span class="severity medium">MEDIUM IMPACT</span>
   </div>
   <div class="finding-grid">
     <div class="finding-block">
       <h4>Problem</h4>
-      <p>No interior, exterior, or team imagery has been uploaded to the Google Business Profile.</p>
+      <p>No interior, exterior, or team photographs have been uploaded to the Google Business Profile dashboard.</p>
     </div>
     <div class="finding-block">
       <h4>Evidence</h4>
@@ -1318,7 +1386,7 @@
     </div>
     <div class="finding-block">
       <h4>What we will do</h4>
-      <p>Upload 10 high-resolution images including the office at 150 King St W, professional headshots of the staff, and branded graphics. We will ensure each image is geo-tagged to Toronto to reinforce local authority.</p>
+      <p>Upload ten high-resolution images including the office exterior at 150 King St W, the interior workspace, and professional headshots of the staff. We will optimize the metadata of each image with geographic coordinates for Toronto to strengthen local signals.</p>
     </div>
     <div class="finding-block">
       <h4>Why it matters</h4>
@@ -1326,12 +1394,12 @@
     </div>
   </div>
   <div class="finding-impact">
-    <div class="impact-amount">$400/mo</div>
+    <div class="impact-amount">$450/mo</div>
     <div class="impact-label">Estimated monthly revenue impact (medium confidence)</div>
   </div>
   <div class="finding-outcome">
     <h4>After implementation</h4>
-    <p>The profile will present a professional visual identity that makes the business feel real and accessible to new clients.</p>
+    <p>The profile will transform from a generic map pin into a professional storefront that builds immediate visual credibility with prospects.</p>
   </div>
 </div>
   </div>
@@ -1613,7 +1681,7 @@
    <div class="doc-label" style="color:rgba(255,255,255,0.35); margin-bottom:20px;">Complete Google Business Profile Optimization</div>
    <div class="cta-price">$287</div>
    <div class="cta-note">One-time investment. No subscription. No contract.</div>
-   <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJ5W4jIxctK4gRVa9326L6efE?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
+   <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button">Start My Optimization Today &#8594;</a>
    <div class="cta-subtext">Secure checkout via Stripe &#183; 48-hour revision window &#183; Implementation begins same day</div>
   </div>
  </section>
@@ -1627,7 +1695,7 @@
   <div class="section-inner">
    <div class="ps-block">
     <strong>P.S.</strong>
-    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$2,400/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJ5W4jIxctK4gRVa9326L6efE?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
+    <p>If you scrolled straight to the bottom, here is the short version: your Google listing has 3 fixable issues costing you an estimated <strong>$2,400/month</strong>. For <strong>$287</strong>, I fix all of them. No subscription, no contract. <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03">Click here to get started.</a></p>
    </div>
 
    <p style="text-align:center; font-style:italic; color:#6b7280; font-size:15px; line-height:1.8; margin-top:32px;">
@@ -1635,7 +1703,7 @@
    </p>
 
    <p style="text-align:center; margin-top:24px;">
-    <a href="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/click/ChIJ5W4jIxctK4gRVa9326L6efE?to=https%3A%2F%2Fbuy.stripe.com%2F28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
+    <a href="https://buy.stripe.com/28E5kE8Mh63xgERcMYenS03" class="cta-button" style="font-size:18px; padding:18px 44px;">Get Started &#8594;</a>
    </p>
 
    <div style="margin-top:56px; padding:32px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; text-align:center;">
@@ -1661,10 +1729,11 @@
   <div class="footer-brand">Flo Marketing System</div>
   <div class="footer-contact">
    &quot;Ethan Florendo&quot; &#183; <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> &#183; Vancouver, BC
+   &#183; <a href="/audits/faq/" style="color:inherit;">FAQ</a>
   </div>
   <div class="footer-legal">
    This report is confidential and prepared exclusively for Hush Hush Bookkeeping. Audit ID: EBFBFF43.<br>
-   Data sourced from Google Places API, Google's Mobile Speed Test, and competitive analysis tools on April 16, 2026.<br>
+   Data sourced from Google Places API, Google's Mobile Speed Test, and competitive analysis tools on April 17, 2026.<br>
    Revenue estimates are modeled projections based on category benchmarks and are not guaranteed outcomes.
   </div>
  </div>
@@ -1929,42 +1998,8 @@
 </script>
 
 
-<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJ5W4jIxctK4gRVa9326L6efE" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0" loading="lazy">
-
-<div id="exit-intent-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:99999;align-items:center;justify-content:center;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
- <div style="background:#fff;max-width:420px;width:100%;border-radius:16px;padding:32px;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-  <button onclick="document.getElementById('exit-intent-popup').style.display='none';document.body.style.overflow='';" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:26px;color:#999;cursor:pointer;line-height:1;">&times;</button>
-  <div style="font-size:14px;font-weight:700;letter-spacing:1.2px;color:#c62828;text-transform:uppercase;margin-bottom:10px;">Before you go</div>
-  <h3 style="font-size:22px;font-weight:800;color:#111;margin:0 0 12px;line-height:1.3;">Not ready for the $287 implementation?</h3>
-  <p style="color:#374151;font-size:15px;line-height:1.6;margin:0 0 20px;">No pressure. Reply to the email I sent with any one question about your Google listing and I will answer personally within 2 hours. Free.</p>
-  <p style="color:#6b7280;font-size:14px;margin:0 0 18px;">Or come back when the timing is better. The audit stays live for 7 days.</p>
-  <a href="mailto:florendo.ethan@gmail.com?subject=One%20question%20about%20my%20Google%20listing" style="display:inline-block;background:#111;color:#fff;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;">Ask me one question, free →</a>
- </div>
-</div>
-<script>
-(function(){
- var shown = false;
- var popup = document.getElementById('exit-intent-popup');
- if (!popup) return;
- document.addEventListener('mouseout', function(e) {
-  if (shown) return;
-  if (e.clientY < 10 && e.relatedTarget === null) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- });
- // Mobile fallback: show after 45s if they haven't scrolled much
- setTimeout(function() {
-  if (shown) return;
-  if (window.scrollY < 300 && window.innerHeight < 900) {
-   shown = true;
-   popup.style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-  }
- }, 45000);
-})();
-</script>
+<!-- Page-open tracking pixel (logs audit-view engagement) -->
+<img src="https://beyond-passengers-kurt-mathematics.trycloudflare.com/track/open/ChIJ5W4jIxctK4gRVa9326L6efE" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0;" loading="lazy">
 
 </body>
 </html>
