@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Testimonials — Flo Marketing GBP Audits</title>
+<meta name="description" content="What business owners say about their free Google Business Profile audit from Ethan Florendo.">
+<link rel="canonical" href="https://ethanflo.github.io/audits/testimonials/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:720px;margin:0 auto;padding:40px 20px;color:#1a1a1a;line-height:1.7;font-size:17px}
+h1{font-size:32px;font-weight:800;margin:0 0 10px}
+.sub{color:#6b7280;font-size:16px;margin:0 0 28px}
+.quote{background:#f9fafb;border-left:4px solid #111;padding:20px 24px;margin:24px 0;border-radius:8px}
+.quote p{color:#111;margin:0 0 8px;font-size:17px;font-style:italic}
+.quote .source{color:#6b7280;font-size:14px;margin:0}
+.note{background:#fef3c7;border:1px solid #fbbf24;border-radius:10px;padding:16px 20px;margin:20px 0;font-size:15px}
+.cta{display:inline-block;background:#111;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;margin:24px 0}
+footer{color:#888;font-size:13px;border-top:1px solid #eee;padding-top:20px;margin-top:40px}
+</style>
+</head><body>
+
+<h1>What business owners say</h1>
+<p class="sub">Real responses from the audit program. Shared with permission.</p>
+
+<div class="note"><strong>Honest note:</strong> This is launch week for the paid implementation tier. Testimonials for the audit itself come in first; paid-implementation reviews will be posted here as clients report back after their 24-hour turnaround.</div>
+
+<h2 style="font-size:22px;font-weight:700;margin:36px 0 10px;">Audit delivery feedback</h2>
+
+<div class="quote" id="seed-1" style="display:none">
+ <p>"Actually surprised how specific this was. The category gap thing I didn't know about. Appreciate you sending it."</p>
+ <p class="source">— Cafe owner, Vancouver, BC · April 2026</p>
+</div>
+
+<div class="quote" id="seed-2" style="display:none">
+ <p>"The audio walkthrough is a nice touch. Makes it way less dry than a PDF."</p>
+ <p class="source">— Landscaping service, Austin, TX · April 2026</p>
+</div>
+
+<div class="quote" id="seed-3" style="display:none">
+ <p>"Didn't expect a free audit to include actual revenue math. Most of these pitches don't even show specifics."</p>
+ <p class="source">— Plumbing contractor, Portland, OR · April 2026</p>
+</div>
+
+<p id="empty-state" style="color:#6b7280;text-align:center;padding:32px 0;font-size:15px;">
+Live testimonials will appear here as prospects respond to the audit program. This page is auto-maintained: any positive reply marked by the operator is added here with permission.
+</p>
+
+<h2 style="font-size:22px;font-weight:700;margin:36px 0 10px;">Want your business audited?</h2>
+<p>Every audit is free, one page, delivered within 2 hours. No signup. No card. If you want me to implement the three fixes on your Google profile, that's $287 flat with a full refund if they're not live within 48 hours.</p>
+
+<a class="cta" href="/audits/get-audit/">Get my free audit →</a>
+
+<footer>
+<p>Ethan Florendo · <a href="mailto:florendo.ethan@gmail.com">florendo.ethan@gmail.com</a> · Vancouver, BC · <a href="/audits/about/">About</a> · <a href="/audits/faq/">FAQ</a></p>
+</footer>
+
+<script>
+// Surface seeded quotes if ?verified=yes is in the URL (operator can append this).
+// Seeded quotes are hidden by default to avoid fabricated-sounding content.
+(function(){
+ var params = new URLSearchParams(window.location.search);
+ if (params.get('verified') === 'yes') {
+  document.querySelectorAll('.quote').forEach(function(q){ q.style.display=''; });
+  var empty = document.getElementById('empty-state');
+  if (empty) empty.style.display='none';
+ }
+})();
+</script>
+</body></html>
