@@ -1,6 +1,6 @@
 {
   "type": "predictive",
-  "generated_at": "2026-04-21T19:07:22.716611+00:00",
+  "generated_at": "2026-04-21T19:08:15.966637+00:00",
   "horizon_days": 7,
   "projected_sends": 3311,
   "projected_chat_sessions": 0,
