@@ -6,8 +6,16 @@
  <atom:link href="https://ethanflo.github.io/audits/feed.xml" rel="self" type="application/rss+xml"/>
  <description>Live feed of Google Business Profile audits, fixes, case studies, and guides for local service businesses.</description>
  <language>en-us</language>
- <lastBuildDate>Tue, 21 Apr 2026 15:16:30 +0000</lastBuildDate>
+ <lastBuildDate>Tue, 21 Apr 2026 16:16:31 +0000</lastBuildDate>
  <ttl>60</ttl>
+
+  <item>
+   <title><![CDATA[The Local 3-Pack: What Google Actually Uses to Rank Those Three Spots]]></title>
+   <link>https://ethanflo.github.io/audits/blog/local-pack-3-pack-ranking-factors/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Tue, 21 Apr 2026 16:01:02 +0000</pubDate>
+   <guid isPermaLink="false">blog-local-pack-3-pack-ranking-factors</guid>
+  </item>
 
   <item>
    <title><![CDATA[Google Visibility Audit, Kisa]]></title>
