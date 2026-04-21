@@ -1,0 +1,26 @@
+{
+  "type": "prescriptive",
+  "generated_at": "2026-04-21T19:07:22.716620+00:00",
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "area": "Marketing",
+      "action": "Cold-email fail rate is 9.9%. Clean bounce list; pause US domains with >10% bounce."
+    },
+    {
+      "priority": "MEDIUM",
+      "area": "Marketing",
+      "action": "Outbound is firing but zero chat sessions from it. Check landing-page CTA + tracking pixel."
+    },
+    {
+      "priority": "HIGH",
+      "area": "Marketing",
+      "action": "7-day sale projection under 1. Crank SEO volume OR reduce prices OR personalize outreach."
+    },
+    {
+      "priority": "HIGH",
+      "area": "Operations",
+      "action": "2 exception report(s) open. See reports/exceptions.json."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIS Dashboard — Flo Marketing</title>
+<meta name="description" content="Management Information Systems dashboard: FAIS, analytics, exception reports, productivity KPIs.">
+<link rel="canonical" href="https://ethanflo.github.io/audits/dashboard/">
+<meta http-equiv="refresh" content="300">
+<style>
+  :root{--bg:#0b1220;--panel:#151d2e;--text:#f5f7fb;--sub:#9aa3b8;--accent:#10b981;--border:rgba(255,255,255,0.08);}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+  .wrap{max-width:1200px;margin:0 auto;padding:32px 20px}
+  .crumbs{color:var(--sub);font-size:13px;margin-bottom:12px}
+  .crumbs a{color:var(--accent);text-decoration:none}
+  h1{font-size:32px;margin:0 0 4px;font-weight:800}
+  .sub-hero{color:var(--sub);font-size:14px;margin:0 0 24px}
+  h2{font-size:18px;margin:32px 0 10px;color:#fff;font-weight:700;letter-spacing:0.02em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px}
+  .card-label{font-size:11px;letter-spacing:0.1em;color:var(--sub);text-transform:uppercase;margin-bottom:6px}
+  .card-val{font-size:24px;font-weight:800;color:#fff}
+  .card-sub{font-size:12px;color:var(--sub);margin-top:4px}
+  .exc{padding:10px 14px;margin:8px 0;background:var(--panel);border-radius:6px;font-size:14px}
+  .sev{font-size:11px;font-weight:800;letter-spacing:0.1em;margin-right:8px}
+  .rec{padding:10px 14px;margin:6px 0;background:var(--panel);border-radius:6px;font-size:13px}
+  .pri{display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:2px 7px;border-radius:4px;margin-right:8px}
+  .pri-high{background:#ef4444;color:#fff}
+  .pri-medium{background:#f59e0b;color:#000}
+  .pri-low{background:#6b7280;color:#fff}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);color:var(--sub);font-size:12px}
+  footer a{color:var(--accent)}
+  code{background:rgba(0,0,0,0.35);padding:1px 5px;border-radius:4px;font-size:12px}
+</style>
+</head><body>
+<div class="wrap">
+<div class="crumbs"><a href="/audits/">Home</a> / Dashboard</div>
+<h1>MIS Dashboard</h1>
+<p class="sub-hero">Auto-refreshes every 5 minutes · Last built: 2026-04-21 19:07 UTC</p>
+
+<h2>Exception Reports <span style="color:var(--sub);font-weight:400;font-size:13px">(management by exception)</span></h2>
+<div class="exc" style="border-left:4px solid #f59e0b"><span class="sev" style="color:#f59e0b">WARNING</span> <b>cold_email_fail_rate</b>: Fail rate 9.9% exceeds warn 8%</div><div class="exc" style="border-left:4px solid #f59e0b"><span class="sev" style="color:#f59e0b">WARNING</span> <b>chat_sessions_per_sends</b>: Sent 473 emails with 0 chat sessions. Landing page or tracking may be broken.</div>
+
+<h2>Descriptive Analytics <span style="color:var(--sub);font-weight:400;font-size:13px">(what happened)</span></h2>
+<p style="color:#cbd5e1">Sent 473 cold emails with 9.9% fail rate. 0 new chat sessions. 0 Upwork orders ever. $0.00 total revenue.</p>
+
+<h2>Prescriptive Recommendations <span style="color:var(--sub);font-weight:400;font-size:13px">(what to do next)</span></h2>
+<div class="rec"><span class="pri pri-high">HIGH</span> <b>Marketing</b>: Cold-email fail rate is 9.9%. Clean bounce list; pause US domains with >10% bounce.</div><div class="rec"><span class="pri pri-medium">MEDIUM</span> <b>Marketing</b>: Outbound is firing but zero chat sessions from it. Check landing-page CTA + tracking pixel.</div><div class="rec"><span class="pri pri-high">HIGH</span> <b>Marketing</b>: 7-day sale projection under 1. Crank SEO volume OR reduce prices OR personalize outreach.</div><div class="rec"><span class="pri pri-high">HIGH</span> <b>Operations</b>: 2 exception report(s) open. See reports/exceptions.json.</div>
+
+<h2>Predictive Analytics <span style="color:var(--sub);font-weight:400;font-size:13px">(7-day projection)</span></h2>
+<div class="grid">
+  <div class="card"><div class="card-label">Projected sends</div><div class="card-val">3,311</div><div class="card-sub">7 days at current pace</div></div>
+  <div class="card"><div class="card-label">Projected hot leads</div><div class="card-val">3.3</div><div class="card-sub">5% of sessions</div></div>
+  <div class="card"><div class="card-label">Projected sales</div><div class="card-val">0.17</div><div class="card-sub">5% of hot leads</div></div>
+  <div class="card"><div class="card-label">Projected revenue</div><div class="card-val">$43</div><div class="card-sub">$262 AOV</div></div>
+</div>
+
+<h2>Productivity KPIs <span style="color:var(--sub);font-weight:400;font-size:13px">(outputs / inputs)</span></h2>
+<div class="grid">
+  <div class="card"><div class="card-label">Sends per hour</div><div class="card-val">19.71</div></div>
+  <div class="card"><div class="card-label">Session per send</div><div class="card-val">0.0</div></div>
+  <div class="card"><div class="card-label">Revenue per send</div><div class="card-val">$0.0</div></div>
+  <div class="card"><div class="card-label">SEO pages live</div><div class="card-val">116</div></div>
+</div>
+
+<h2>FAIS — Marketing</h2>
+<div class="grid">
+  <div class="card"><div class="card-label">Sends 24h</div><div class="card-val">473</div></div>
+  <div class="card"><div class="card-label">Fail rate</div><div class="card-val">9.9%</div></div>
+  <div class="card"><div class="card-label">Chat sessions 24h</div><div class="card-val">0</div></div>
+  <div class="card"><div class="card-label">Hot leads now</div><div class="card-val">0</div></div>
+</div>
+
+<h2>FAIS — Sales</h2>
+<div class="grid">
+  <div class="card"><div class="card-label">Stripe revenue (all)</div><div class="card-val">$0.00</div></div>
+  <div class="card"><div class="card-label">Upwork revenue (all)</div><div class="card-val">$0.00</div></div>
+  <div class="card"><div class="card-label">Combined</div><div class="card-val">$0.00</div></div>
+  <div class="card"><div class="card-label">Pipeline hot leads</div><div class="card-val">0</div></div>
+</div>
+
+<h2>FAIS — Operations</h2>
+<div class="grid">
+  <div class="card"><div class="card-label">Chat agent</div><div class="card-val">✓</div></div>
+  <div class="card"><div class="card-label">Tunnel</div><div class="card-val">✓</div></div>
+  <div class="card"><div class="card-label">Routine loop</div><div class="card-val">✓</div></div>
+  <div class="card"><div class="card-label">Wave loop</div><div class="card-val">✓</div></div>
+  <div class="card"><div class="card-label">Ops bot</div><div class="card-val">✓</div></div>
+</div>
+
+<h2>FAIS — Finance</h2>
+<div class="grid">
+  <div class="card"><div class="card-label">Revenue (all)</div><div class="card-val">$0.00</div></div>
+  <div class="card"><div class="card-label">Op cost</div><div class="card-val">$0.00</div></div>
+  <div class="card"><div class="card-label">Net margin</div><div class="card-val">$0.00</div></div>
+  <div class="card"><div class="card-label">Stripe share</div><div class="card-val">0%</div></div>
+</div>
+
+<footer>
+Management Information Systems — BUSI 205 concepts applied · TPS data in <code>data/</code> · Reports in <code>docs/reports/</code><br>
+Auto-refreshes every 5 min · Server time: 2026-04-21 19:07 UTC<br>
+<a href="/audits/">← back to home</a>
+</footer>
+</div></body></html>

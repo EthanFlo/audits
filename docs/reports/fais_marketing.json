@@ -1,0 +1,17 @@
+{
+  "area": "Marketing",
+  "generated_at": "2026-04-21T19:07:22.716626+00:00",
+  "sends_24h": 473,
+  "fail_rate": 0.099,
+  "top_countries": {
+    "US": 158,
+    "DE": 57,
+    "CA": 55,
+    "HK": 46,
+    "SG": 44
+  },
+  "chat_sessions_24h": 0,
+  "hot_leads_now": 0,
+  "seo_pages_live": 116,
+  "wave_loop_healthy": true
+}
