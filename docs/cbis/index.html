@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CBIS — Computer-Based Information System · Flo Marketing</title>
+<meta name="description" content="Full Computer-Based Information System architecture: hardware, software, data, network, procedures, people, plus TPS/MIS/DSS/ESS/ERP/CRM/KMS/OAS/BI.">
+<link rel="canonical" href="https://ethanflo.github.io/audits/cbis/">
+<meta http-equiv="refresh" content="900">
+<style>
+  :root{--bg:#0b1220;--panel:#151d2e;--text:#f5f7fb;--sub:#9aa3b8;--accent:#10b981;--accent2:#fbbf24;--border:rgba(255,255,255,0.08);}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+  .wrap{max-width:1280px;margin:0 auto;padding:32px 20px}
+  .crumbs{color:var(--sub);font-size:13px;margin-bottom:12px}
+  .crumbs a{color:var(--accent);text-decoration:none}
+  h1{font-size:34px;margin:0 0 6px;font-weight:800}
+  .sub-hero{color:var(--sub);font-size:14px;margin:0 0 24px}
+  .score-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:28px;display:flex;align-items:center;gap:24px}
+  .score-num{font-size:56px;font-weight:800;color:var(--accent);line-height:1}
+  .score-label{font-size:12px;letter-spacing:0.15em;color:var(--sub);text-transform:uppercase}
+  .fin{padding:10px 14px;margin:4px 0;background:rgba(0,0,0,0.2);border-left:4px solid #6b7280;border-radius:4px;font-size:13px}
+  .fin.ok{border-left-color:#10b981;color:#6ee7b7}
+  .sev{font-weight:800;margin-right:8px;font-size:11px;letter-spacing:0.1em}
+  h2{font-size:20px;margin:40px 0 12px;color:#fff;font-weight:700}
+  .comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:14px;margin:14px 0}
+  .comp-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px}
+  .comp-label{font-size:11px;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;font-weight:700;margin-bottom:8px}
+  .comp-card h3{margin:0 0 10px;font-size:17px}
+  .comp-card ul{color:#cbd5e1;margin:0;padding-left:20px;font-size:13px}
+  .comp-card li{margin-bottom:4px}
+  pre{background:rgba(0,0,0,0.35);padding:12px;border-radius:6px;font-size:11px;color:#cbd5e1;overflow-x:auto;max-height:300px}
+  .is-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+  .is-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px}
+  .is-name{font-weight:800;font-size:14px;letter-spacing:0.08em;color:var(--accent2);margin-bottom:4px}
+  .is-desc{color:#cbd5e1;font-size:13px;margin-bottom:8px}
+  summary{cursor:pointer;color:var(--sub);font-size:12px}
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--border);color:var(--sub);font-size:12px}
+  footer a{color:var(--accent)}
+  code{background:rgba(0,0,0,0.35);padding:1px 5px;border-radius:4px;font-size:12px;color:#cbd5e1}
+</style>
+</head><body>
+<div class="wrap">
+<div class="crumbs"><a href="/audits/">Home</a> / CBIS</div>
+<h1>Computer-Based Information System</h1>
+<p class="sub-hero">Full CBIS per BUSI 205 architecture · Auto-refreshes every 15 min · Last built 2026-04-21 20:29 UTC</p>
+
+<div class="score-card">
+  <div><div class="score-num">85</div><div class="score-label">CBIS Health Score</div></div>
+  <div style="flex:1"><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> Gemini API unreachable</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> CRM: 38 sessions, 0 purchases. Conversion funnel needs work.</div></div>
+</div>
+
+<h2>Six CBIS Components</h2>
+<div class="comp-grid">
+
+  <div class="comp-card">
+    <div class="comp-label">1. Hardware</div>
+    <h3>Physical devices</h3>
+    <ul>
+      <li>Host: <code>Ethans-MacBook-Pro.local</code></li>
+      <li>OS: Darwin 24.6.0 / arm64</li>
+      <li>Python 3.9.6 · 12 CPUs</li>
+      <li>Disk: 80.01/994.66 GB free</li>
+    </ul>
+    <details><summary>Vendor infra</summary><ul><li>Cloudflare (tunnel edge)</li><li>GitHub Pages (static HTML)</li><li>Gmail SMTP/IMAP (email transport)</li><li>Stripe (payment processing)</li><li>Google Cloud / Gemini (LLM inference)</li><li>Telegram (ops messaging)</li></ul></details>
+  </div>
+
+  <div class="comp-card">
+    <div class="comp-label">2. Software</div>
+    <h3>Programs</h3>
+    <ul>
+      <li><b>85</b> Python modules, <b>4</b> bash scripts</li>
+      <li>Total LOC: <b>20,293</b></li>
+      <li>Core runtime: python 3.9 (.venv), bash (routine_loop.sh + start_agent.sh + tonight_wave_loop.sh), cloudflared (tunnel binary)</li>
+    </ul>
+  </div>
+
+  <div class="comp-card">
+    <div class="comp-label">3. Database / Data</div>
+    <h3>Stored records</h3>
+    <ul>
+      <li>chat.db sessions: <b>38</b></li>
+      <li>chat.db messages: <b>38</b></li>
+      <li>chat.db purchases: <b>0</b></li>
+      <li>Send-log rows (all time): <b>829</b></li>
+      <li>Upwork orders: <b>0</b></li>
+      <li>SEO pages: <b>116</b></li>
+      <li>Audit pages: <b>993</b></li>
+      <li>Opt-outs honored: <b>1</b></li>
+    </ul>
+  </div>
+
+  <div class="comp-card">
+    <div class="comp-label">4. Network / Telecom</div>
+    <h3>Connectivity</h3>
+    <ul>
+      <li>Cloudflare tunnel: <b style="color:var(--accent)">200 ✓</b></li>
+      <li>GitHub Pages: <b style="color:var(--accent)">200</b></li>
+      <li>Gemini API: <b style="color:#ef4444">unreachable</b></li>
+      <li>Gmail SMTP/IMAP: configured</li>
+      <li>Telegram API: configured</li>
+    </ul>
+  </div>
+
+  <div class="comp-card">
+    <div class="comp-label">5. Procedures</div>
+    <h3>How the system is operated</h3>
+    <ul>
+      <li><b>41</b> scheduled routines in <code>routine_loop.sh</code></li>
+      <li><b>8</b> runbook/playbook markdown files</li>
+    </ul>
+    <details><summary>Scheduled routines</summary><ul><li>00_auto_healer</li><li>00b_upwork_orders</li><li>00c_upwork_fulfill</li><li>00d_upwork_jobs</li><li>00e_upwork_reviews</li><li>00f_seo_city_pages</li><li>00g_seo_howto</li><li>00h_seo_sitemap</li><li>00i_seo_hubs</li><li>00j_busi205_reports</li><li>00k_cbis</li><li>01_heartbeat</li><li>02_stats_refresh</li><li>03_page_open_agg</li><li>04_chat_escalator</li><li>05_sitemap_regen</li><li>06_db_backup</li><li>07_bounce_blacklist</li><li>08_reply_throttle</li><li>09_abandoned_checkout</li><li>10_reddit_hn_monitor</li><li>11_hot_lead_scorer</li><li>12_chat_analytics</li><li>13_vertical_rotator</li><li>14_city_rotator</li><li>15_owner_enrich</li><li>16_domain_age</li><li>17_case_study</li><li>18_location_seo_add</li><li>19_daily_digest</li></ul></details>
+    <details><summary>Automated policies</summary><ul><li>opt-out honored on UNSUBSCRIBE detection (ethics)</li><li>send pause when 24h fail rate > 10% (deliverability)</li><li>auto-resume pause after 6h (operational continuity)</li><li>exception-report CRITICAL only triggers Telegram (management by exception)</li><li>2-consecutive-failure gate before auto-heal (false positive prevention)</li><li>lockfile + launchd KeepAlive prevent process swarm (operational control)</li></ul></details>
+  </div>
+
+  <div class="comp-card">
+    <div class="comp-label">6. People</div>
+    <h3>Users + staff substitutes</h3>
+    <ul>
+      <li>Operator: <b>Ethan Florendo</b> (Vancouver, BC)</li>
+      <li>External stakeholders: 5 groups</li>
+      <li>Vendor/AI staff substitutes: 5</li>
+    </ul>
+    <details><summary>AI staff substitutes (replacing full-time hires)</summary>
+    <ul><li>Gemini 2.5 Pro — audit generation + classifier (replaces copywriter)</li><li>Gemini 2.5 Flash — SEO content farm (replaces content writer)</li><li>Stripe — payment processing (replaces bookkeeper)</li><li>Cloudflare Quick Tunnels — hosting (replaces IT ops)</li><li>GitHub Pages — publishing (replaces web hosting)</li></ul></details>
+  </div>
+
+</div>
+
+<h2>10 Information System Types</h2>
+<div class="is-grid">
+<div class="is-card"><div class="is-name">TPS</div><div class="is-desc">Captures every send / chat session / order / purchase as an immutable transaction record.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
+  "transactions_today": 186,
+  "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
+  "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
+  "data_stores": [
+    "data/send-log-*.jsonl",
+    "chat.db",
+    "data/upwork-orders/*.json"
+  ]
+}</pre></details></div><div class="is-card"><div class="is-name">MIS/FAIS</div><div class="is-desc">Hourly functional-area snapshots. Each area manager gets their own view.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Hourly functional-area snapshots. Each area manager gets their own view.",
+  "areas": [
+    "marketing",
+    "sales",
+    "operations",
+    "finance"
+  ],
+  "file_status": {
+    "marketing": "present",
+    "sales": "present",
+    "operations": "present",
+    "finance": "present"
+  },
+  "endpoint": "/audits/reports/fais_<area>.json"
+}</pre></details></div><div class="is-card"><div class="is-name">DSS</div><div class="is-desc">Rule-based prescriptive recommendations from current TPS + FAIS data.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
+  "current_recommendations_count": 4,
+  "current_top_recommendation": {
+    "priority": "HIGH",
+    "area": "Marketing",
+    "action": "Cold-email fail rate is 9.9%. Clean bounce list; pause US domains with >10% bounce."
+  },
+  "file": "audit-pages/docs/reports/analytics_prescriptive.json"
+}</pre></details></div><div class="is-card"><div class="is-name">ESS</div><div class="is-desc">Auto-refreshing dashboard aggregating all FAIS + analytics + exceptions.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Auto-refreshing dashboard aggregating all FAIS + analytics + exceptions.",
+  "url": "https://ethanflo.github.io/audits/dashboard/",
+  "refresh_interval": "5 min (meta http-equiv refresh)",
+  "cbis_url": "https://ethanflo.github.io/audits/cbis/"
+}</pre></details></div><div class="is-card"><div class="is-name">ERP</div><div class="is-desc">Integrates Marketing (send-log), Sales (Stripe, Upwork), Operations (watchdog), Finance (purchases), Customer Service (chat_agent) in one data + decision layer.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Integrates Marketing (send-log), Sales (Stripe, Upwork), Operations (watchdog), Finance (purchases), Customer Service (chat_agent) in one data + decision layer.",
+  "approach": "Best-of-Breed",
+  "rationale": "Free vendors (Stripe/Gmail/GitHub/Gemini) with custom Python glue. Zero SaaS subscription spend.",
+  "cross_functional_flows": [
+    "lead scraped \u2192 email sent (Marketing\u2192Sales)",
+    "reply received \u2192 hot lead (Sales\u2192Marketing)",
+    "purchase made \u2192 fulfillment triggered (Sales\u2192Operations)",
+    "exception raised \u2192 ops bot alerts (Operations\u2192Management)"
+  ]
+}</pre></details></div><div class="is-card"><div class="is-name">CRM</div><div class="is-desc">Tracks every visitor → session → lead → purchase → repeat. Powered by chat.db + Stripe webhook + Upwork orders.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Tracks every visitor \u2192 session \u2192 lead \u2192 purchase \u2192 repeat. Powered by chat.db + Stripe webhook + Upwork orders.",
+  "lifecycle_stages": [
+    "visitor",
+    "session",
+    "engaged",
+    "hot_lead",
+    "purchaser",
+    "repeat"
+  ],
+  "current_state": {
+    "sessions": 38,
+    "active_sessions": 38,
+    "hot_leads": 0,
+    "purchases": 0,
+    "lifetime_revenue": 0.0
+  },
+  "data_sources": [
+    "chat.db sessions + messages tables",
+    "chat.db purchases table",
+    "data/upwork-orders/*.json"
+  ]
+}</pre></details></div><div class="is-card"><div class="is-name">KMS</div><div class="is-desc">Externalizes every piece of institutional know-how as a searchable, linkable public page.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Externalizes every piece of institutional know-how as a searchable, linkable public page.",
+  "glossary_terms": 51,
+  "paa_pages": 31,
+  "guides_pages": 38,
+  "case_studies": 0,
+  "faq_page": true,
+  "runbooks_md": 46,
+  "philosophy": "Knowledge stored as markdown + HTML, versioned in git, indexed by Google, consumed by future-self AND prospects."
+}</pre></details></div><div class="is-card"><div class="is-name">OAS</div><div class="is-desc">Automates repetitive knowledge-worker tasks: inbox scan, message routing, document generation.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Automates repetitive knowledge-worker tasks: inbox scan, message routing, document generation.",
+  "email_automation": [
+    "reply_monitor.py: scan Gmail every 30 min, classify, auto-respond or escalate",
+    "auto_reply.py: Gemini-drafted replies to INTERESTED",
+    "deliverability.py: generate unique per-prospect cold email bodies"
+  ],
+  "messaging_automation": [
+    "telegram_ops_bot.py: /stats /hot /sales /sends /status /pause /resume /upwork commands",
+    "busi205_applied.py: Telegram on CRITICAL exceptions (management by exception)"
+  ],
+  "document_generation": [
+    "case_study_generator.py: auto case study from closed orders",
+    "daily_blog.py: 1-2 SEO blog posts per day",
+    "run_nightly_free.py: personalized audit HTML per prospect",
+    "make_upwork_gallery_images.py: auto-generated listing images"
+  ]
+}</pre></details></div><div class="is-card"><div class="is-name">BI</div><div class="is-desc">Aggregates TPS data across sources for analytics continuum (descriptive / predictive / prescriptive).</div><details><summary>raw JSON</summary><pre>{
+  "description": "Aggregates TPS data across sources for analytics continuum (descriptive / predictive / prescriptive).",
+  "data_warehouse_shape": {
+    "sources": [
+      "send-log-*.jsonl",
+      "chat.db",
+      "upwork-orders/*.json",
+      "logs/*.log"
+    ],
+    "aggregation": "busi205_applied.py \u2192 scan_send_log() + scan_chat_db() + scan_upwork_orders()",
+    "analytics_outputs": [
+      "docs/reports/analytics_descriptive.json",
+      "docs/reports/analytics_predictive.json",
+      "docs/reports/analytics_prescriptive.json",
+      "docs/reports/productivity.json",
+      "docs/reports/drilldown_sends_by_country.json"
+    ]
+  },
+  "continuum": {
+    "descriptive": "What happened \u2014 24h summary",
+    "predictive": "What will happen \u2014 7-day projection via conversion model",
+    "prescriptive": "What to do \u2014 ranked recommendations tied to threshold triggers"
+  }
+}</pre></details></div><div class="is-card"><div class="is-name">SCM-analog</div><div class="is-desc">Lead supply chain: discovery → enrichment → outreach → reply → qualification → close.</div><details><summary>raw JSON</summary><pre>{
+  "description": "Lead supply chain: discovery \u2192 enrichment \u2192 outreach \u2192 reply \u2192 qualification \u2192 close.",
+  "stages": [
+    "1. DISCOVERY: vertical_rotator + city_rotator scrape Google Places nightly",
+    "2. ENRICHMENT: owner_name_enricher, domain_age_filter, pagespeed_score per prospect",
+    "3. STAGING: audits rendered, landing pages generated, emails drafted",
+    "4. OUTREACH: wave_loop sends tz-aware batches",
+    "5. REPLY: reply_monitor classifies, auto_reply engages INTERESTED",
+    "6. CLOSE: chat_agent takes over, Stripe/Upwork route to purchase"
+  ],
+  "inventory_metric": "drafts in outbox (send-ready prospects)"
+}</pre></details></div>
+</div>
+
+<footer>
+CBIS architecture mapped to BUSI 205 curriculum · see <a href="/audits/dashboard/">MIS dashboard</a> for live metrics<br>
+Orchestrated by <code>scripts/cbis_orchestrator.py</code>, scheduled every 15 min via <code>routine_loop.sh → 00k_cbis</code><br>
+<a href="/audits/">← Home</a>
+</footer>
+</div></body></html>
