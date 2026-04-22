@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategy · Flo Marketing</title>
+<meta name="description" content="Porter's Five Forces, Value Chain, Generic Strategies, and SWOT analysis for Flo Marketing — auto-generated from live system metrics.">
+<link rel="canonical" href="https://ethanflo.github.io/audits/strategy/">
+<meta http-equiv="refresh" content="3600">
+<style>
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:#0b1220;color:#f5f7fb;line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:48px 24px}
+  .crumbs{color:#9aa3b8;font-size:13px;margin-bottom:12px} .crumbs a{color:#10b981;text-decoration:none}
+  h1{font-size:36px;margin:0 0 8px;font-weight:800}
+  .sub{color:#9aa3b8;font-size:14px;margin:0 0 28px}
+  h2{font-size:24px;margin:40px 0 14px}
+  .force,.strat{background:#151d2e;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:18px 22px;margin:12px 0}
+  .force-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .force h3,.strat h3{margin:0;font-size:17px}
+  .force p,.strat p{color:#cbd5e1;font-size:14px;margin:8px 0 0}
+  .rating{font-size:11px;letter-spacing:0.1em;font-weight:800;padding:4px 10px;border-radius:6px;color:#fff}
+  .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .swot{background:#151d2e;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px}
+  .swot h3{margin:0 0 10px;font-size:16px;letter-spacing:0.05em;text-transform:uppercase}
+  .swot ul{margin:0;padding-left:18px;color:#cbd5e1;font-size:13px}
+  .swot li{margin-bottom:6px}
+  .s{border-top:3px solid #10b981} .w{border-top:3px solid #ef4444}
+  .o{border-top:3px solid #3b82f6} .t{border-top:3px solid #f59e0b}
+  footer{margin-top:48px;color:#9aa3b8;font-size:13px;text-align:center}
+</style>
+</head><body>
+<div class="wrap">
+<div class="crumbs"><a href="/audits/">Home</a> / Strategy</div>
+<h1>Strategic analysis</h1>
+<p class="sub">Porter's Five Forces, Value Chain, Generic Strategies, and SWOT · Auto-updated hourly · Last build 2026-04-22 16:53 UTC</p>
+
+<h2>Porter's Five Forces</h2>
+<p style="color:#9aa3b8;font-size:14px">Industry is LOW-barrier, HIGH-rivalry. Winners are those with unique volume + specific service offering + automated delivery. Our automation is the moat.</p>
+<div class="force"><div class="force-top"><h3>Threat Of New Entrants</h3><span class="rating" style="background:#ef4444">HIGH</span></div><p><b>Why:</b> GBP audit services have near-zero barriers to entry. Any freelancer can start doing audits. Differentiation is service quality, speed, and pricing model (flat fee vs retainer).</p><p><b>Our play:</b> Defensible moat = speed (2h audit), price transparency ($287 flat), refund guarantee, proof of volume (250+ audits). Hard to replicate in week 1.</p></div><div class="force"><div class="force-top"><h3>Bargaining Power Of Buyers</h3><span class="rating" style="background:#ef4444">HIGH</span></div><p><b>Why:</b> Buyers have many free alternatives (YouTube tutorials, Upwork competitors, DIY). Switching cost is zero.</p><p><b>Our play:</b> Lower buyer friction with free tripwire audit, then upsell implementation. Compete on specificity and speed rather than price.</p></div><div class="force"><div class="force-top"><h3>Bargaining Power Of Suppliers</h3><span class="rating" style="background:#10b981">LOW</span></div><p><b>Why:</b> Suppliers = Google Cloud (Gemini API), Gmail, GitHub Pages, Cloudflare. All have free tiers. Switching to Anthropic/Groq/OpenAI is a one-line env-var change.</p><p><b>Our play:</b> Best-of-Breed architecture means no supplier lock-in. LLM_PROVIDER env var supports fallback chain.</p></div><div class="force"><div class="force-top"><h3>Threat Of Substitutes</h3><span class="rating" style="background:#f59e0b">MODERATE</span></div><p><b>Why:</b> Substitutes = do-it-yourself guides, agency retainers, cheap overseas freelancers. DIY is free but slow; agencies are 10× more expensive; freelancers vary in quality.</p><p><b>Our play:</b> Position as 'faster than agencies, cheaper than retainers, sharper than random freelancers'. The flat-fee + refund guarantee is the anti-substitute weapon.</p></div><div class="force"><div class="force-top"><h3>Competitive Rivalry</h3><span class="rating" style="background:#ef4444">HIGH</span></div><p><b>Why:</b> Upwork and Fiverr have hundreds of 'GBP optimization' listings. SEO is crowded. Local SEO agencies are everywhere.</p><p><b>Our play:</b> Win on (1) discovery surface (1,600+ SEO pages) (2) speed (sub-2h free audit) (3) transparency (public refund policy + pricing ladder on every page).</p></div>
+
+<h2>Porter's Generic Strategies</h2>
+<div class="strat"><h3 style="color:#10b981">✓ Cost Leadership</h3><p>Free-tier infrastructure, zero SaaS spend beyond $20/mo Gemini Pro, Best-of-Breed with custom glue. Our cost per audit trends to $0 (Gemini tokens only).</p></div><div class="strat"><h3 style="color:#10b981">✓ Differentiation</h3><p>Unique positioning: 2-hour turnaround, flat fee, 48h refund guarantee. No agency can match this speed; no freelancer can match the volume.</p></div><div class="strat"><h3 style="color:#10b981">✓ Focus Niche</h3><p>Narrow focus: Google Business Profile audits for local service businesses. Not trying to do general SEO, websites, ads.</p></div>
+<p style="color:#cbd5e1;font-style:italic">We're pursuing all three, which Porter warns against ('stuck in the middle'). But the hybrid works for us because the automation layer collapses the cost-differentiation tradeoff — we can be cheap AND fast AND specialized because the marginal cost per audit is near zero.</p>
+<p style="color:#fbbf24"><b>Recommendation:</b> Current positioning works for < $100K revenue. Beyond that, pick one primary strategy for defensibility.</p>
+
+<h2>SWOT (auto-generated from live metrics)</h2>
+<div class="grid-2">
+  <div class="swot s"><h3>Strengths</h3><ul><li>Fully automated pipeline (scraping → outreach → audit → fulfillment)</li><li>116 SEO pages as discovery surface</li><li>$0/day operational cost (free-tier stack)</li><li>60-second auto-send for Upwork orders (no human latency)</li><li>Multi-channel: Stripe + Upwork + cold email + SEO + chat agent</li></ul></div>
+  <div class="swot w"><h3>Weaknesses</h3><ul><li>Fail rate at 9.9% on cold email</li><li>0.0 total revenue so far — no proven conversion yet</li><li>Solo operator (bus factor = 1)</li><li>No reviews on Upwork listing yet (new-seller penalty in search)</li><li>Pricing ladder has no $47 tripwire on Stripe yet (only Upwork)</li></ul></div>
+  <div class="swot o"><h3>Opportunities</h3><ul><li>1,625 city×vertical SEO pages ramping organic traffic over next 30-60 days</li><li>Upwork Project Catalog listing approved and live (inbound surface)</li><li>Microsoft for Startups Founders Hub / Google for Startups Cloud Program available (unclaimed)</li><li>Gemini 2.5 Pro upgrade improves audit quality (recently deployed)</li><li>5 more Upwork listing variants paste-ready but unpublished</li></ul></div>
+  <div class="swot t"><h3>Threats</h3><ul><li>Upwork could change Project Catalog rules or suspend listing</li><li>Google Cloud credit expires in ~12 days at current burn rate ($173 left of $415)</li><li>Gmail daily send limit caps cold outreach at ~200/day per account</li><li>SEO pages could be flagged as low-quality if matrix fills too fast</li><li>Competitor could copy our landing page + pricing ladder</li></ul></div>
+</div>
+
+<h2>Prioritized actions</h2>
+<ol style="color:#cbd5e1">
+<li>Validate conversion: every day without a sale, lower friction (add $47 tripwire Stripe link)</li><li>Claim $150K Microsoft for Startups credit (buys runway beyond Google Cloud promo)</li><li>Monitor Gmail deliverability; if fail rate stays >8% add 3rd sender</li><li>Publish 5 more Upwork listings to 6× the inbound surface</li><li>Document the automation (this file) so it's transferable if operator leaves</li>
+</ol>
+
+<h2>Porter's Value Chain</h2>
+<p style="color:#9aa3b8;font-size:14px">Five primary activities + four support activities, mapped to our actual operation.</p>
+<div class="grid-2">
+  <div class="swot"><h3 style="text-transform:none;letter-spacing:0">Inbound Logistics</h3><p style="color:#cbd5e1;font-size:13px"><b>Prospect data acquisition</b></p><p style="color:#cbd5e1;font-size:13px">How: Google Places scraping + RSS + free directories → enriched prospect JSONL</p><p style="color:#10b981;font-size:13px">Value: Structured addressable TAM of ~10K local businesses</p></div><div class="swot"><h3 style="text-transform:none;letter-spacing:0">Operations</h3><p style="color:#cbd5e1;font-size:13px"><b>Audit generation + implementation</b></p><p style="color:#cbd5e1;font-size:13px">How: Gemini 2.5 Pro for audits, human (operator) for GBP implementation</p><p style="color:#10b981;font-size:13px">Value: Turning raw GBP URL into actionable 3-fix playbook within 2 hours</p></div><div class="swot"><h3 style="text-transform:none;letter-spacing:0">Outbound Logistics</h3><p style="color:#cbd5e1;font-size:13px"><b>Audit delivery</b></p><p style="color:#cbd5e1;font-size:13px">How: Personalized landing pages on GitHub Pages + chat agent + Stripe checkout + Upwork auto-send</p><p style="color:#10b981;font-size:13px">Value: Client receives deliverable within 60s of purchase</p></div><div class="swot"><h3 style="text-transform:none;letter-spacing:0">Marketing And Sales</h3><p style="color:#cbd5e1;font-size:13px"><b>Prospect outreach + pipeline</b></p><p style="color:#cbd5e1;font-size:13px">How: Wave loop cold email (100-200/day) + 1,500+ SEO pages + Upwork Project Catalog + Reddit/HN monitor</p><p style="color:#10b981;font-size:13px">Value: Buyer awareness → audit request → purchase</p></div><div class="swot"><h3 style="text-transform:none;letter-spacing:0">Service</h3><p style="color:#cbd5e1;font-size:13px"><b>Post-sale support + reviews</b></p><p style="color:#cbd5e1;font-size:13px">How: Review-ask automation 48h after fulfillment; Telegram ops bot for operator</p><p style="color:#10b981;font-size:13px">Value: Repeat buyers + portfolio-building social proof</p></div>
+</div>
+<p style="color:#fbbf24;margin-top:20px">Value is captured in the AUTOMATION LAYER between prospects and purchases. Each step that would normally require a human is handled by a Python script, so marginal cost per audit trends to zero.</p>
+
+<footer>Auto-generated by <code style="color:#10b981">scripts/busi205_chapters.py</code> · <a href="/audits/" style="color:#10b981">Home</a> · <a href="/audits/cbis/" style="color:#10b981">CBIS</a> · <a href="/audits/dashboard/" style="color:#10b981">MIS dashboard</a></footer>
+</div>
+</body></html>

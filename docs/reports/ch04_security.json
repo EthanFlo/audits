@@ -1,0 +1,15 @@
+{
+  "scanned_files": 0,
+  "env_gitignored": true,
+  "findings": [],
+  "findings_count_by_severity": {
+    "CRITICAL": 0,
+    "WARNING": 0
+  },
+  "emails_in_logs_total": 5369,
+  "recommendations": [
+    "Rotate any secret flagged above and regenerate in its vendor console",
+    "If logs contain emails, redact them with `sed -i 's/\\S*@\\S*/[email]/g' *.log` before sharing",
+    "Review access to the operator Mac: physical + login password"
+  ]
+}

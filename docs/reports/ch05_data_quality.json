@@ -1,0 +1,9 @@
+{
+  "total_prospects_scanned": 3929,
+  "unique_emails": 3736,
+  "duplicate_emails_count": 115,
+  "chat_db_schema_ok": true,
+  "chat_db_schema_drift": [],
+  "old_send_logs_archivable": [],
+  "master_data_rule": "Email is the unique key across prospects. chat.db is the source of truth for customers."
+}

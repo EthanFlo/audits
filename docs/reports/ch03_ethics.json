@@ -1,0 +1,41 @@
+{
+  "opt_out_honored_count": 1,
+  "fair_information_practices": {
+    "notice_awareness": {
+      "status": "MISSING",
+      "description": "Data subjects know we collect their data",
+      "evidence": "Every cold email includes sender ID + mailing addr + STOP reply instruction"
+    },
+    "choice_consent": {
+      "status": "OK",
+      "description": "Subjects can opt out at any time",
+      "evidence": "reply_monitor.py auto-honors UNSUBSCRIBE; opt-out ledger has 1 entries"
+    },
+    "access_participation": {
+      "status": "NEEDS_PAGE",
+      "description": "Subjects can request what we know about them",
+      "evidence": "Publish /data-rights/ with email contact"
+    },
+    "integrity_security": {
+      "status": "OK",
+      "description": "Data accuracy + security",
+      "evidence": "chat.db is local + git-ignored; Stripe handles PII; Gemini API calls never log personal data"
+    },
+    "enforcement_redress": {
+      "status": "NEEDS_POLICY",
+      "description": "Subjects have recourse if harmed",
+      "evidence": "florendo.ethan@gmail.com for complaints; public privacy policy"
+    }
+  },
+  "fip_score": "2/5",
+  "required_pages": {
+    "privacy_policy": false,
+    "terms_of_service": false,
+    "data_rights": false
+  },
+  "recommendations": [
+    "Publish /privacy/ page with cookie + data-use disclosure",
+    "Publish /data-rights/ page for DSRs (data subject requests)",
+    "Publish /terms/ with refund policy + dispute process"
+  ]
+}

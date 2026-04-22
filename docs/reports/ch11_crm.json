@@ -1,0 +1,18 @@
+{
+  "description": "Customer-lifetime patterns across sessions \u2192 purchases \u2192 repeat.",
+  "cohorts": {},
+  "clv_estimate": 0,
+  "churn_signals": [],
+  "weekly_cohorts": [
+    {
+      "week": "2026-W16",
+      "sessions": 26,
+      "avg_lead_temp": 0
+    },
+    {
+      "week": "2026-W15",
+      "sessions": 12,
+      "avg_lead_temp": 0
+    }
+  ]
+}

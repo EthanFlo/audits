@@ -1,0 +1,119 @@
+{
+  "porters_five_forces": {
+    "threat_of_new_entrants": {
+      "rating": "HIGH",
+      "rationale": "GBP audit services have near-zero barriers to entry. Any freelancer can start doing audits. Differentiation is service quality, speed, and pricing model (flat fee vs retainer).",
+      "our_response": "Defensible moat = speed (2h audit), price transparency ($287 flat), refund guarantee, proof of volume (250+ audits). Hard to replicate in week 1."
+    },
+    "bargaining_power_of_buyers": {
+      "rating": "HIGH",
+      "rationale": "Buyers have many free alternatives (YouTube tutorials, Upwork competitors, DIY). Switching cost is zero.",
+      "our_response": "Lower buyer friction with free tripwire audit, then upsell implementation. Compete on specificity and speed rather than price."
+    },
+    "bargaining_power_of_suppliers": {
+      "rating": "LOW",
+      "rationale": "Suppliers = Google Cloud (Gemini API), Gmail, GitHub Pages, Cloudflare. All have free tiers. Switching to Anthropic/Groq/OpenAI is a one-line env-var change.",
+      "our_response": "Best-of-Breed architecture means no supplier lock-in. LLM_PROVIDER env var supports fallback chain."
+    },
+    "threat_of_substitutes": {
+      "rating": "MODERATE",
+      "rationale": "Substitutes = do-it-yourself guides, agency retainers, cheap overseas freelancers. DIY is free but slow; agencies are 10\u00d7 more expensive; freelancers vary in quality.",
+      "our_response": "Position as 'faster than agencies, cheaper than retainers, sharper than random freelancers'. The flat-fee + refund guarantee is the anti-substitute weapon."
+    },
+    "competitive_rivalry": {
+      "rating": "HIGH",
+      "rationale": "Upwork and Fiverr have hundreds of 'GBP optimization' listings. SEO is crowded. Local SEO agencies are everywhere.",
+      "our_response": "Win on (1) discovery surface (1,600+ SEO pages) (2) speed (sub-2h free audit) (3) transparency (public refund policy + pricing ladder on every page)."
+    },
+    "summary": "Industry is LOW-barrier, HIGH-rivalry. Winners are those with unique volume + specific service offering + automated delivery. Our automation is the moat."
+  },
+  "value_chain": {
+    "primary_activities": {
+      "inbound_logistics": {
+        "activity": "Prospect data acquisition",
+        "how": "Google Places scraping + RSS + free directories \u2192 enriched prospect JSONL",
+        "value_added": "Structured addressable TAM of ~10K local businesses"
+      },
+      "operations": {
+        "activity": "Audit generation + implementation",
+        "how": "Gemini 2.5 Pro for audits, human (operator) for GBP implementation",
+        "value_added": "Turning raw GBP URL into actionable 3-fix playbook within 2 hours"
+      },
+      "outbound_logistics": {
+        "activity": "Audit delivery",
+        "how": "Personalized landing pages on GitHub Pages + chat agent + Stripe checkout + Upwork auto-send",
+        "value_added": "Client receives deliverable within 60s of purchase"
+      },
+      "marketing_and_sales": {
+        "activity": "Prospect outreach + pipeline",
+        "how": "Wave loop cold email (100-200/day) + 1,500+ SEO pages + Upwork Project Catalog + Reddit/HN monitor",
+        "value_added": "Buyer awareness \u2192 audit request \u2192 purchase"
+      },
+      "service": {
+        "activity": "Post-sale support + reviews",
+        "how": "Review-ask automation 48h after fulfillment; Telegram ops bot for operator",
+        "value_added": "Repeat buyers + portfolio-building social proof"
+      }
+    },
+    "support_activities": {
+      "firm_infrastructure": "launchd + watchdog + auto_healer keep the system up; Cloudflare tunnel + GitHub Pages for hosting",
+      "human_resource_management": "Solo operator + AI staff substitutes (Gemini replaces copywriter, Stripe replaces bookkeeper)",
+      "technology_development": "Custom Python automation across Marketing / Sales / Fulfillment / Analytics",
+      "procurement": "Free-tier vendors (Gmail, GitHub, Cloudflare, Gemini free tier) + $20/mo Google AI Pro"
+    },
+    "strategic_implication": "Value is captured in the AUTOMATION LAYER between prospects and purchases. Each step that would normally require a human is handled by a Python script, so marginal cost per audit trends to zero."
+  },
+  "generic_strategies": {
+    "cost_leadership": {
+      "pursuing": true,
+      "evidence": "Free-tier infrastructure, zero SaaS spend beyond $20/mo Gemini Pro, Best-of-Breed with custom glue. Our cost per audit trends to $0 (Gemini tokens only)."
+    },
+    "differentiation": {
+      "pursuing": true,
+      "evidence": "Unique positioning: 2-hour turnaround, flat fee, 48h refund guarantee. No agency can match this speed; no freelancer can match the volume."
+    },
+    "focus_niche": {
+      "pursuing": true,
+      "evidence": "Narrow focus: Google Business Profile audits for local service businesses. Not trying to do general SEO, websites, ads."
+    },
+    "hybrid_position": "We're pursuing all three, which Porter warns against ('stuck in the middle'). But the hybrid works for us because the automation layer collapses the cost-differentiation tradeoff \u2014 we can be cheap AND fast AND specialized because the marginal cost per audit is near zero.",
+    "recommendation": "Current positioning works for < $100K revenue. Beyond that, pick one primary strategy for defensibility."
+  },
+  "swot": {
+    "strengths": [
+      "Fully automated pipeline (scraping \u2192 outreach \u2192 audit \u2192 fulfillment)",
+      "116 SEO pages as discovery surface",
+      "$0/day operational cost (free-tier stack)",
+      "60-second auto-send for Upwork orders (no human latency)",
+      "Multi-channel: Stripe + Upwork + cold email + SEO + chat agent"
+    ],
+    "weaknesses": [
+      "Fail rate at 9.9% on cold email",
+      "0.0 total revenue so far \u2014 no proven conversion yet",
+      "Solo operator (bus factor = 1)",
+      "No reviews on Upwork listing yet (new-seller penalty in search)",
+      "Pricing ladder has no $47 tripwire on Stripe yet (only Upwork)"
+    ],
+    "opportunities": [
+      "1,625 city\u00d7vertical SEO pages ramping organic traffic over next 30-60 days",
+      "Upwork Project Catalog listing approved and live (inbound surface)",
+      "Microsoft for Startups Founders Hub / Google for Startups Cloud Program available (unclaimed)",
+      "Gemini 2.5 Pro upgrade improves audit quality (recently deployed)",
+      "5 more Upwork listing variants paste-ready but unpublished"
+    ],
+    "threats": [
+      "Upwork could change Project Catalog rules or suspend listing",
+      "Google Cloud credit expires in ~12 days at current burn rate ($173 left of $415)",
+      "Gmail daily send limit caps cold outreach at ~200/day per account",
+      "SEO pages could be flagged as low-quality if matrix fills too fast",
+      "Competitor could copy our landing page + pricing ladder"
+    ],
+    "prioritized_actions": [
+      "Validate conversion: every day without a sale, lower friction (add $47 tripwire Stripe link)",
+      "Claim $150K Microsoft for Startups credit (buys runway beyond Google Cloud promo)",
+      "Monitor Gmail deliverability; if fail rate stays >8% add 3rd sender",
+      "Publish 5 more Upwork listings to 6\u00d7 the inbound surface",
+      "Document the automation (this file) so it's transferable if operator leaves"
+    ]
+  }
+}
