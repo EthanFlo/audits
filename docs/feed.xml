@@ -6,8 +6,16 @@
  <atom:link href="https://ethanflo.github.io/audits/feed.xml" rel="self" type="application/rss+xml"/>
  <description>Live feed of Google Business Profile audits, fixes, case studies, and guides for local service businesses.</description>
  <language>en-us</language>
- <lastBuildDate>Wed, 22 Apr 2026 16:44:41 +0000</lastBuildDate>
+ <lastBuildDate>Wed, 22 Apr 2026 17:45:27 +0000</lastBuildDate>
  <ttl>60</ttl>
+
+  <item>
+   <title><![CDATA[GBP Website vs Separate Website: Which Ranks Better for Local Queries]]></title>
+   <link>https://ethanflo.github.io/audits/blog/gbp-website-vs-separate-website/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Wed, 22 Apr 2026 16:46:20 +0000</pubDate>
+   <guid isPermaLink="false">blog-gbp-website-vs-separate-website</guid>
+  </item>
 
   <item>
    <title><![CDATA[The Local 3-Pack: What Google Actually Uses to Rank Those Three Spots]]></title>
