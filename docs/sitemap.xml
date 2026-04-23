@@ -1137,6 +1137,7 @@
   <url><loc>https://ethanflo.github.io/audits/live/</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/adelaide-au/landscaper/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/atlanta-ga/gym/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/auckland-nz/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/auckland-nz/auto-repair/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/auckland-nz/physical-therapist/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -1155,6 +1156,9 @@
   <url><loc>https://ethanflo.github.io/audits/local/bristol-uk/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/bristol-uk/gym/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/bristol-uk/plumber/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/calgary-ab/landscaper/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/cape-town-za/auto-repair/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/cape-town-za/cafe/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/cape-town-za/physical-therapist/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/charlotte-nc/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/charlotte-nc/chiropractor/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -1185,6 +1189,7 @@
   <url><loc>https://ethanflo.github.io/audits/local/durban-za/pest-control/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/edinburgh-uk/landscaper/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/edinburgh-uk/optometrist/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/edinburgh-uk/restaurant/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/edmonton-ab/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/edmonton-ab/plumber/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/edmonton-ab/roofing/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -1204,21 +1209,26 @@
   <url><loc>https://ethanflo.github.io/audits/local/jacksonville-fl/physical-therapist/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/johannesburg-za/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/johannesburg-za/accountant/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/johannesburg-za/auto-repair/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/johannesburg-za/cafe/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/johannesburg-za/dentist/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/kansas-city-mo/cafe/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/kansas-city-mo/physical-therapist/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/las-vegas-nv/movers/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/leeds-uk/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/leeds-uk/dermatologist/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/leeds-uk/med-spa/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/liverpool-uk/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/liverpool-uk/optometrist/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/london-uk/chiropractor/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/london-uk/hair-salon/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/london-uk/landscaper/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/london-uk/movers/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/london-uk/optometrist/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/manchester-uk/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/manchester-uk/chiropractor/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/manchester-uk/gym/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/manchester-uk/roofing/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/manchester-uk/veterinarian/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/melbourne-au/law-firm/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/melbourne-au/locksmith/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -1229,16 +1239,20 @@
   <url><loc>https://ethanflo.github.io/audits/local/nashville-tn/hvac/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/nashville-tn/plumber/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/newcastle-au/landscaper/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/newcastle-au/tattoo-artist/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/oklahoma-city-ok/hair-salon/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/oklahoma-city-ok/physical-therapist/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/oklahoma-city-ok/real-estate/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/orlando-fl/accountant/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/orlando-fl/real-estate/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/ottawa-on/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/ottawa-on/cafe/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/ottawa-on/dermatologist/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/ottawa-on/hvac/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/ottawa-on/med-spa/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/ottawa-on/physical-therapist/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/ottawa-on/restaurant/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/perth-au/movers/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/phoenix-az/med-spa/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/phoenix-az/plumber/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/pittsburgh-pa/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -1268,9 +1282,11 @@
   <url><loc>https://ethanflo.github.io/audits/local/tampa-fl/hair-salon/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/tampa-fl/movers/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/tampa-fl/tattoo-artist/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/toronto-on/gym/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/toronto-on/landscaper/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/toronto-on/movers/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/vancouver-bc/pest-control/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ethanflo.github.io/audits/local/victoria-bc/veterinarian/</loc><lastmod>2026-04-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/wellington-nz/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/wellington-nz/chiropractor/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ethanflo.github.io/audits/local/wellington-nz/landscaper/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
