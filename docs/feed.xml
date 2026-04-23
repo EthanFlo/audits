@@ -6,7 +6,7 @@
  <atom:link href="https://ethanflo.github.io/audits/feed.xml" rel="self" type="application/rss+xml"/>
  <description>Live feed of Google Business Profile audits, fixes, case studies, and guides for local service businesses.</description>
  <language>en-us</language>
- <lastBuildDate>Thu, 23 Apr 2026 16:27:48 +0000</lastBuildDate>
+ <lastBuildDate>Thu, 23 Apr 2026 20:22:16 +0000</lastBuildDate>
  <ttl>60</ttl>
 
   <item>
@@ -23,6 +23,14 @@
    <description><![CDATA[]]></description>
    <pubDate>Tue, 21 Apr 2026 16:01:02 +0000</pubDate>
    <guid isPermaLink="false">blog-local-pack-3-pack-ranking-factors</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[The Hidden Google Business Profile Service Categories Most Owners Miss]]></title>
+   <link>https://ethanflo.github.io/audits/blog/gbp-service-categories-hidden/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Thu, 23 Apr 2026 16:29:33 +0000</pubDate>
+   <guid isPermaLink="false">blog-gbp-service-categories-hidden</guid>
   </item>
 
   <item>
