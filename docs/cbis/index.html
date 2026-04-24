@@ -42,11 +42,11 @@
 <div class="wrap">
 <div class="crumbs"><a href="/audits/">Home</a> / CBIS</div>
 <h1>Computer-Based Information System</h1>
-<p class="sub-hero">Full CBIS per BUSI 205 architecture · Auto-refreshes every 15 min · Last built 2026-04-21 20:29 UTC</p>
+<p class="sub-hero">Full CBIS per BUSI 205 architecture · Auto-refreshes every 15 min · Last built 2026-04-24 05:50 UTC</p>
 
 <div class="score-card">
-  <div><div class="score-num">85</div><div class="score-label">CBIS Health Score</div></div>
-  <div style="flex:1"><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> Gemini API unreachable</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> CRM: 38 sessions, 0 purchases. Conversion funnel needs work.</div></div>
+  <div><div class="score-num">60</div><div class="score-label">CBIS Health Score</div></div>
+  <div style="flex:1"><div class="fin" style="border-left-color:#ef4444"><span class="sev" style="color:#ef4444">CRITICAL</span> Cloudflare tunnel /healthz failing</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> Gemini API unreachable</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> CRM: 38 sessions, 0 purchases. Conversion funnel needs work.</div></div>
 </div>
 
 <h2>Six CBIS Components</h2>
@@ -59,7 +59,7 @@
       <li>Host: <code>Ethans-MacBook-Pro.local</code></li>
       <li>OS: Darwin 24.6.0 / arm64</li>
       <li>Python 3.9.6 · 12 CPUs</li>
-      <li>Disk: 80.01/994.66 GB free</li>
+      <li>Disk: 87.58/994.66 GB free</li>
     </ul>
     <details><summary>Vendor infra</summary><ul><li>Cloudflare (tunnel edge)</li><li>GitHub Pages (static HTML)</li><li>Gmail SMTP/IMAP (email transport)</li><li>Stripe (payment processing)</li><li>Google Cloud / Gemini (LLM inference)</li><li>Telegram (ops messaging)</li></ul></details>
   </div>
@@ -68,8 +68,8 @@
     <div class="comp-label">2. Software</div>
     <h3>Programs</h3>
     <ul>
-      <li><b>85</b> Python modules, <b>4</b> bash scripts</li>
-      <li>Total LOC: <b>20,293</b></li>
+      <li><b>87</b> Python modules, <b>4</b> bash scripts</li>
+      <li>Total LOC: <b>21,442</b></li>
       <li>Core runtime: python 3.9 (.venv), bash (routine_loop.sh + start_agent.sh + tonight_wave_loop.sh), cloudflared (tunnel binary)</li>
     </ul>
   </div>
@@ -81,11 +81,11 @@
       <li>chat.db sessions: <b>38</b></li>
       <li>chat.db messages: <b>38</b></li>
       <li>chat.db purchases: <b>0</b></li>
-      <li>Send-log rows (all time): <b>829</b></li>
+      <li>Send-log rows (all time): <b>918</b></li>
       <li>Upwork orders: <b>0</b></li>
-      <li>SEO pages: <b>116</b></li>
-      <li>Audit pages: <b>993</b></li>
-      <li>Opt-outs honored: <b>1</b></li>
+      <li>SEO pages: <b>413</b></li>
+      <li>Audit pages: <b>1010</b></li>
+      <li>Opt-outs honored: <b>2</b></li>
     </ul>
   </div>
 
@@ -93,7 +93,7 @@
     <div class="comp-label">4. Network / Telecom</div>
     <h3>Connectivity</h3>
     <ul>
-      <li>Cloudflare tunnel: <b style="color:var(--accent)">200 ✓</b></li>
+      <li>Cloudflare tunnel: <b style="color:#ef4444">FAIL</b></li>
       <li>GitHub Pages: <b style="color:var(--accent)">200</b></li>
       <li>Gemini API: <b style="color:#ef4444">unreachable</b></li>
       <li>Gmail SMTP/IMAP: configured</li>
@@ -105,10 +105,10 @@
     <div class="comp-label">5. Procedures</div>
     <h3>How the system is operated</h3>
     <ul>
-      <li><b>41</b> scheduled routines in <code>routine_loop.sh</code></li>
+      <li><b>42</b> scheduled routines in <code>routine_loop.sh</code></li>
       <li><b>8</b> runbook/playbook markdown files</li>
     </ul>
-    <details><summary>Scheduled routines</summary><ul><li>00_auto_healer</li><li>00b_upwork_orders</li><li>00c_upwork_fulfill</li><li>00d_upwork_jobs</li><li>00e_upwork_reviews</li><li>00f_seo_city_pages</li><li>00g_seo_howto</li><li>00h_seo_sitemap</li><li>00i_seo_hubs</li><li>00j_busi205_reports</li><li>00k_cbis</li><li>01_heartbeat</li><li>02_stats_refresh</li><li>03_page_open_agg</li><li>04_chat_escalator</li><li>05_sitemap_regen</li><li>06_db_backup</li><li>07_bounce_blacklist</li><li>08_reply_throttle</li><li>09_abandoned_checkout</li><li>10_reddit_hn_monitor</li><li>11_hot_lead_scorer</li><li>12_chat_analytics</li><li>13_vertical_rotator</li><li>14_city_rotator</li><li>15_owner_enrich</li><li>16_domain_age</li><li>17_case_study</li><li>18_location_seo_add</li><li>19_daily_digest</li></ul></details>
+    <details><summary>Scheduled routines</summary><ul><li>00_auto_healer</li><li>00b_upwork_orders</li><li>00c_upwork_fulfill</li><li>00d_upwork_jobs</li><li>00e_upwork_reviews</li><li>00f_seo_city_pages</li><li>00g_seo_howto</li><li>00h_seo_sitemap</li><li>00i_seo_hubs</li><li>00j_busi205_reports</li><li>00k_cbis</li><li>00l_busi205_chapters</li><li>01_heartbeat</li><li>02_stats_refresh</li><li>03_page_open_agg</li><li>04_chat_escalator</li><li>05_sitemap_regen</li><li>06_db_backup</li><li>07_bounce_blacklist</li><li>08_reply_throttle</li><li>09_abandoned_checkout</li><li>10_reddit_hn_monitor</li><li>11_hot_lead_scorer</li><li>12_chat_analytics</li><li>13_vertical_rotator</li><li>14_city_rotator</li><li>15_owner_enrich</li><li>16_domain_age</li><li>17_case_study</li><li>18_location_seo_add</li></ul></details>
     <details><summary>Automated policies</summary><ul><li>opt-out honored on UNSUBSCRIBE detection (ethics)</li><li>send pause when 24h fail rate > 10% (deliverability)</li><li>auto-resume pause after 6h (operational continuity)</li><li>exception-report CRITICAL only triggers Telegram (management by exception)</li><li>2-consecutive-failure gate before auto-heal (false positive prevention)</li><li>lockfile + launchd KeepAlive prevent process swarm (operational control)</li></ul></details>
   </div>
 
@@ -130,7 +130,7 @@
 <div class="is-grid">
 <div class="is-card"><div class="is-name">TPS</div><div class="is-desc">Captures every send / chat session / order / purchase as an immutable transaction record.</div><details><summary>raw JSON</summary><pre>{
   "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-  "transactions_today": 186,
+  "transactions_today": 0,
   "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
   "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
   "data_stores": [
@@ -155,11 +155,11 @@
   "endpoint": "/audits/reports/fais_<area>.json"
 }</pre></details></div><div class="is-card"><div class="is-name">DSS</div><div class="is-desc">Rule-based prescriptive recommendations from current TPS + FAIS data.</div><details><summary>raw JSON</summary><pre>{
   "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
-  "current_recommendations_count": 4,
+  "current_recommendations_count": 3,
   "current_top_recommendation": {
     "priority": "HIGH",
     "area": "Marketing",
-    "action": "Cold-email fail rate is 9.9%. Clean bounce list; pause US domains with >10% bounce."
+    "action": "Sends under 50/day. Restart wave_loop or check Gmail daily-limit."
   },
   "file": "audit-pages/docs/reports/analytics_prescriptive.json"
 }</pre></details></div><div class="is-card"><div class="is-name">ESS</div><div class="is-desc">Auto-refreshing dashboard aggregating all FAIS + analytics + exceptions.</div><details><summary>raw JSON</summary><pre>{
@@ -203,7 +203,7 @@
   "description": "Externalizes every piece of institutional know-how as a searchable, linkable public page.",
   "glossary_terms": 51,
   "paa_pages": 31,
-  "guides_pages": 38,
+  "guides_pages": 105,
   "case_studies": 0,
   "faq_page": true,
   "runbooks_md": 46,

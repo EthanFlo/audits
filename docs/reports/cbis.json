@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T20:29:21.111353+00:00",
+  "generated_at": "2026-04-24T05:50:25.957288+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 80.01,
+        "disk_free_gb": 87.58,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -21,16 +21,16 @@
       ]
     },
     "software": {
-      "total_py_modules": 85,
+      "total_py_modules": 87,
       "total_sh_scripts": 4,
-      "total_lines_of_code": 20293,
+      "total_lines_of_code": 21442,
       "core_runtime": [
         "python 3.9 (.venv)",
         "bash (routine_loop.sh + start_agent.sh + tonight_wave_loop.sh)",
         "cloudflared (tunnel binary)",
         "git (version control)"
       ],
-      "custom_modules_count": 85,
+      "custom_modules_count": 87,
       "vendor_sdks": [
         "urllib (HTTP, no external deps)",
         "smtplib / imaplib (Gmail)",
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 829,
+      "send_log_rows_all_time": 918,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
@@ -52,7 +52,7 @@
         },
         {
           "name": "page-opens.jsonl",
-          "rows": 3
+          "rows": 4
         },
         {
           "name": "global-targets.jsonl",
@@ -108,7 +108,7 @@
         },
         {
           "name": "stripe-clicks.jsonl",
-          "rows": 2
+          "rows": 4
         },
         {
           "name": "chambers-intl-sent.jsonl",
@@ -124,15 +124,15 @@
         }
       ],
       "upwork_orders_count": 0,
-      "seo_pages_count": 116,
-      "audit_pages_count": 993,
-      "opt_out_count": 1
+      "seo_pages_count": 413,
+      "audit_pages_count": 1010,
+      "opt_out_count": 2
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://gay-surprising-highlight-lung.trycloudflare.com",
-        "healthz_status": 200,
-        "healthy": true
+        "url": "https://flush-prepared-leonard-ronald.trycloudflare.com",
+        "healthz_status": 0,
+        "healthy": false
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -162,7 +162,7 @@
         "UPWORK-SALES-GAUNTLET.md",
         "V3-GAUNTLET-28-UPGRADES.md"
       ],
-      "scheduled_routines_count": 41,
+      "scheduled_routines_count": 42,
       "scheduled_routines": [
         "00_auto_healer",
         "00b_upwork_orders",
@@ -175,6 +175,7 @@
         "00i_seo_hubs",
         "00j_busi205_reports",
         "00k_cbis",
+        "00l_busi205_chapters",
         "01_heartbeat",
         "02_stats_refresh",
         "03_page_open_agg",
@@ -245,7 +246,7 @@
   "systems": {
     "TPS": {
       "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-      "transactions_today": 186,
+      "transactions_today": 0,
       "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
       "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
       "data_stores": [
@@ -272,11 +273,11 @@
     },
     "DSS": {
       "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
-      "current_recommendations_count": 4,
+      "current_recommendations_count": 3,
       "current_top_recommendation": {
         "priority": "HIGH",
         "area": "Marketing",
-        "action": "Cold-email fail rate is 9.9%. Clean bounce list; pause US domains with >10% bounce."
+        "action": "Sends under 50/day. Restart wave_loop or check Gmail daily-limit."
       },
       "file": "audit-pages/docs/reports/analytics_prescriptive.json"
     },
@@ -324,7 +325,7 @@
       "description": "Externalizes every piece of institutional know-how as a searchable, linkable public page.",
       "glossary_terms": 51,
       "paa_pages": 31,
-      "guides_pages": 38,
+      "guides_pages": 105,
       "case_studies": 0,
       "faq_page": true,
       "runbooks_md": 46,
@@ -386,8 +387,12 @@
     }
   },
   "health": {
-    "score": 85,
+    "score": 60,
     "findings": [
+      [
+        "CRITICAL",
+        "Cloudflare tunnel /healthz failing"
+      ],
       [
         "WARN",
         "Gemini API unreachable"
