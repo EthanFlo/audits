@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T07:00:44.340264+00:00",
+  "generated_at": "2026-04-24T18:47:52.025865+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 87.85,
+        "disk_free_gb": 89.45,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 918,
+      "send_log_rows_all_time": 920,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
@@ -124,15 +124,15 @@
         }
       ],
       "upwork_orders_count": 0,
-      "seo_pages_count": 413,
+      "seo_pages_count": 419,
       "audit_pages_count": 1010,
       "opt_out_count": 2
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://roster-nomination-bool-granny.trycloudflare.com",
-        "healthz_status": 200,
-        "healthy": true
+        "url": "https://scholarships-course-yukon-installations.trycloudflare.com",
+        "healthz_status": 0,
+        "healthy": false
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -246,7 +246,7 @@
   "systems": {
     "TPS": {
       "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-      "transactions_today": 0,
+      "transactions_today": 2,
       "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
       "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
       "data_stores": [
@@ -273,11 +273,11 @@
     },
     "DSS": {
       "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
-      "current_recommendations_count": 3,
+      "current_recommendations_count": 4,
       "current_top_recommendation": {
         "priority": "HIGH",
         "area": "Marketing",
-        "action": "Sends under 50/day. Restart wave_loop or check Gmail daily-limit."
+        "action": "Cold-email fail rate is 50.0%. Clean bounce list; pause US domains with >10% bounce."
       },
       "file": "audit-pages/docs/reports/analytics_prescriptive.json"
     },
@@ -387,8 +387,12 @@
     }
   },
   "health": {
-    "score": 85,
+    "score": 60,
     "findings": [
+      [
+        "CRITICAL",
+        "Cloudflare tunnel /healthz failing"
+      ],
       [
         "WARN",
         "Gemini API unreachable"
