@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-04-24T05:50:22.725013+00:00",
+  "generated_at": "2026-04-24T07:00:39.407320+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://flush-prepared-leonard-ronald.trycloudflare.com",
+  "tunnel_url": "https://roster-nomination-bool-granny.trycloudflare.com",
   "seo_pages_live": 413
 }

@@ -1,12 +1,7 @@
 [
   {
-    "country": "UK",
-    "sends_24h": 14,
-    "share_pct": 93.33
-  },
-  {
     "country": "US",
     "sends_24h": 1,
-    "share_pct": 6.67
+    "share_pct": 100.0
   }
 ]
