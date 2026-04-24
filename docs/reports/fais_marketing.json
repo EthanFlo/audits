@@ -1,17 +1,14 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-04-21T19:08:15.966651+00:00",
-  "sends_24h": 473,
-  "fail_rate": 0.099,
+  "generated_at": "2026-04-24T05:50:22.725001+00:00",
+  "sends_24h": 15,
+  "fail_rate": 0.0,
   "top_countries": {
-    "US": 158,
-    "DE": 57,
-    "CA": 55,
-    "HK": 46,
-    "SG": 44
+    "UK": 14,
+    "US": 1
   },
   "chat_sessions_24h": 0,
   "hot_leads_now": 0,
-  "seo_pages_live": 116,
+  "seo_pages_live": 413,
   "wave_loop_healthy": true
 }
