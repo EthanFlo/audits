@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T18:44:36.512453+00:00",
+  "generated_at": "2026-04-25T19:31:12.678606+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 79.24,
+        "disk_free_gb": 78.74,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -130,7 +130,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://stars-feedback-sri-reforms.trycloudflare.com",
+        "url": "https://merry-queen-copied-segment.trycloudflare.com",
         "healthz_status": 200,
         "healthy": true
       },
