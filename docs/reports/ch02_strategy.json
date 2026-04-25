@@ -82,13 +82,13 @@
   "swot": {
     "strengths": [
       "Fully automated pipeline (scraping \u2192 outreach \u2192 audit \u2192 fulfillment)",
-      "455 SEO pages as discovery surface",
+      "472 SEO pages as discovery surface",
       "$0/day operational cost (free-tier stack)",
       "60-second auto-send for Upwork orders (no human latency)",
       "Multi-channel: Stripe + Upwork + cold email + SEO + chat agent"
     ],
     "weaknesses": [
-      "Fail rate at 60.0% on cold email",
+      "Fail rate at 50.0% on cold email",
       "0.0 total revenue so far \u2014 no proven conversion yet",
       "Solo operator (bus factor = 1)",
       "No reviews on Upwork listing yet (new-seller penalty in search)",
