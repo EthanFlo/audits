@@ -2,22 +2,22 @@
   {
     "severity": "CRITICAL",
     "metric": "cold_email_fail_rate",
-    "value": 33.33,
+    "value": 40.0,
     "threshold": 15.0,
-    "message": "Fail rate 33.3% exceeds critical 15%"
+    "message": "Fail rate 40.0% exceeds critical 15%"
   },
   {
     "severity": "WARNING",
     "metric": "sends_24h",
-    "value": 4,
+    "value": 3,
     "threshold": 50,
-    "message": "Only 4 sends in last 24h (target >= 50)"
+    "message": "Only 3 sends in last 24h (target >= 50)"
   },
   {
     "severity": "CRITICAL",
     "metric": "tunnel_healthz",
     "value": 0,
     "threshold": 200,
-    "message": "Tunnel https://stars-feedback-sri-reforms.trycloudflare.com/healthz not returning 200"
+    "message": "Tunnel https://api.trycloudflare.com/healthz not returning 200"
   }
 ]
