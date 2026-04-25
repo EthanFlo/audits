@@ -42,7 +42,7 @@
 <div class="wrap">
 <div class="crumbs"><a href="/audits/">Home</a> / CBIS</div>
 <h1>Computer-Based Information System</h1>
-<p class="sub-hero">Full CBIS per BUSI 205 architecture · Auto-refreshes every 15 min · Last built 2026-04-25 17:09 UTC</p>
+<p class="sub-hero">Full CBIS per BUSI 205 architecture · Auto-refreshes every 15 min · Last built 2026-04-25 17:24 UTC</p>
 
 <div class="score-card">
   <div><div class="score-num">85</div><div class="score-label">CBIS Health Score</div></div>
@@ -59,7 +59,7 @@
       <li>Host: <code>Ethans-MacBook-Pro.local</code></li>
       <li>OS: Darwin 24.6.0 / arm64</li>
       <li>Python 3.9.6 · 12 CPUs</li>
-      <li>Disk: 86.63/994.66 GB free</li>
+      <li>Disk: 86.65/994.66 GB free</li>
     </ul>
     <details><summary>Vendor infra</summary><ul><li>Cloudflare (tunnel edge)</li><li>GitHub Pages (static HTML)</li><li>Gmail SMTP/IMAP (email transport)</li><li>Stripe (payment processing)</li><li>Google Cloud / Gemini (LLM inference)</li><li>Telegram (ops messaging)</li></ul></details>
   </div>
@@ -81,7 +81,7 @@
       <li>chat.db sessions: <b>38</b></li>
       <li>chat.db messages: <b>38</b></li>
       <li>chat.db purchases: <b>0</b></li>
-      <li>Send-log rows (all time): <b>924</b></li>
+      <li>Send-log rows (all time): <b>926</b></li>
       <li>Upwork orders: <b>0</b></li>
       <li>SEO pages: <b>472</b></li>
       <li>Audit pages: <b>1010</b></li>
@@ -130,7 +130,7 @@
 <div class="is-grid">
 <div class="is-card"><div class="is-name">TPS</div><div class="is-desc">Captures every send / chat session / order / purchase as an immutable transaction record.</div><details><summary>raw JSON</summary><pre>{
   "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-  "transactions_today": 1,
+  "transactions_today": 3,
   "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
   "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
   "data_stores": [

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T17:09:22.753286+00:00",
+  "generated_at": "2026-04-25T17:24:44.559849+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 86.63,
+        "disk_free_gb": 86.65,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 924,
+      "send_log_rows_all_time": 926,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
@@ -246,7 +246,7 @@
   "systems": {
     "TPS": {
       "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-      "transactions_today": 1,
+      "transactions_today": 3,
       "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
       "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
       "data_stores": [
