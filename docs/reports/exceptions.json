@@ -2,22 +2,22 @@
   {
     "severity": "CRITICAL",
     "metric": "cold_email_fail_rate",
-    "value": 50.0,
+    "value": 60.0,
     "threshold": 15.0,
-    "message": "Fail rate 50.0% exceeds critical 15%"
+    "message": "Fail rate 60.0% exceeds critical 15%"
   },
   {
     "severity": "WARNING",
     "metric": "sends_24h",
-    "value": 1,
+    "value": 2,
     "threshold": 50,
-    "message": "Only 1 sends in last 24h (target >= 50)"
+    "message": "Only 2 sends in last 24h (target >= 50)"
   },
   {
     "severity": "CRITICAL",
     "metric": "tunnel_healthz",
     "value": 0,
     "threshold": 200,
-    "message": "Tunnel https://scholarships-course-yukon-installations.trycloudflare.com/healthz not returning 200"
+    "message": "Tunnel https://hugo-sugar-reasonable-yeah.trycloudflare.com/healthz not returning 200"
   }
 ]
