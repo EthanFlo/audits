@@ -6,7 +6,7 @@
     "CRITICAL": 0,
     "WARNING": 0
   },
-  "emails_in_logs_total": 5497,
+  "emails_in_logs_total": 5501,
   "recommendations": [
     "Rotate any secret flagged above and regenerate in its vendor console",
     "If logs contain emails, redact them with `sed -i 's/\\S*@\\S*/[email]/g' *.log` before sharing",
