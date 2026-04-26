@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-04-26T01:02:18.975906+00:00",
+  "generated_at": "2026-04-26T04:52:20.958665+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://fee-pmc-billing-bacterial.trycloudflare.com",
-  "seo_pages_live": 472
+  "tunnel_url": "https://causing-sake-inline-tsunami.trycloudflare.com",
+  "seo_pages_live": 488
 }
