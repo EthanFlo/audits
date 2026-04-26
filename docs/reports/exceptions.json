@@ -2,8 +2,8 @@
   {
     "severity": "WARNING",
     "metric": "sends_24h",
-    "value": 3,
+    "value": 0,
     "threshold": 50,
-    "message": "Only 3 sends in last 24h (target >= 50)"
+    "message": "Only 0 sends in last 24h (target >= 50)"
   }
 ]
