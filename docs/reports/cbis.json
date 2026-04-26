@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T19:48:08.356192+00:00",
+  "generated_at": "2026-04-26T20:03:50.801123+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -124,7 +124,7 @@
         }
       ],
       "upwork_orders_count": 0,
-      "seo_pages_count": 552,
+      "seo_pages_count": 568,
       "audit_pages_count": 1010,
       "opt_out_count": 2
     },
