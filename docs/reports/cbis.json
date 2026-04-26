@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T07:56:27.965939+00:00",
+  "generated_at": "2026-04-26T08:11:38.246872+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 82.09,
+        "disk_free_gb": 82.02,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -68,7 +68,7 @@
         },
         {
           "name": "rotator-verticals.jsonl",
-          "rows": 51
+          "rows": 64
         },
         {
           "name": "agency-emails-sent.jsonl",
