@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T07:25:51.919464+00:00",
+  "generated_at": "2026-04-26T07:41:14.341983+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 82.6,
+        "disk_free_gb": 82.48,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -162,7 +162,7 @@
         "UPWORK-SALES-GAUNTLET.md",
         "V3-GAUNTLET-28-UPGRADES.md"
       ],
-      "scheduled_routines_count": 42,
+      "scheduled_routines_count": 43,
       "scheduled_routines": [
         "00_auto_healer",
         "00b_upwork_orders",
@@ -176,6 +176,7 @@
         "00j_busi205_reports",
         "00k_cbis",
         "00l_busi205_chapters",
+        "00m_warm_connection",
         "01_heartbeat",
         "02_stats_refresh",
         "03_page_open_agg",
