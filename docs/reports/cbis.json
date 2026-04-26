@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T08:57:47.162078+00:00",
+  "generated_at": "2026-04-26T09:16:09.540100+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 82.03,
+        "disk_free_gb": 82.0,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -84,7 +84,7 @@
         },
         {
           "name": "rotator-cities.jsonl",
-          "rows": 41
+          "rows": 55
         },
         {
           "name": "chambers-targets.jsonl",
