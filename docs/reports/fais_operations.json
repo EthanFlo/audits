@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-04-26T06:53:04.928977+00:00",
+  "generated_at": "2026-04-26T07:53:19.772706+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
   "tunnel_url": "https://causing-sake-inline-tsunami.trycloudflare.com",
-  "seo_pages_live": 488
+  "seo_pages_live": 504
 }
