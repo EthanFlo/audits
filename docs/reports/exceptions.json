@@ -5,12 +5,5 @@
     "value": 0,
     "threshold": 50,
     "message": "Only 0 sends in last 24h (target >= 50)"
-  },
-  {
-    "severity": "CRITICAL",
-    "metric": "tunnel_healthz",
-    "value": 0,
-    "threshold": 200,
-    "message": "Tunnel https://causing-sake-inline-tsunami.trycloudflare.com/healthz not returning 200"
   }
 ]
