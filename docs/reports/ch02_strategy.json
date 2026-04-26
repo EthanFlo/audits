@@ -82,7 +82,7 @@
   "swot": {
     "strengths": [
       "Fully automated pipeline (scraping \u2192 outreach \u2192 audit \u2192 fulfillment)",
-      "472 SEO pages as discovery surface",
+      "488 SEO pages as discovery surface",
       "$0/day operational cost (free-tier stack)",
       "60-second auto-send for Upwork orders (no human latency)",
       "Multi-channel: Stripe + Upwork + cold email + SEO + chat agent"
