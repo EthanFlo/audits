@@ -1,6 +1,6 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-04-26T12:54:52.011829+00:00",
+  "generated_at": "2026-04-26T13:55:43.224033+00:00",
   "sends_24h": 3,
   "fail_rate": 0.0,
   "top_countries": {
@@ -8,6 +8,6 @@
   },
   "chat_sessions_24h": 0,
   "hot_leads_now": 0,
-  "seo_pages_live": 520,
+  "seo_pages_live": 536,
   "wave_loop_healthy": true
 }
