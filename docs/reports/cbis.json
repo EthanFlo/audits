@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T07:10:31.567903+00:00",
+  "generated_at": "2026-04-26T07:25:51.919464+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 82.61,
+        "disk_free_gb": 82.6,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -21,16 +21,16 @@
       ]
     },
     "software": {
-      "total_py_modules": 87,
+      "total_py_modules": 88,
       "total_sh_scripts": 4,
-      "total_lines_of_code": 21442,
+      "total_lines_of_code": 21953,
       "core_runtime": [
         "python 3.9 (.venv)",
         "bash (routine_loop.sh + start_agent.sh + tonight_wave_loop.sh)",
         "cloudflared (tunnel binary)",
         "git (version control)"
       ],
-      "custom_modules_count": 87,
+      "custom_modules_count": 88,
       "vendor_sdks": [
         "urllib (HTTP, no external deps)",
         "smtplib / imaplib (Gmail)",
@@ -328,7 +328,7 @@
       "guides_pages": 105,
       "case_studies": 0,
       "faq_page": true,
-      "runbooks_md": 47,
+      "runbooks_md": 48,
       "philosophy": "Knowledge stored as markdown + HTML, versioned in git, indexed by Google, consumed by future-self AND prospects."
     },
     "OAS": {
