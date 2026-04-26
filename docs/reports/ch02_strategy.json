@@ -88,7 +88,7 @@
       "Multi-channel: Stripe + Upwork + cold email + SEO + chat agent"
     ],
     "weaknesses": [
-      "Fail rate at 40.0% on cold email",
+      "Fail rate at 0.0% on cold email",
       "0.0 total revenue so far \u2014 no proven conversion yet",
       "Solo operator (bus factor = 1)",
       "No reviews on Upwork listing yet (new-seller penalty in search)",
