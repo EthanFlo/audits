@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-04-26T23:24:51.129960+00:00",
+  "generated_at": "2026-04-27T00:25:22.959528+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://applicants-harley-supervisors-connector.trycloudflare.com",
+  "tunnel_url": "https://pen-demands-thy-singer.trycloudflare.com",
   "seo_pages_live": 584
 }
