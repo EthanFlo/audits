@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-04-27T07:48:05.012405+00:00",
+  "generated_at": "2026-04-27T08:48:56.628120+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": true,
+  "wave_loop_healthy": false,
   "ops_bot_healthy": true,
   "tunnel_url": "https://intelligent-opponent-louise-external.trycloudflare.com",
-  "seo_pages_live": 615
+  "seo_pages_live": 630
 }
