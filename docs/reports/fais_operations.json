@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-04-27T20:57:40.490687+00:00",
+  "generated_at": "2026-04-27T21:58:19.868892+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://bathrooms-classics-success-observation.trycloudflare.com",
+  "tunnel_url": "https://yang-helena-breakdown-earn.trycloudflare.com",
   "seo_pages_live": 645
 }

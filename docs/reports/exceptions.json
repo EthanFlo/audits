@@ -5,12 +5,5 @@
     "value": 4,
     "threshold": 50,
     "message": "Only 4 sends in last 24h (target >= 50)"
-  },
-  {
-    "severity": "CRITICAL",
-    "metric": "tunnel_healthz",
-    "value": 0,
-    "threshold": 200,
-    "message": "Tunnel https://bathrooms-classics-success-observation.trycloudflare.com/healthz not returning 200"
   }
 ]
