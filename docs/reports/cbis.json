@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T21:44:01.044959+00:00",
+  "generated_at": "2026-04-27T22:00:23.029255+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 123.81,
+        "disk_free_gb": 111.78,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -130,7 +130,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://bathrooms-classics-success-observation.trycloudflare.com",
+        "url": "https://yang-helena-breakdown-earn.trycloudflare.com",
         "healthz_status": 200,
         "healthy": true
       },
