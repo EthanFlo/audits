@@ -6,7 +6,7 @@
  <atom:link href="https://ethanflo.github.io/audits/feed.xml" rel="self" type="application/rss+xml"/>
  <description>Live feed of Google Business Profile audits, fixes, case studies, and guides for local service businesses.</description>
  <language>en-us</language>
- <lastBuildDate>Mon, 27 Apr 2026 01:36:09 +0000</lastBuildDate>
+ <lastBuildDate>Mon, 27 Apr 2026 03:36:34 +0000</lastBuildDate>
  <ttl>60</ttl>
 
   <item>
@@ -31,6 +31,22 @@
    <description><![CDATA[]]></description>
    <pubDate>Thu, 23 Apr 2026 16:29:33 +0000</pubDate>
    <guid isPermaLink="false">blog-gbp-service-categories-hidden</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[Google Visibility Audit, Yan HVAC Refrigerator Appliances Repair]]></title>
+   <link>https://ethanflo.github.io/audits/audits/ChIJz023JeVbwokRh1UR_QDE9B4/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Mon, 27 Apr 2026 02:25:12 +0000</pubDate>
+   <guid isPermaLink="false">audit-ChIJz023JeVbwokRh1UR_QDE9B4</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[Google Visibility Audit, Weather Makers NYC]]></title>
+   <link>https://ethanflo.github.io/audits/audits/ChIJzy7wJ-9jwokRf6D3TYK28i4/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Mon, 27 Apr 2026 02:19:31 +0000</pubDate>
+   <guid isPermaLink="false">audit-ChIJzy7wJ-9jwokRf6D3TYK28i4</guid>
   </item>
 
   <item>
@@ -95,22 +111,6 @@
    <description><![CDATA[]]></description>
    <pubDate>Mon, 20 Apr 2026 16:57:47 +0000</pubDate>
    <guid isPermaLink="false">audit-ChIJySoHkNYEdkgR9OoudntfKV8</guid>
-  </item>
-
-  <item>
-   <title><![CDATA[Google Visibility Audit, Martelli McKegg]]></title>
-   <link>https://ethanflo.github.io/audits/audits/ChIJyRV3oPlHDW0RAqlFyLeMMkM/</link>
-   <description><![CDATA[]]></description>
-   <pubDate>Mon, 20 Apr 2026 16:57:47 +0000</pubDate>
-   <guid isPermaLink="false">audit-ChIJyRV3oPlHDW0RAqlFyLeMMkM</guid>
-  </item>
-
-  <item>
-   <title><![CDATA[Google Visibility Audit, Auckland City Physio]]></title>
-   <link>https://ethanflo.github.io/audits/audits/ChIJyRDS1PBHDW0RLKHHHYT4_hg/</link>
-   <description><![CDATA[]]></description>
-   <pubDate>Mon, 20 Apr 2026 16:57:47 +0000</pubDate>
-   <guid isPermaLink="false">audit-ChIJyRDS1PBHDW0RLKHHHYT4_hg</guid>
   </item>
 
   <item>
