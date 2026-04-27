@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T04:25:38.855412+00:00",
+  "generated_at": "2026-04-27T04:47:13.613726+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -130,7 +130,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://resources-sentence-puzzles-sherman.trycloudflare.com",
+        "url": "https://intelligent-opponent-louise-external.trycloudflare.com",
         "healthz_status": 200,
         "healthy": true
       },
