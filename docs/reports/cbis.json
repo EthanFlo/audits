@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T23:48:14.702144+00:00",
+  "generated_at": "2026-04-28T00:03:40.623405+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -247,7 +247,7 @@
   "systems": {
     "TPS": {
       "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-      "transactions_today": 4,
+      "transactions_today": 0,
       "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
       "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
       "data_stores": [
