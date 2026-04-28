@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T22:45:48.382812+00:00",
+  "generated_at": "2026-04-28T23:01:08.584399+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 113.96,
+        "disk_free_gb": 112.62,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -130,7 +130,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://upc-malpractice-creating-outlet.trycloudflare.com",
+        "url": "https://fishing-revolutionary-grades-stan.trycloudflare.com",
         "healthz_status": 200,
         "healthy": true
       },
