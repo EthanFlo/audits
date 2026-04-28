@@ -1,13 +1,11 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-04-28T15:09:11.731980+00:00",
-  "sends_24h": 4,
-  "fail_rate": 0.0,
-  "top_countries": {
-    "US": 4
-  },
+  "generated_at": "2026-04-28T16:10:10.919424+00:00",
+  "sends_24h": 0,
+  "fail_rate": 0,
+  "top_countries": {},
   "chat_sessions_24h": 0,
   "hot_leads_now": 0,
   "seo_pages_live": 645,
-  "wave_loop_healthy": true
+  "wave_loop_healthy": false
 }

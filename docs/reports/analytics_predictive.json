@@ -1,11 +1,11 @@
 {
   "type": "predictive",
-  "generated_at": "2026-04-28T15:09:11.731967+00:00",
+  "generated_at": "2026-04-28T16:10:10.919395+00:00",
   "horizon_days": 7,
-  "projected_sends": 28,
+  "projected_sends": 0,
   "projected_chat_sessions": 0,
   "projected_hot_leads": 0.0,
   "projected_sales": 0.0,
-  "projected_revenue": 0.37,
+  "projected_revenue": 0.0,
   "model": "linear extrapolation with 2% send\u2192session, 5% session\u2192hot, 5% hot\u2192sale, $262 AOV"
 }
