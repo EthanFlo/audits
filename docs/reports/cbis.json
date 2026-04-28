@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T15:09:15.166374+00:00",
+  "generated_at": "2026-04-28T15:24:17.040489+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 118.11,
+        "disk_free_gb": 118.07,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -130,7 +130,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://mirror-counties-alex-buffer.trycloudflare.com",
+        "url": "https://tunes-abstract-incomplete-contractors.trycloudflare.com",
         "healthz_status": 0,
         "healthy": false
       },
