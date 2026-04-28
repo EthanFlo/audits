@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T08:50:53.583695+00:00",
+  "generated_at": "2026-04-28T15:09:15.166374+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 117.18,
+        "disk_free_gb": 118.11,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -84,7 +84,7 @@
         },
         {
           "name": "rotator-cities.jsonl",
-          "rows": 67
+          "rows": 85
         },
         {
           "name": "chambers-targets.jsonl",
@@ -130,9 +130,9 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://writings-arlington-remarkable-refined.trycloudflare.com",
-        "healthz_status": 200,
-        "healthy": true
+        "url": "https://mirror-counties-alex-buffer.trycloudflare.com",
+        "healthz_status": 0,
+        "healthy": false
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -388,8 +388,12 @@
     }
   },
   "health": {
-    "score": 85,
+    "score": 60,
     "findings": [
+      [
+        "CRITICAL",
+        "Cloudflare tunnel /healthz failing"
+      ],
       [
         "WARN",
         "Gemini API unreachable"
