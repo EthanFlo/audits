@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T01:20:29.690618+00:00",
+  "generated_at": "2026-04-28T01:56:22.244102+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -131,8 +131,8 @@
     "network": {
       "cloudflare_tunnel": {
         "url": "https://yang-helena-breakdown-earn.trycloudflare.com",
-        "healthz_status": 200,
-        "healthy": true
+        "healthz_status": 0,
+        "healthy": false
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -388,8 +388,12 @@
     }
   },
   "health": {
-    "score": 85,
+    "score": 60,
     "findings": [
+      [
+        "CRITICAL",
+        "Cloudflare tunnel /healthz failing"
+      ],
       [
         "WARN",
         "Gemini API unreachable"
