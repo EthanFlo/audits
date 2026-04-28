@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-04-28T08:10:44.866213+00:00",
+  "generated_at": "2026-04-28T15:09:11.731987+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": false,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://writings-arlington-remarkable-refined.trycloudflare.com",
+  "tunnel_url": "https://mirror-counties-alex-buffer.trycloudflare.com",
   "seo_pages_live": 645
 }
