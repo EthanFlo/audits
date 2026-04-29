@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T00:18:08.175622+00:00",
+  "generated_at": "2026-04-29T00:45:15.477200+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 111.51,
+        "disk_free_gb": 111.56,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -130,9 +130,9 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://fishing-revolutionary-grades-stan.trycloudflare.com",
-        "healthz_status": 200,
-        "healthy": true
+        "url": "https://api.trycloudflare.com",
+        "healthz_status": 0,
+        "healthy": false
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -388,8 +388,12 @@
     }
   },
   "health": {
-    "score": 85,
+    "score": 60,
     "findings": [
+      [
+        "CRITICAL",
+        "Cloudflare tunnel /healthz failing"
+      ],
       [
         "WARN",
         "Gemini API unreachable"
