@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T16:30:37.153421+00:00",
+  "generated_at": "2026-04-30T16:45:49.574264+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 110.83,
+        "disk_free_gb": 109.89,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -130,18 +130,18 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://api.trycloudflare.com",
-        "healthz_status": 0,
-        "healthy": false
+        "url": "https://hierarchy-europe-effort-rapid.trycloudflare.com",
+        "healthz_status": 200,
+        "healthy": true
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
-        "status": 0,
-        "healthy": false
+        "status": 200,
+        "healthy": true
       },
       "stripe_checkout": {
-        "url_healthy": false,
-        "status": 0
+        "url_healthy": true,
+        "status": 200
       },
       "gemini_api": {
         "reachable": false
@@ -388,16 +388,8 @@
     }
   },
   "health": {
-    "score": 50,
+    "score": 85,
     "findings": [
-      [
-        "CRITICAL",
-        "Cloudflare tunnel /healthz failing"
-      ],
-      [
-        "WARN",
-        "GitHub Pages not 200"
-      ],
       [
         "WARN",
         "Gemini API unreachable"
