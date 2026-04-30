@@ -2,7 +2,9 @@
   "description": "Customer-lifetime patterns across sessions \u2192 purchases \u2192 repeat.",
   "cohorts": {},
   "clv_estimate": 0,
-  "churn_signals": [],
+  "churn_signals": [
+    "4 sessions stuck as 'active' but silent 14+ days"
+  ],
   "weekly_cohorts": [
     {
       "week": "2026-W16",
