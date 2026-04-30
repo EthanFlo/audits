@@ -6,24 +6,8 @@
  <atom:link href="https://ethanflo.github.io/audits/feed.xml" rel="self" type="application/rss+xml"/>
  <description>Live feed of Google Business Profile audits, fixes, case studies, and guides for local service businesses.</description>
  <language>en-us</language>
- <lastBuildDate>Wed, 29 Apr 2026 04:04:42 +0000</lastBuildDate>
+ <lastBuildDate>Thu, 30 Apr 2026 06:51:22 +0000</lastBuildDate>
  <ttl>60</ttl>
-
-  <item>
-   <title><![CDATA[Google Visibility Audit, Weather Makers NYC]]></title>
-   <link>https://ethanflo.github.io/audits/audits/ChIJzy7wJ-9jwokRf6D3TYK28i4/</link>
-   <description><![CDATA[]]></description>
-   <pubDate>Wed, 29 Apr 2026 00:45:08 +0000</pubDate>
-   <guid isPermaLink="false">audit-ChIJzy7wJ-9jwokRf6D3TYK28i4</guid>
-  </item>
-
-  <item>
-   <title><![CDATA[Google Visibility Audit, Yan HVAC Refrigerator Appliances Repair]]></title>
-   <link>https://ethanflo.github.io/audits/audits/ChIJz023JeVbwokRh1UR_QDE9B4/</link>
-   <description><![CDATA[]]></description>
-   <pubDate>Wed, 29 Apr 2026 00:45:08 +0000</pubDate>
-   <guid isPermaLink="false">audit-ChIJz023JeVbwokRh1UR_QDE9B4</guid>
-  </item>
 
   <item>
    <title><![CDATA[GBP Website vs Separate Website: Which Ranks Better for Local Queries]]></title>
@@ -39,6 +23,22 @@
    <description><![CDATA[]]></description>
    <pubDate>Tue, 21 Apr 2026 16:01:02 +0000</pubDate>
    <guid isPermaLink="false">blog-local-pack-3-pack-ranking-factors</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[Google Visibility Audit, Weather Makers NYC]]></title>
+   <link>https://ethanflo.github.io/audits/audits/ChIJzy7wJ-9jwokRf6D3TYK28i4/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Thu, 30 Apr 2026 05:50:08 +0000</pubDate>
+   <guid isPermaLink="false">audit-ChIJzy7wJ-9jwokRf6D3TYK28i4</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[Google Visibility Audit, Yan HVAC Refrigerator Appliances Repair]]></title>
+   <link>https://ethanflo.github.io/audits/audits/ChIJz023JeVbwokRh1UR_QDE9B4/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Thu, 30 Apr 2026 05:50:08 +0000</pubDate>
+   <guid isPermaLink="false">audit-ChIJz023JeVbwokRh1UR_QDE9B4</guid>
   </item>
 
   <item>
