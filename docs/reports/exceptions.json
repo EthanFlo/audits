@@ -12,5 +12,12 @@
     "value": 40,
     "threshold": 50,
     "message": "Only 40 sends in last 24h (target >= 50)"
+  },
+  {
+    "severity": "CRITICAL",
+    "metric": "tunnel_healthz",
+    "value": 0,
+    "threshold": 200,
+    "message": "Tunnel https://looks-distribute-engine-mechanisms.trycloudflare.com/healthz not returning 200"
   }
 ]
