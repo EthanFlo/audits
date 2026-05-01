@@ -36,37 +36,37 @@
 <div class="wrap">
 <div class="crumbs"><a href="/audits/">Home</a> / Dashboard</div>
 <h1>MIS Dashboard</h1>
-<p class="sub-hero">Auto-refreshes every 5 minutes · Last built: 2026-05-01 19:20 UTC</p>
+<p class="sub-hero">Auto-refreshes every 5 minutes · Last built: 2026-05-01 20:21 UTC</p>
 
 <h2>Exception Reports <span style="color:var(--sub);font-weight:400;font-size:13px">(management by exception)</span></h2>
-<div class="exc" style="border-left:4px solid #f59e0b"><span class="sev" style="color:#f59e0b">WARNING</span> <b>sends_24h</b>: Only 0 sends in last 24h (target >= 50)</div>
+<div class="exc" style="border-left:4px solid #f59e0b"><span class="sev" style="color:#f59e0b">WARNING</span> <b>cold_email_fail_rate</b>: Fail rate 13.6% exceeds warn 8%</div><div class="exc" style="border-left:4px solid #f59e0b"><span class="sev" style="color:#f59e0b">WARNING</span> <b>sends_24h</b>: Only 19 sends in last 24h (target >= 50)</div>
 
 <h2>Descriptive Analytics <span style="color:var(--sub);font-weight:400;font-size:13px">(what happened)</span></h2>
-<p style="color:#cbd5e1">Sent 0 cold emails with 0.0% fail rate. 0 new chat sessions. 0 Upwork orders ever. $0.00 total revenue.</p>
+<p style="color:#cbd5e1">Sent 19 cold emails with 13.6% fail rate. 0 new chat sessions. 0 Upwork orders ever. $0.00 total revenue.</p>
 
 <h2>Prescriptive Recommendations <span style="color:var(--sub);font-weight:400;font-size:13px">(what to do next)</span></h2>
-<div class="rec"><span class="pri pri-high">HIGH</span> <b>Marketing</b>: Sends under 50/day. Restart wave_loop or check Gmail daily-limit.</div><div class="rec"><span class="pri pri-high">HIGH</span> <b>Marketing</b>: 7-day sale projection under 1. Crank SEO volume OR reduce prices OR personalize outreach.</div><div class="rec"><span class="pri pri-high">HIGH</span> <b>Operations</b>: 1 exception report(s) open. See reports/exceptions.json.</div>
+<div class="rec"><span class="pri pri-high">HIGH</span> <b>Marketing</b>: Cold-email fail rate is 13.6%. Clean bounce list; pause US domains with >10% bounce.</div><div class="rec"><span class="pri pri-high">HIGH</span> <b>Marketing</b>: Sends under 50/day. Restart wave_loop or check Gmail daily-limit.</div><div class="rec"><span class="pri pri-high">HIGH</span> <b>Marketing</b>: 7-day sale projection under 1. Crank SEO volume OR reduce prices OR personalize outreach.</div><div class="rec"><span class="pri pri-high">HIGH</span> <b>Operations</b>: 2 exception report(s) open. See reports/exceptions.json.</div>
 
 <h2>Predictive Analytics <span style="color:var(--sub);font-weight:400;font-size:13px">(7-day projection)</span></h2>
 <div class="grid">
-  <div class="card"><div class="card-label">Projected sends</div><div class="card-val">0</div><div class="card-sub">7 days at current pace</div></div>
-  <div class="card"><div class="card-label">Projected hot leads</div><div class="card-val">0.0</div><div class="card-sub">5% of sessions</div></div>
-  <div class="card"><div class="card-label">Projected sales</div><div class="card-val">0.0</div><div class="card-sub">5% of hot leads</div></div>
-  <div class="card"><div class="card-label">Projected revenue</div><div class="card-val">$0</div><div class="card-sub">$262 AOV</div></div>
+  <div class="card"><div class="card-label">Projected sends</div><div class="card-val">133</div><div class="card-sub">7 days at current pace</div></div>
+  <div class="card"><div class="card-label">Projected hot leads</div><div class="card-val">0.1</div><div class="card-sub">5% of sessions</div></div>
+  <div class="card"><div class="card-label">Projected sales</div><div class="card-val">0.01</div><div class="card-sub">5% of hot leads</div></div>
+  <div class="card"><div class="card-label">Projected revenue</div><div class="card-val">$2</div><div class="card-sub">$262 AOV</div></div>
 </div>
 
 <h2>Productivity KPIs <span style="color:var(--sub);font-weight:400;font-size:13px">(outputs / inputs)</span></h2>
 <div class="grid">
-  <div class="card"><div class="card-label">Sends per hour</div><div class="card-val">0</div></div>
-  <div class="card"><div class="card-label">Session per send</div><div class="card-val">0</div></div>
-  <div class="card"><div class="card-label">Revenue per send</div><div class="card-val">$0</div></div>
+  <div class="card"><div class="card-label">Sends per hour</div><div class="card-val">0.79</div></div>
+  <div class="card"><div class="card-label">Session per send</div><div class="card-val">0.0</div></div>
+  <div class="card"><div class="card-label">Revenue per send</div><div class="card-val">$0.0</div></div>
   <div class="card"><div class="card-label">SEO pages live</div><div class="card-val">645</div></div>
 </div>
 
 <h2>FAIS — Marketing</h2>
 <div class="grid">
-  <div class="card"><div class="card-label">Sends 24h</div><div class="card-val">0</div></div>
-  <div class="card"><div class="card-label">Fail rate</div><div class="card-val">0.0%</div></div>
+  <div class="card"><div class="card-label">Sends 24h</div><div class="card-val">19</div></div>
+  <div class="card"><div class="card-label">Fail rate</div><div class="card-val">13.6%</div></div>
   <div class="card"><div class="card-label">Chat sessions 24h</div><div class="card-val">0</div></div>
   <div class="card"><div class="card-label">Hot leads now</div><div class="card-val">0</div></div>
 </div>
@@ -98,7 +98,7 @@
 
 <footer>
 Management Information Systems — BUSI 205 concepts applied · TPS data in <code>data/</code> · Reports in <code>docs/reports/</code><br>
-Auto-refreshes every 5 min · Server time: 2026-05-01 19:20 UTC<br>
+Auto-refreshes every 5 min · Server time: 2026-05-01 20:21 UTC<br>
 <a href="/audits/">← back to home</a>
 </footer>
 </div></body></html>
