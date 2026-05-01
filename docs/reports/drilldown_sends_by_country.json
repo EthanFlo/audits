@@ -2,11 +2,16 @@
   {
     "country": "US",
     "sends_24h": 29,
-    "share_pct": 70.73
+    "share_pct": 65.91
   },
   {
     "country": "CA",
     "sends_24h": 12,
-    "share_pct": 29.27
+    "share_pct": 27.27
+  },
+  {
+    "country": "JP",
+    "sends_24h": 3,
+    "share_pct": 6.82
   }
 ]
