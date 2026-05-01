@@ -1,16 +1,21 @@
 {
   "type": "prescriptive",
-  "generated_at": "2026-05-01T20:21:02.463077+00:00",
+  "generated_at": "2026-05-01T21:21:32.759164+00:00",
   "recommendations": [
     {
       "priority": "HIGH",
       "area": "Marketing",
-      "action": "Cold-email fail rate is 13.6%. Clean bounce list; pause US domains with >10% bounce."
+      "action": "Cold-email fail rate is 9.8%. Clean bounce list; pause US domains with >10% bounce."
     },
     {
       "priority": "HIGH",
       "area": "Marketing",
       "action": "Sends under 50/day. Restart wave_loop or check Gmail daily-limit."
+    },
+    {
+      "priority": "MEDIUM",
+      "area": "Marketing",
+      "action": "Outbound is firing but zero chat sessions from it. Check landing-page CTA + tracking pixel."
     },
     {
       "priority": "HIGH",

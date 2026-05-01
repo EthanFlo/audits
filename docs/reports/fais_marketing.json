@@ -1,11 +1,11 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-05-01T20:21:02.463112+00:00",
-  "sends_24h": 19,
-  "fail_rate": 0.1364,
+  "generated_at": "2026-05-01T21:21:32.759186+00:00",
+  "sends_24h": 37,
+  "fail_rate": 0.0976,
   "top_countries": {
-    "CA": 11,
-    "US": 11
+    "US": 29,
+    "CA": 12
   },
   "chat_sessions_24h": 0,
   "hot_leads_now": 0,

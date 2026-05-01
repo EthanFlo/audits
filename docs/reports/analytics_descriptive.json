@@ -1,21 +1,21 @@
 {
   "type": "descriptive",
-  "generated_at": "2026-05-01T20:21:02.462940+00:00",
-  "summary": "Sent 19 cold emails with 13.6% fail rate. 0 new chat sessions. 0 Upwork orders ever. $0.00 total revenue.",
+  "generated_at": "2026-05-01T21:21:32.759095+00:00",
+  "summary": "Sent 37 cold emails with 9.8% fail rate. 0 new chat sessions. 0 Upwork orders ever. $0.00 total revenue.",
   "raw": {
     "sends": {
-      "sent": 19,
-      "failed": 3,
+      "sent": 37,
+      "failed": 4,
       "rejected": 0,
-      "total": 22,
-      "fail_rate": 0.1364,
+      "total": 41,
+      "fail_rate": 0.0976,
       "by_country": {
-        "CA": 11,
-        "US": 11
+        "CA": 12,
+        "US": 29
       },
       "by_account": {
-        "1": 9,
-        "2": 13
+        "1": 15,
+        "2": 26
       }
     },
     "chat": {
