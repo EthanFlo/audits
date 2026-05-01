@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T22:20:56.069612+00:00",
+  "generated_at": "2026-05-01T22:36:23.393685+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 110.08,
+        "disk_free_gb": 110.05,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -282,7 +282,7 @@
       "current_top_recommendation": {
         "priority": "HIGH",
         "area": "Marketing",
-        "action": "Cold-email fail rate is 9.8%. Clean bounce list; pause US domains with >10% bounce."
+        "action": "Cold-email fail rate is 9.1%. Clean bounce list; pause US domains with >10% bounce."
       },
       "file": "audit-pages/docs/reports/analytics_prescriptive.json"
     },
