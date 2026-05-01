@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T21:19:26.792367+00:00",
+  "generated_at": "2026-05-01T21:34:47.208118+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 111.72,
+        "disk_free_gb": 110.34,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -278,11 +278,11 @@
     },
     "DSS": {
       "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
-      "current_recommendations_count": 4,
+      "current_recommendations_count": 5,
       "current_top_recommendation": {
         "priority": "HIGH",
         "area": "Marketing",
-        "action": "Cold-email fail rate is 13.6%. Clean bounce list; pause US domains with >10% bounce."
+        "action": "Cold-email fail rate is 9.8%. Clean bounce list; pause US domains with >10% bounce."
       },
       "file": "audit-pages/docs/reports/analytics_prescriptive.json"
     },
