@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-01T09:16:47.673782+00:00",
+  "generated_at": "2026-05-01T10:16:55.054200+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": false,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://hierarchy-europe-effort-rapid.trycloudflare.com",
+  "tunnel_url": "https://looks-distribute-engine-mechanisms.trycloudflare.com",
   "seo_pages_live": 645
 }
