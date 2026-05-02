@@ -1,12 +1,13 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-05-02T02:31:42.070616+00:00",
-  "sends_24h": 40,
-  "fail_rate": 0.0909,
+  "generated_at": "2026-05-02T03:32:41.816494+00:00",
+  "sends_24h": 43,
+  "fail_rate": 0.0851,
   "top_countries": {
     "US": 29,
     "CA": 12,
-    "JP": 3
+    "JP": 3,
+    "HK": 3
   },
   "chat_sessions_24h": 0,
   "hot_leads_now": 0,
