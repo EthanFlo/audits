@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T05:22:34.154444+00:00",
+  "generated_at": "2026-05-02T05:38:01.487433+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 111.66,
+        "disk_free_gb": 111.61,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 987,
+      "send_log_rows_all_time": 997,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
@@ -278,11 +278,11 @@
     },
     "DSS": {
       "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
-      "current_recommendations_count": 5,
+      "current_recommendations_count": 2,
       "current_top_recommendation": {
-        "priority": "HIGH",
+        "priority": "MEDIUM",
         "area": "Marketing",
-        "action": "Cold-email fail rate is 8.5%. Clean bounce list; pause US domains with >10% bounce."
+        "action": "Outbound is firing but zero chat sessions from it. Check landing-page CTA + tracking pixel."
       },
       "file": "audit-pages/docs/reports/analytics_prescriptive.json"
     },
