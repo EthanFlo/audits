@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T07:25:27.519377+00:00",
+  "generated_at": "2026-05-02T07:41:06.636219+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 111.61,
+        "disk_free_gb": 111.52,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 1043,
+      "send_log_rows_all_time": 1049,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
@@ -251,7 +251,7 @@
   "systems": {
     "TPS": {
       "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-      "transactions_today": 12,
+      "transactions_today": 18,
       "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
       "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
       "data_stores": [
@@ -278,7 +278,7 @@
     },
     "DSS": {
       "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
-      "current_recommendations_count": 2,
+      "current_recommendations_count": 3,
       "current_top_recommendation": {
         "priority": "MEDIUM",
         "area": "Marketing",
