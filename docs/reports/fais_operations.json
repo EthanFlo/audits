@@ -1,8 +1,8 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-02T19:55:43.049120+00:00",
+  "generated_at": "2026-05-02T21:48:00.487353+00:00",
   "chat_agent_healthy": true,
-  "cloudflared_healthy": true,
+  "cloudflared_healthy": false,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
