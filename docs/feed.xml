@@ -6,7 +6,7 @@
  <atom:link href="https://ethanflo.github.io/audits/feed.xml" rel="self" type="application/rss+xml"/>
  <description>Live feed of Google Business Profile audits, fixes, case studies, and guides for local service businesses.</description>
  <language>en-us</language>
- <lastBuildDate>Sat, 02 May 2026 02:31:43 +0000</lastBuildDate>
+ <lastBuildDate>Sat, 02 May 2026 03:32:45 +0000</lastBuildDate>
  <ttl>60</ttl>
 
   <item>
@@ -31,6 +31,22 @@
    <description><![CDATA[]]></description>
    <pubDate>Thu, 23 Apr 2026 16:29:33 +0000</pubDate>
    <guid isPermaLink="false">blog-gbp-service-categories-hidden</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[Google Visibility Audit, Weather Makers NYC]]></title>
+   <link>https://ethanflo.github.io/audits/audits/ChIJzy7wJ-9jwokRf6D3TYK28i4/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Sat, 02 May 2026 02:37:45 +0000</pubDate>
+   <guid isPermaLink="false">audit-ChIJzy7wJ-9jwokRf6D3TYK28i4</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[Google Visibility Audit, Yan HVAC Refrigerator Appliances Repair]]></title>
+   <link>https://ethanflo.github.io/audits/audits/ChIJz023JeVbwokRh1UR_QDE9B4/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Sat, 02 May 2026 02:37:45 +0000</pubDate>
+   <guid isPermaLink="false">audit-ChIJz023JeVbwokRh1UR_QDE9B4</guid>
   </item>
 
   <item>
@@ -335,22 +351,6 @@
    <description><![CDATA[Why Your Business Isn't Showing on Google Maps (and How to Fix It) — practical guide from 200+ Google Business Profile audits.]]></description>
    <pubDate>Fri, 17 Apr 2026 03:45:03 +0000</pubDate>
    <guid isPermaLink="false">blog-why-is-my-business-not-showing-on-google-maps</guid>
-  </item>
-
-  <item>
-   <title><![CDATA[Google Visibility Audit, Weather Makers NYC]]></title>
-   <link>https://ethanflo.github.io/audits/audits/ChIJzy7wJ-9jwokRf6D3TYK28i4/</link>
-   <description><![CDATA[]]></description>
-   <pubDate>Fri, 01 May 2026 23:36:27 +0000</pubDate>
-   <guid isPermaLink="false">audit-ChIJzy7wJ-9jwokRf6D3TYK28i4</guid>
-  </item>
-
-  <item>
-   <title><![CDATA[Google Visibility Audit, Yan HVAC Refrigerator Appliances Repair]]></title>
-   <link>https://ethanflo.github.io/audits/audits/ChIJz023JeVbwokRh1UR_QDE9B4/</link>
-   <description><![CDATA[]]></description>
-   <pubDate>Fri, 01 May 2026 23:36:27 +0000</pubDate>
-   <guid isPermaLink="false">audit-ChIJz023JeVbwokRh1UR_QDE9B4</guid>
   </item>
 </channel>
 </rss>
