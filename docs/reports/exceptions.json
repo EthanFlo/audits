@@ -18,6 +18,6 @@
     "metric": "tunnel_healthz",
     "value": 0,
     "threshold": 200,
-    "message": "Tunnel https://looks-distribute-engine-mechanisms.trycloudflare.com/healthz not returning 200"
+    "message": "Tunnel https://api.trycloudflare.com/healthz not returning 200"
   }
 ]
