@@ -2,46 +2,46 @@
   {
     "country": "DE",
     "sends_24h": 33,
-    "share_pct": 22.76
+    "share_pct": 21.15
   },
   {
     "country": "NL",
     "sends_24h": 30,
-    "share_pct": 20.69
+    "share_pct": 19.23
   },
   {
     "country": "US",
     "sends_24h": 29,
-    "share_pct": 20.0
+    "share_pct": 18.59
   },
   {
     "country": "UK",
-    "sends_24h": 17,
-    "share_pct": 11.72
+    "sends_24h": 28,
+    "share_pct": 17.95
   },
   {
     "country": "CA",
     "sends_24h": 12,
-    "share_pct": 8.28
+    "share_pct": 7.69
   },
   {
     "country": "FR",
     "sends_24h": 10,
-    "share_pct": 6.9
+    "share_pct": 6.41
   },
   {
     "country": "ES",
     "sends_24h": 8,
-    "share_pct": 5.52
+    "share_pct": 5.13
   },
   {
     "country": "JP",
     "sends_24h": 3,
-    "share_pct": 2.07
+    "share_pct": 1.92
   },
   {
     "country": "HK",
     "sends_24h": 3,
-    "share_pct": 2.07
+    "share_pct": 1.92
   }
 ]
