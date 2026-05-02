@@ -1,8 +1,8 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-05-02T21:48:00.487317+00:00",
-  "sends_24h": 112,
-  "fail_rate": 0.0261,
+  "generated_at": "2026-05-02T22:48:08.304724+00:00",
+  "sends_24h": 109,
+  "fail_rate": 0.0268,
   "top_countries": {
     "DE": 33,
     "NL": 30,

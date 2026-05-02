@@ -4,13 +4,6 @@
     "metric": "chat_sessions_per_sends",
     "value": 0,
     "threshold": 1,
-    "message": "Sent 112 emails with 0 chat sessions. Landing page or tracking may be broken."
-  },
-  {
-    "severity": "CRITICAL",
-    "metric": "tunnel_healthz",
-    "value": 0,
-    "threshold": 200,
-    "message": "Tunnel https://foot-regulation-tomorrow-flex.trycloudflare.com/healthz not returning 200"
+    "message": "Sent 109 emails with 0 chat sessions. Landing page or tracking may be broken."
   }
 ]
