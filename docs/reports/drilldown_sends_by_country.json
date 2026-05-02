@@ -2,21 +2,26 @@
   {
     "country": "US",
     "sends_24h": 29,
-    "share_pct": 61.7
+    "share_pct": 45.31
+  },
+  {
+    "country": "DE",
+    "sends_24h": 17,
+    "share_pct": 26.56
   },
   {
     "country": "CA",
     "sends_24h": 12,
-    "share_pct": 25.53
+    "share_pct": 18.75
   },
   {
     "country": "JP",
     "sends_24h": 3,
-    "share_pct": 6.38
+    "share_pct": 4.69
   },
   {
     "country": "HK",
     "sends_24h": 3,
-    "share_pct": 6.38
+    "share_pct": 4.69
   }
 ]

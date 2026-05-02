@@ -1,17 +1,7 @@
 {
   "type": "prescriptive",
-  "generated_at": "2026-05-02T04:33:20.078767+00:00",
+  "generated_at": "2026-05-02T05:33:54.908082+00:00",
   "recommendations": [
-    {
-      "priority": "HIGH",
-      "area": "Marketing",
-      "action": "Cold-email fail rate is 8.5%. Clean bounce list; pause US domains with >10% bounce."
-    },
-    {
-      "priority": "HIGH",
-      "area": "Marketing",
-      "action": "Sends under 50/day. Restart wave_loop or check Gmail daily-limit."
-    },
     {
       "priority": "MEDIUM",
       "area": "Marketing",
@@ -21,11 +11,6 @@
       "priority": "HIGH",
       "area": "Marketing",
       "action": "7-day sale projection under 1. Crank SEO volume OR reduce prices OR personalize outreach."
-    },
-    {
-      "priority": "HIGH",
-      "area": "Operations",
-      "action": "2 exception report(s) open. See reports/exceptions.json."
     }
   ]
 }
