@@ -11,6 +11,6 @@
     "metric": "tunnel_healthz",
     "value": 0,
     "threshold": 200,
-    "message": "Tunnel https://prefer-innovation-start-ntsc.trycloudflare.com/healthz not returning 200"
+    "message": "Tunnel https://expects-williams-danny-pulled.trycloudflare.com/healthz not returning 200"
   }
 ]
