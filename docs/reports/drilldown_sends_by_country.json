@@ -2,31 +2,26 @@
   {
     "country": "DE",
     "sends_24h": 33,
-    "share_pct": 29.46
+    "share_pct": 30.28
   },
   {
     "country": "NL",
     "sends_24h": 30,
-    "share_pct": 26.79
+    "share_pct": 27.52
   },
   {
     "country": "UK",
     "sends_24h": 28,
-    "share_pct": 25.0
+    "share_pct": 25.69
   },
   {
     "country": "FR",
     "sends_24h": 10,
-    "share_pct": 8.93
+    "share_pct": 9.17
   },
   {
     "country": "ES",
     "sends_24h": 8,
-    "share_pct": 7.14
-  },
-  {
-    "country": "HK",
-    "sends_24h": 3,
-    "share_pct": 2.68
+    "share_pct": 7.34
   }
 ]
