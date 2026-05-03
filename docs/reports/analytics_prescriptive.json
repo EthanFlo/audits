@@ -1,16 +1,21 @@
 {
   "type": "prescriptive",
-  "generated_at": "2026-05-03T06:34:47.386817+00:00",
+  "generated_at": "2026-05-03T14:10:40.600593+00:00",
   "recommendations": [
     {
-      "priority": "MEDIUM",
+      "priority": "HIGH",
       "area": "Marketing",
-      "action": "Outbound is firing but zero chat sessions from it. Check landing-page CTA + tracking pixel."
+      "action": "Sends under 50/day. Restart wave_loop or check Gmail daily-limit."
     },
     {
       "priority": "HIGH",
       "area": "Marketing",
       "action": "7-day sale projection under 1. Crank SEO volume OR reduce prices OR personalize outreach."
+    },
+    {
+      "priority": "HIGH",
+      "area": "Operations",
+      "action": "2 exception report(s) open. See reports/exceptions.json."
     }
   ]
 }
