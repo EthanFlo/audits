@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T21:19:38.466189+00:00",
+  "generated_at": "2026-05-03T22:03:55.386743+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 121.99,
+        "disk_free_gb": 122.04,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://prefer-innovation-start-ntsc.trycloudflare.com",
+        "url": "https://engineering-usgs-across-grows.trycloudflare.com",
         "healthz_status": 0,
         "healthy": false
       },
