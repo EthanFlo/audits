@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-03T17:21:12.811481+00:00",
+  "generated_at": "2026-05-03T18:26:39.190827+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://eyes-soa-allocation-pay.trycloudflare.com",
+  "tunnel_url": "https://six-rail-vertex-grant.trycloudflare.com",
   "seo_pages_live": 645
 }
