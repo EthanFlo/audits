@@ -1,9 +1,1 @@
-[
-  {
-    "severity": "CRITICAL",
-    "metric": "tunnel_healthz",
-    "value": 0,
-    "threshold": 200,
-    "message": "Tunnel https://por-promptly-geography-accurate.trycloudflare.com/healthz not returning 200"
-  }
-]
+[]

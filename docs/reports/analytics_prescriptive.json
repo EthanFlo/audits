@@ -1,6 +1,6 @@
 {
   "type": "prescriptive",
-  "generated_at": "2026-05-03T05:18:25.808842+00:00",
+  "generated_at": "2026-05-03T06:34:47.386817+00:00",
   "recommendations": [
     {
       "priority": "MEDIUM",
@@ -11,11 +11,6 @@
       "priority": "HIGH",
       "area": "Marketing",
       "action": "7-day sale projection under 1. Crank SEO volume OR reduce prices OR personalize outreach."
-    },
-    {
-      "priority": "HIGH",
-      "area": "Operations",
-      "action": "1 exception report(s) open. See reports/exceptions.json."
     }
   ]
 }

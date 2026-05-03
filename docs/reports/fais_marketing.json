@@ -1,12 +1,11 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-05-03T05:18:25.808848+00:00",
-  "sends_24h": 96,
-  "fail_rate": 0.0303,
+  "generated_at": "2026-05-03T06:34:47.386827+00:00",
+  "sends_24h": 66,
+  "fail_rate": 0.0,
   "top_countries": {
-    "NL": 30,
-    "UK": 28,
-    "DE": 23,
+    "UK": 26,
+    "NL": 22,
     "FR": 10,
     "ES": 8
   },
