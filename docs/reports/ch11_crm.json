@@ -3,7 +3,7 @@
   "cohorts": {},
   "clv_estimate": 0,
   "churn_signals": [
-    "36 sessions stuck as 'active' but silent 14+ days"
+    "38 sessions stuck as 'active' but silent 14+ days"
   ],
   "weekly_cohorts": [
     {
