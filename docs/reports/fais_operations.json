@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-04T14:43:01.155819+00:00",
+  "generated_at": "2026-05-04T15:57:56.111854+00:00",
   "chat_agent_healthy": true,
-  "cloudflared_healthy": true,
+  "cloudflared_healthy": false,
   "routine_loop_healthy": false,
   "wave_loop_healthy": false,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://expects-williams-danny-pulled.trycloudflare.com",
+  "tunnel_url": "https://api.trycloudflare.com",
   "seo_pages_live": 645
 }
