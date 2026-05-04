@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T14:55:23.886178+00:00",
+  "generated_at": "2026-05-04T15:57:56.473423+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 107.81,
+        "disk_free_gb": 107.17,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,18 +134,18 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://expects-williams-danny-pulled.trycloudflare.com",
-        "healthz_status": 200,
-        "healthy": true
+        "url": "https://api.trycloudflare.com",
+        "healthz_status": 0,
+        "healthy": false
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
-        "status": 200,
-        "healthy": true
+        "status": 0,
+        "healthy": false
       },
       "stripe_checkout": {
-        "url_healthy": true,
-        "status": 200
+        "url_healthy": false,
+        "status": 0
       },
       "gemini_api": {
         "reachable": false
@@ -392,8 +392,16 @@
     }
   },
   "health": {
-    "score": 85,
+    "score": 50,
     "findings": [
+      [
+        "CRITICAL",
+        "Cloudflare tunnel /healthz failing"
+      ],
+      [
+        "WARN",
+        "GitHub Pages not 200"
+      ],
       [
         "WARN",
         "Gemini API unreachable"

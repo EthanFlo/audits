@@ -42,11 +42,11 @@
 <div class="wrap">
 <div class="crumbs"><a href="/audits/">Home</a> / CBIS</div>
 <h1>Computer-Based Information System</h1>
-<p class="sub-hero">Full CBIS per BUSI 205 architecture · Auto-refreshes every 15 min · Last built 2026-05-04 14:55 UTC</p>
+<p class="sub-hero">Full CBIS per BUSI 205 architecture · Auto-refreshes every 15 min · Last built 2026-05-04 15:57 UTC</p>
 
 <div class="score-card">
-  <div><div class="score-num">85</div><div class="score-label">CBIS Health Score</div></div>
-  <div style="flex:1"><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> Gemini API unreachable</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> CRM: 38 sessions, 0 purchases. Conversion funnel needs work.</div></div>
+  <div><div class="score-num">50</div><div class="score-label">CBIS Health Score</div></div>
+  <div style="flex:1"><div class="fin" style="border-left-color:#ef4444"><span class="sev" style="color:#ef4444">CRITICAL</span> Cloudflare tunnel /healthz failing</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> GitHub Pages not 200</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> Gemini API unreachable</div><div class="fin" style="border-left-color:#f59e0b"><span class="sev" style="color:#f59e0b">WARN</span> CRM: 38 sessions, 0 purchases. Conversion funnel needs work.</div></div>
 </div>
 
 <h2>Six CBIS Components</h2>
@@ -59,7 +59,7 @@
       <li>Host: <code>Ethans-MacBook-Pro.local</code></li>
       <li>OS: Darwin 24.6.0 / arm64</li>
       <li>Python 3.9.6 · 12 CPUs</li>
-      <li>Disk: 107.81/994.66 GB free</li>
+      <li>Disk: 107.17/994.66 GB free</li>
     </ul>
     <details><summary>Vendor infra</summary><ul><li>Cloudflare (tunnel edge)</li><li>GitHub Pages (static HTML)</li><li>Gmail SMTP/IMAP (email transport)</li><li>Stripe (payment processing)</li><li>Google Cloud / Gemini (LLM inference)</li><li>Telegram (ops messaging)</li></ul></details>
   </div>
@@ -93,8 +93,8 @@
     <div class="comp-label">4. Network / Telecom</div>
     <h3>Connectivity</h3>
     <ul>
-      <li>Cloudflare tunnel: <b style="color:var(--accent)">200 ✓</b></li>
-      <li>GitHub Pages: <b style="color:var(--accent)">200</b></li>
+      <li>Cloudflare tunnel: <b style="color:#ef4444">FAIL</b></li>
+      <li>GitHub Pages: <b style="color:#ef4444">FAIL</b></li>
       <li>Gemini API: <b style="color:#ef4444">unreachable</b></li>
       <li>Gmail SMTP/IMAP: configured</li>
       <li>Telegram API: configured</li>
