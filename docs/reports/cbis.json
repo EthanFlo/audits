@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T14:43:04.207819+00:00",
+  "generated_at": "2026-05-05T15:33:06.230031+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 109.48,
+        "disk_free_gb": 109.44,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
