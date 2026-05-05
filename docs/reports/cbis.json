@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T06:46:58.354733+00:00",
+  "generated_at": "2026-05-05T14:43:04.207819+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 109.51,
+        "disk_free_gb": 109.48,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -68,7 +68,7 @@
         },
         {
           "name": "rotator-verticals.jsonl",
-          "rows": 219
+          "rows": 225
         },
         {
           "name": "agency-emails-sent.jsonl",
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://rail-refresh-blend-minor.trycloudflare.com",
+        "url": "https://api.trycloudflare.com",
         "healthz_status": 0,
         "healthy": false
       },
