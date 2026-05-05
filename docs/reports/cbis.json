@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T18:06:12.195923+00:00",
+  "generated_at": "2026-05-05T18:29:44.916698+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 109.43,
+        "disk_free_gb": 69.43,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,9 +134,9 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://validity-marker-gnu-influenced.trycloudflare.com",
-        "healthz_status": 0,
-        "healthy": false
+        "url": "https://celebs-appliance-sparc-trains.trycloudflare.com",
+        "healthz_status": 200,
+        "healthy": true
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -392,12 +392,8 @@
     }
   },
   "health": {
-    "score": 60,
+    "score": 85,
     "findings": [
-      [
-        "CRITICAL",
-        "Cloudflare tunnel /healthz failing"
-      ],
       [
         "WARN",
         "Gemini API unreachable"
