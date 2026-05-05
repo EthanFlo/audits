@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-05T06:46:54.838130+00:00",
-  "chat_agent_healthy": false,
+  "generated_at": "2026-05-05T14:42:59.205073+00:00",
+  "chat_agent_healthy": true,
   "cloudflared_healthy": false,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": true,
+  "wave_loop_healthy": false,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://rail-refresh-blend-minor.trycloudflare.com",
+  "tunnel_url": "https://api.trycloudflare.com",
   "seo_pages_live": 645
 }
