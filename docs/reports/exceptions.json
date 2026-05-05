@@ -11,6 +11,6 @@
     "metric": "tunnel_healthz",
     "value": 0,
     "threshold": 200,
-    "message": "Tunnel https://api.trycloudflare.com/healthz not returning 200"
+    "message": "Tunnel https://rail-refresh-blend-minor.trycloudflare.com/healthz not returning 200"
   }
 ]
