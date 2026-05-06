@@ -1,10 +1,10 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-06T08:14:47.075935+00:00",
+  "generated_at": "2026-05-06T09:20:09.685101+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": true,
+  "wave_loop_healthy": false,
   "ops_bot_healthy": true,
   "tunnel_url": "https://celebs-appliance-sparc-trains.trycloudflare.com",
   "seo_pages_live": 645
