@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T18:25:48.724797+00:00",
+  "generated_at": "2026-05-06T18:40:52.245160+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 99.63,
+        "disk_free_gb": 101.07,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://rebecca-concern-yesterday-artistic.trycloudflare.com",
+        "url": "https://knight-msgid-subsidiary-wood.trycloudflare.com",
         "healthz_status": 0,
         "healthy": false
       },
