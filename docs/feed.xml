@@ -6,7 +6,7 @@
  <atom:link href="https://ethanflo.github.io/audits/feed.xml" rel="self" type="application/rss+xml"/>
  <description>Live feed of Google Business Profile audits, fixes, case studies, and guides for local service businesses.</description>
  <language>en-us</language>
- <lastBuildDate>Wed, 06 May 2026 10:51:45 +0000</lastBuildDate>
+ <lastBuildDate>Wed, 06 May 2026 18:26:01 +0000</lastBuildDate>
  <ttl>60</ttl>
 
   <item>
@@ -18,18 +18,10 @@
   </item>
 
   <item>
-   <title><![CDATA[The Local 3-Pack: What Google Actually Uses to Rank Those Three Spots]]></title>
-   <link>https://ethanflo.github.io/audits/blog/local-pack-3-pack-ranking-factors/</link>
-   <description><![CDATA[]]></description>
-   <pubDate>Tue, 21 Apr 2026 16:01:02 +0000</pubDate>
-   <guid isPermaLink="false">blog-local-pack-3-pack-ranking-factors</guid>
-  </item>
-
-  <item>
    <title><![CDATA[Google Visibility Audit, Weather Makers NYC]]></title>
    <link>https://ethanflo.github.io/audits/audits/ChIJzy7wJ-9jwokRf6D3TYK28i4/</link>
    <description><![CDATA[]]></description>
-   <pubDate>Tue, 05 May 2026 18:29:35 +0000</pubDate>
+   <pubDate>Wed, 06 May 2026 18:25:36 +0000</pubDate>
    <guid isPermaLink="false">audit-ChIJzy7wJ-9jwokRf6D3TYK28i4</guid>
   </item>
 
@@ -37,8 +29,16 @@
    <title><![CDATA[Google Visibility Audit, Yan HVAC Refrigerator Appliances Repair]]></title>
    <link>https://ethanflo.github.io/audits/audits/ChIJz023JeVbwokRh1UR_QDE9B4/</link>
    <description><![CDATA[]]></description>
-   <pubDate>Tue, 05 May 2026 18:29:35 +0000</pubDate>
+   <pubDate>Wed, 06 May 2026 18:25:36 +0000</pubDate>
    <guid isPermaLink="false">audit-ChIJz023JeVbwokRh1UR_QDE9B4</guid>
+  </item>
+
+  <item>
+   <title><![CDATA[The Local 3-Pack: What Google Actually Uses to Rank Those Three Spots]]></title>
+   <link>https://ethanflo.github.io/audits/blog/local-pack-3-pack-ranking-factors/</link>
+   <description><![CDATA[]]></description>
+   <pubDate>Tue, 21 Apr 2026 16:01:02 +0000</pubDate>
+   <guid isPermaLink="false">blog-local-pack-3-pack-ranking-factors</guid>
   </item>
 
   <item>
