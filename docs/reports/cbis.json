@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T04:09:48.734713+00:00",
+  "generated_at": "2026-05-07T04:34:21.580617+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 102.05,
+        "disk_free_gb": 102.03,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -135,8 +135,8 @@
     "network": {
       "cloudflare_tunnel": {
         "url": "https://appears-fifteen-find-antarctica.trycloudflare.com",
-        "healthz_status": 0,
-        "healthy": false
+        "healthz_status": 200,
+        "healthy": true
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -392,12 +392,8 @@
     }
   },
   "health": {
-    "score": 60,
+    "score": 85,
     "findings": [
-      [
-        "CRITICAL",
-        "Cloudflare tunnel /healthz failing"
-      ],
       [
         "WARN",
         "Gemini API unreachable"
