@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-07T17:59:59.359060+00:00",
+  "generated_at": "2026-05-07T19:18:44.000247+00:00",
   "chat_agent_healthy": true,
-  "cloudflared_healthy": true,
+  "cloudflared_healthy": false,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://instruction-pillow-hwy-shot.trycloudflare.com",
+  "tunnel_url": "https://api.trycloudflare.com",
   "seo_pages_live": 645
 }
