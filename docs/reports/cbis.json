@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T21:19:40.907905+00:00",
+  "generated_at": "2026-05-07T21:38:01.347216+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 106.75,
+        "disk_free_gb": 106.79,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -140,8 +140,8 @@
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
-        "status": 0,
-        "healthy": false
+        "status": 200,
+        "healthy": true
       },
       "stripe_checkout": {
         "url_healthy": true,
@@ -392,12 +392,8 @@
     }
   },
   "health": {
-    "score": 75,
+    "score": 85,
     "findings": [
-      [
-        "WARN",
-        "GitHub Pages not 200"
-      ],
       [
         "WARN",
         "Gemini API unreachable"
