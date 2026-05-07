@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T14:12:11.438813+00:00",
+  "generated_at": "2026-05-07T14:58:51.709699+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 106.81,
+        "disk_free_gb": 106.79,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://accessing-appendix-sufficient-gnu.trycloudflare.com",
+        "url": "https://worldwide-farm-goal-license.trycloudflare.com",
         "healthz_status": 200,
         "healthy": true
       },
