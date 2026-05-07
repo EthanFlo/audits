@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T23:07:23.962387+00:00",
+  "generated_at": "2026-05-07T23:29:04.100031+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 109.67,
+        "disk_free_gb": 109.68,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://punch-lan-brought-representation.trycloudflare.com",
+        "url": "https://closed-want-spray-cant.trycloudflare.com",
         "healthz_status": 200,
         "healthy": true
       },
