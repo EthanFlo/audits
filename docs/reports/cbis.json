@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T01:32:37.879996+00:00",
+  "generated_at": "2026-05-08T01:48:02.815048+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 109.68,
+        "disk_free_gb": 109.65,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://closed-want-spray-cant.trycloudflare.com",
+        "url": "https://separate-seasons-somerset-personnel.trycloudflare.com",
         "healthz_status": 200,
         "healthy": true
       },
