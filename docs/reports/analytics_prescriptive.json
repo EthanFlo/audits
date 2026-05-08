@@ -1,6 +1,6 @@
 {
   "type": "prescriptive",
-  "generated_at": "2026-05-08T02:43:20.946156+00:00",
+  "generated_at": "2026-05-08T03:44:08.340282+00:00",
   "recommendations": [
     {
       "priority": "HIGH",
@@ -15,7 +15,7 @@
     {
       "priority": "HIGH",
       "area": "Operations",
-      "action": "1 exception report(s) open. See reports/exceptions.json."
+      "action": "2 exception report(s) open. See reports/exceptions.json."
     }
   ]
 }
