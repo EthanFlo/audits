@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-08T15:31:47.315114+00:00",
+  "generated_at": "2026-05-08T16:31:48.891540+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": false,
+  "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://pushing-symposium-mazda-occasionally.trycloudflare.com",
+  "tunnel_url": "https://preventing-podcast-challenging-customers.trycloudflare.com",
   "seo_pages_live": 645
 }
