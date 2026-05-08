@@ -1,6 +1,6 @@
 {
-  "total_prospects_scanned": 4304,
-  "unique_emails": 4083,
+  "total_prospects_scanned": 4328,
+  "unique_emails": 4107,
   "duplicate_emails_count": 126,
   "chat_db_schema_ok": true,
   "chat_db_schema_drift": [],
