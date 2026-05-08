@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T06:26:21.883577+00:00",
+  "generated_at": "2026-05-08T06:42:20.920936+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 108.39,
+        "disk_free_gb": 109.43,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://continue-dave-complexity-camcorder.trycloudflare.com",
+        "url": "https://gmbh-lawsuit-resources-lauderdale.trycloudflare.com",
         "healthz_status": 0,
         "healthy": false
       },
