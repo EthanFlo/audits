@@ -51,6 +51,17 @@ h2{font-size:48px;line-height:1.04;letter-spacing:0;margin:8px 0 14px;font-weigh
 .choice dt{font-weight:750;color:var(--ink)}
 .choice dd{margin:0;color:#515154}
 .choice a{margin-top:auto;color:var(--accent);font-weight:750;text-decoration:none}
+.decision-guide{padding:42px 0 56px}
+.decision-panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.decision-panel h2{font-size:38px;max-width:760px;margin:8px 0 10px}
+.decision-panel p{color:#515154;font-size:16px;max-width:760px;margin:0}
+.decision-table{width:100%;border-collapse:collapse;margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.decision-table th,.decision-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.decision-table th{background:var(--soft);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.decision-table td:first-child{font-weight:800;color:var(--ink)}
+.decision-table a{color:var(--blue);font-weight:750;text-decoration:none;white-space:nowrap}
+.product .fit-note{display:grid;grid-template-columns:110px 1fr;gap:12px;margin:18px 0 0;padding:14px;background:var(--soft);border:1px solid var(--line);border-radius:10px;color:#515154;font-size:14px}
+.product .fit-note b{color:var(--ink)}
 section{padding:80px 0;border-top:1px solid var(--line)}
 section h2{font-size:48px;line-height:1.04;letter-spacing:0;max-width:820px;font-weight:700;overflow-wrap:break-word}
 .compare{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:32px}
@@ -93,6 +104,13 @@ h2,section h2{font-size:30px;line-height:1.1}
 .bars{grid-template-columns:1fr}
 .chooser-grid{grid-template-columns:1fr}
 .choice div{grid-template-columns:1fr;gap:4px}
+.decision-panel{padding:22px}
+.decision-panel h2{font-size:29px}
+.decision-table,.decision-table tbody,.decision-table tr,.decision-table th,.decision-table td{display:block;width:100%}
+.decision-table tr{border-bottom:1px solid var(--line)}
+.decision-table th,.decision-table td{border-bottom:0;padding:10px 14px}
+.decision-table th{display:none}
+.product .fit-note{grid-template-columns:1fr;gap:4px}
 .story{grid-template-columns:1fr;padding:28px;gap:24px}
 .cta-banner{flex-direction:column;align-items:flex-start;padding:28px}
 .cta-banner h3{font-size:24px}
@@ -109,11 +127,26 @@ footer{flex-direction:column}
 <a class="guarantee" id="guarantee" href="#refund">14-day money back · No questions</a>
 </section>
 
+<section class="decision-guide fade-in"><div class="decision-panel">
+<div class="eyebrow">Pick in 60 seconds</div>
+<h2>Which surface can you inspect today?</h2>
+<p>Pick the product tied to a real work surface you can open now. The guide keeps the three offers distinct and keeps the buy path one click away.</p>
+<table class="decision-table">
+<thead><tr><th>Surface</th><th>Buy this</th><th>Use it when</th><th>First file</th><th>Next click</th></tr></thead>
+<tbody>
+<tr><td>Local profile</td><td>GBP Optimization Pack</td><td>You have a Google Business Profile or local-service page to audit.</td><td>Score Rank, Show, Convert.</td><td><a href="/audits/products/gbp-checklist/">View GBP</a></td></tr>
+<tr><td>Outbound loop</td><td>Reply Rate Loop</td><td>You send cold email or need to plan a small, clean outbound test.</td><td>Name whether list, copy, or deliverability is blocking replies.</td><td><a href="/audits/products/reply-rate-loop/">View Reply</a></td></tr>
+<tr><td>Video idea</td><td>Hook Doctor</td><td>You have a title, hook, thumbnail, or video idea that needs diagnosis.</td><td>Name the hook failure mode before generating more angles.</td><td><a href="/audits/products/hook-doctor/">View Hook</a></td></tr>
+</tbody>
+</table>
+</div></section>
+
 <section class="grid fade-in">
 <article class="product" style="--accent:#34c759">
 <img src="/audits/products/assets/gbp-cover.png" alt="The GBP Optimization Pack cover">
 <div><p class="tag">Local SEO field guide</p><h2>The GBP Optimization Pack</h2>
 <p>The pack turns a messy local SEO task into a visual Rank, Show, Convert system with scorecards, source notes from Google's own help center, and a 14-day retest path.</p>
+<div class="fit-note"><b>Choose if</b><span>You can inspect a live Google Business Profile or local-service page today.</span></div>
 <div class="bars"><div class="bar"><label><span>Profile completeness</span><span>8/10</span></label><div class="track"><div class="fill" style="width:80%"></div></div></div><div class="bar"><label><span>Review response</span><span>7/10</span></label><div class="track"><div class="fill" style="width:70%"></div></div></div><div class="bar"><label><span>Photo freshness</span><span>6/10</span></label><div class="track"><div class="fill" style="width:60%"></div></div></div></div>
 <a href="/audits/products/gbp-checklist/" class="btn">View product · $44 CAD</a></div>
 </article>
@@ -122,6 +155,7 @@ footer{flex-direction:column}
 <img src="/audits/products/assets/reply-cover.png" alt="The Reply Rate Loop cover">
 <div><p class="tag">Cold email operator kit</p><h2>The Reply Rate Loop</h2>
 <p>A premium audit, 75 prompts, dashboards, and test tables for solo B2B founders who need calmer outbound decisions. Compliance-aware (CAN-SPAM, Workspace sender rules).</p>
+<div class="fit-note"><b>Choose if</b><span>You can inspect a buyer list, first email, or sender setup today.</span></div>
 <div class="bars"><div class="bar"><label><span>ICP fit</span><span>8/10</span></label><div class="track"><div class="fill" style="width:80%"></div></div></div><div class="bar"><label><span>Message clarity</span><span>7/10</span></label><div class="track"><div class="fill" style="width:70%"></div></div></div><div class="bar"><label><span>Inbox readiness</span><span>6/10</span></label><div class="track"><div class="fill" style="width:60%"></div></div></div></div>
 <a href="/audits/products/reply-rate-loop/" class="btn">View product · $89 USD</a></div>
 </article>
@@ -130,6 +164,7 @@ footer{flex-direction:column}
 <img src="/audits/products/assets/hook-cover.png" alt="The Hook Doctor cover">
 <div><p class="tag">Faceless YouTube field guide</p><h2>The Hook Doctor</h2>
 <p>A visual prompt system for faceless YouTube operators: failure modes, test tables, thumbnail checks, and cleaner hook decisions. Source-backed by YouTube's own impressions/CTR help docs.</p>
+<div class="fit-note"><b>Choose if</b><span>You can inspect one weak title, hook, thumbnail, or video idea today.</span></div>
 <div class="bars"><div class="bar"><label><span>Viewer specificity</span><span>8/10</span></label><div class="track"><div class="fill" style="width:80%"></div></div></div><div class="bar"><label><span>Curiosity gap</span><span>7/10</span></label><div class="track"><div class="fill" style="width:70%"></div></div></div><div class="bar"><label><span>Mobile clarity</span><span>8/10</span></label><div class="track"><div class="fill" style="width:80%"></div></div></div></div>
 <a href="/audits/products/hook-doctor/" class="btn">View product · $35 CAD</a></div>
 </article>
