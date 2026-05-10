@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-10T05:37:54.936275+00:00",
-  "chat_agent_healthy": false,
-  "cloudflared_healthy": false,
+  "generated_at": "2026-05-10T14:08:18.515380+00:00",
+  "chat_agent_healthy": true,
+  "cloudflared_healthy": true,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": true,
+  "wave_loop_healthy": false,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://still-paragraphs-hampshire-seek.trycloudflare.com",
+  "tunnel_url": "https://mice-along-housing-corner.trycloudflare.com",
   "seo_pages_live": 645
 }
