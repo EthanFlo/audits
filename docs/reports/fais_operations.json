@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-11T17:09:04.495820+00:00",
+  "generated_at": "2026-05-11T18:09:25.255285+00:00",
   "chat_agent_healthy": true,
-  "cloudflared_healthy": false,
+  "cloudflared_healthy": true,
   "routine_loop_healthy": false,
   "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "Binary file logs/tunnel.log matches",
+  "tunnel_url": "https://wrestling-pin-cbs-view.trycloudflare.com",
   "seo_pages_live": 645
 }
