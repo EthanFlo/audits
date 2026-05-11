@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-11T08:05:28.637902+00:00",
+  "generated_at": "2026-05-11T12:56:06.251835+00:00",
   "chat_agent_healthy": true,
-  "cloudflared_healthy": true,
+  "cloudflared_healthy": false,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": true,
+  "wave_loop_healthy": false,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://investigate-graphics-petroleum-online.trycloudflare.com",
+  "tunnel_url": "https://api.trycloudflare.com",
   "seo_pages_live": 645
 }
