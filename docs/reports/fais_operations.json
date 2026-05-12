@@ -1,11 +1,11 @@
 {
   "area": "Operations",
-  "generated_at": "2026-05-12T15:09:43.060968+00:00",
+  "generated_at": "2026-05-12T16:10:29.434225+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": true,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": false,
+  "wave_loop_healthy": true,
   "ops_bot_healthy": true,
-  "tunnel_url": "https://commissioners-lots-window-head.trycloudflare.com",
+  "tunnel_url": "https://plant-indicators-trackbacks-sufficient.trycloudflare.com",
   "seo_pages_live": 645
 }
