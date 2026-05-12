@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T14:49:29.669091+00:00",
+  "generated_at": "2026-05-12T15:05:35.437795+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 108.52,
+        "disk_free_gb": 108.5,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -134,7 +134,7 @@
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://produces-magical-copies-antenna.trycloudflare.com",
+        "url": "https://commissioners-lots-window-head.trycloudflare.com",
         "healthz_status": 0,
         "healthy": false
       },
