@@ -4,6 +4,17 @@
   "duplicate_emails_count": 126,
   "chat_db_schema_ok": true,
   "chat_db_schema_drift": [],
-  "old_send_logs_archivable": [],
+  "old_send_logs_archivable": [
+    "send-log-2026-07-07.jsonl",
+    "send-log-2026-06-05.jsonl",
+    "send-log-2026-06-18.jsonl",
+    "send-log-2026-06-25.jsonl",
+    "send-log-2026-04-17.jsonl",
+    "send-log-2026-07-01.jsonl",
+    "send-log-2026-06-03.jsonl",
+    "send-log-2026-04-15.jsonl",
+    "send-log-2026-06-04.jsonl",
+    "send-log-2026-06-22.jsonl"
+  ],
   "master_data_rule": "Email is the unique key across prospects. chat.db is the source of truth for customers."
 }

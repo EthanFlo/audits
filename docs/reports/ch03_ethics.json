@@ -1,5 +1,5 @@
 {
-  "opt_out_honored_count": 2,
+  "opt_out_honored_count": 5,
   "fair_information_practices": {
     "notice_awareness": {
       "status": "OK",
@@ -9,7 +9,7 @@
     "choice_consent": {
       "status": "OK",
       "description": "Subjects can opt out at any time",
-      "evidence": "reply_monitor.py auto-honors UNSUBSCRIBE; opt-out ledger has 2 entries"
+      "evidence": "reply_monitor.py auto-honors UNSUBSCRIBE; opt-out ledger has 5 entries"
     },
     "access_participation": {
       "status": "OK",
