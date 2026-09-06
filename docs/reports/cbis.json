@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T20:44:51.518617+00:00",
+  "generated_at": "2026-09-06T19:19:36.742921+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 105.82,
+        "disk_free_gb": 194.05,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -21,16 +21,16 @@
       ]
     },
     "software": {
-      "total_py_modules": 88,
-      "total_sh_scripts": 4,
-      "total_lines_of_code": 21953,
+      "total_py_modules": 90,
+      "total_sh_scripts": 6,
+      "total_lines_of_code": 22466,
       "core_runtime": [
         "python 3.9 (.venv)",
         "bash (routine_loop.sh + start_agent.sh + tonight_wave_loop.sh)",
         "cloudflared (tunnel binary)",
         "git (version control)"
       ],
-      "custom_modules_count": 88,
+      "custom_modules_count": 90,
       "vendor_sdks": [
         "urllib (HTTP, no external deps)",
         "smtplib / imaplib (Gmail)",
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 1086,
+      "send_log_rows_all_time": 1467,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
@@ -52,7 +52,7 @@
         },
         {
           "name": "page-opens.jsonl",
-          "rows": 5
+          "rows": 6
         },
         {
           "name": "global-targets.jsonl",
@@ -108,7 +108,7 @@
         },
         {
           "name": "stripe-clicks.jsonl",
-          "rows": 5
+          "rows": 6
         },
         {
           "name": "partner-nurture-sent.jsonl",
@@ -130,13 +130,13 @@
       "upwork_orders_count": 0,
       "seo_pages_count": 645,
       "audit_pages_count": 1034,
-      "opt_out_count": 2
+      "opt_out_count": 5
     },
     "network": {
       "cloudflare_tunnel": {
-        "url": "https://inkjet-northeast-monica-cheats.trycloudflare.com",
-        "healthz_status": 200,
-        "healthy": true
+        "url": "https://eval-helena-camera-sec.trycloudflare.com",
+        "healthz_status": 0,
+        "healthy": false
       },
       "github_pages": {
         "url": "https://ethanflo.github.io/audits/",
@@ -251,7 +251,7 @@
   "systems": {
     "TPS": {
       "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-      "transactions_today": 0,
+      "transactions_today": 1,
       "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
       "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
       "data_stores": [
@@ -392,8 +392,12 @@
     }
   },
   "health": {
-    "score": 85,
+    "score": 60,
     "findings": [
+      [
+        "CRITICAL",
+        "Cloudflare tunnel /healthz failing"
+      ],
       [
         "WARN",
         "Gemini API unreachable"
