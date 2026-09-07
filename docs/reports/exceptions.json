@@ -1,17 +1,17 @@
 [
   {
-    "severity": "WARNING",
+    "severity": "CRITICAL",
     "metric": "cold_email_fail_rate",
-    "value": 14.29,
-    "threshold": 8.0,
-    "message": "Fail rate 14.3% exceeds warn 8%"
+    "value": 22.73,
+    "threshold": 15.0,
+    "message": "Fail rate 22.7% exceeds critical 15%"
   },
   {
     "severity": "WARNING",
     "metric": "sends_24h",
-    "value": 30,
+    "value": 17,
     "threshold": 50,
-    "message": "Only 30 sends in last 24h (target >= 50)"
+    "message": "Only 17 sends in last 24h (target >= 50)"
   },
   {
     "severity": "CRITICAL",
