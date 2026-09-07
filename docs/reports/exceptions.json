@@ -2,9 +2,9 @@
   {
     "severity": "WARNING",
     "metric": "sends_24h",
-    "value": 13,
+    "value": 14,
     "threshold": 50,
-    "message": "Only 13 sends in last 24h (target >= 50)"
+    "message": "Only 14 sends in last 24h (target >= 50)"
   },
   {
     "severity": "CRITICAL",

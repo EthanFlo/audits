@@ -1,10 +1,10 @@
 {
   "area": "Marketing",
-  "generated_at": "2026-09-06T20:59:45.284671+00:00",
-  "sends_24h": 13,
-  "fail_rate": 0.0714,
+  "generated_at": "2026-09-07T00:41:24.153017+00:00",
+  "sends_24h": 14,
+  "fail_rate": 0.0667,
   "top_countries": {
-    "US": 14
+    "US": 15
   },
   "chat_sessions_24h": 0,
   "hot_leads_now": 0,
