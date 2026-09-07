@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T00:41:28.943165+00:00",
+  "generated_at": "2026-09-07T00:56:36.559519+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 189.62,
+        "disk_free_gb": 179.34,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 1481,
+      "send_log_rows_all_time": 1486,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
