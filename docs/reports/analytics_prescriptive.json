@@ -1,12 +1,7 @@
 {
   "type": "prescriptive",
-  "generated_at": "2026-09-08T00:00:59.048175+00:00",
+  "generated_at": "2026-09-08T01:01:54.875464+00:00",
   "recommendations": [
-    {
-      "priority": "HIGH",
-      "area": "Marketing",
-      "action": "Cold-email fail rate is 19.1%. Clean bounce list; pause US domains with >10% bounce."
-    },
     {
       "priority": "HIGH",
       "area": "Marketing",
@@ -20,7 +15,7 @@
     {
       "priority": "HIGH",
       "area": "Operations",
-      "action": "3 exception report(s) open. See reports/exceptions.json."
+      "action": "2 exception report(s) open. See reports/exceptions.json."
     }
   ]
 }
