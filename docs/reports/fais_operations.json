@@ -1,10 +1,10 @@
 {
   "area": "Operations",
-  "generated_at": "2026-09-08T10:10:42.524764+00:00",
+  "generated_at": "2026-09-08T16:19:43.742424+00:00",
   "chat_agent_healthy": true,
   "cloudflared_healthy": false,
   "routine_loop_healthy": false,
-  "wave_loop_healthy": true,
+  "wave_loop_healthy": false,
   "ops_bot_healthy": true,
   "tunnel_url": "https://eval-helena-camera-sec.trycloudflare.com",
   "seo_pages_live": 645
