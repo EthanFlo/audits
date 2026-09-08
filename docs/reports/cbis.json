@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T16:19:49.564084+00:00",
+  "generated_at": "2026-09-08T17:28:27.421637+00:00",
   "components": {
     "hardware": {
       "operator_host": {
@@ -8,7 +8,7 @@
         "arch": "arm64",
         "python": "3.9.6",
         "cpu_count": 12,
-        "disk_free_gb": 187.79,
+        "disk_free_gb": 187.78,
         "disk_total_gb": 994.66
       },
       "vendor_infra": [
@@ -44,7 +44,7 @@
         "messages": 38,
         "purchases": 0
       },
-      "send_log_rows_all_time": 1501,
+      "send_log_rows_all_time": 1503,
       "prospect_datasets": [
         {
           "name": "adjacent-verticals-targets.jsonl",
@@ -251,7 +251,7 @@
   "systems": {
     "TPS": {
       "description": "Captures every send / chat session / order / purchase as an immutable transaction record.",
-      "transactions_today": 0,
+      "transactions_today": 2,
       "batch_processing": "tonight_wave_loop.sh fires batches of 20 sends every 5 min",
       "oltp": "Stripe webhook + Upwork monitor process transactions as they arrive",
       "data_stores": [
@@ -278,11 +278,11 @@
     },
     "DSS": {
       "description": "Rule-based prescriptive recommendations from current TPS + FAIS data.",
-      "current_recommendations_count": 3,
+      "current_recommendations_count": 4,
       "current_top_recommendation": {
         "priority": "HIGH",
         "area": "Marketing",
-        "action": "Sends under 50/day. Restart wave_loop or check Gmail daily-limit."
+        "action": "Cold-email fail rate is 50.0%. Clean bounce list; pause US domains with >10% bounce."
       },
       "file": "audit-pages/docs/reports/analytics_prescriptive.json"
     },
