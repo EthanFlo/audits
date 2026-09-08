@@ -1,11 +1,11 @@
 {
   "type": "prescriptive",
-  "generated_at": "2026-09-08T17:28:22.926488+00:00",
+  "generated_at": "2026-09-08T18:29:24.861943+00:00",
   "recommendations": [
     {
       "priority": "HIGH",
       "area": "Marketing",
-      "action": "Cold-email fail rate is 50.0%. Clean bounce list; pause US domains with >10% bounce."
+      "action": "Cold-email fail rate is 18.2%. Clean bounce list; pause US domains with >10% bounce."
     },
     {
       "priority": "HIGH",
