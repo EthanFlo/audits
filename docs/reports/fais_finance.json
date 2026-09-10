@@ -1,8 +1,8 @@
 {
   "area": "Finance",
-  "generated_at": "2026-09-10T14:51:26.695340+00:00",
+  "generated_at": "2026-09-10T20:13:25.918612+00:00",
   "revenue_all": 0.0,
-  "sends_24h": 0,
+  "sends_24h": 1,
   "cost_per_send": 0.0,
   "operational_cost_estimate": 0.0,
   "net_margin_estimate": 0.0,
